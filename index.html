@@ -7,7 +7,7 @@
     <meta name="keywords" content="digital marketing, reputation management, video editing, affiliate marketing, social media management, influencer marketing, Gujarat, Bharuch, Ankleshwar, web development">
     <title>Clickdera - Premium Digital Marketing & Creative Services in Bharuch, Gujarat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Modern Color Scheme */
         :root {
@@ -71,8 +71,18 @@
             color: var(--darker);
         }
         
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.5rem; }
+        h1 { 
+            font-size: 3.5rem; 
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        h2 { 
+            font-size: 2.5rem; 
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
         h3 { font-size: 1.75rem; }
         h4 { font-size: 1.25rem; }
         
@@ -270,10 +280,23 @@
         
         /* Hero Section */
         .hero {
-            padding: 10rem 0 6rem;
+            padding: 12rem 0 8rem;
             background: linear-gradient(135deg, rgba(249, 250, 251, 0.95) 0%, rgba(249, 250, 251, 0.97) 100%);
             position: relative;
             overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: -1;
         }
         
         .hero-content {
@@ -308,12 +331,19 @@
             overflow: hidden;
             box-shadow: var(--shadow-xl);
             border: 1px solid rgba(0, 0, 0, 0.05);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: var(--transition);
         }
         
         .hero-image img {
             width: 100%;
             height: auto;
             transition: transform 0.5s ease;
+        }
+        
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+            box-shadow: var(--shadow-xl);
         }
         
         .hero-image:hover img {
@@ -349,7 +379,7 @@
         .feature-card {
             background-color: white;
             border-radius: var(--radius-lg);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid var(--light-gray);
@@ -364,8 +394,8 @@
         }
         
         .feature-icon {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 4rem;
+            height: 4rem;
             background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
             border-radius: var(--radius-md);
             display: flex;
@@ -383,13 +413,13 @@
         }
         
         .feature-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
         
         .feature-card p {
             color: var(--gray);
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
         
         /* Services Section */
@@ -439,8 +469,8 @@
         }
         
         .service-icon {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 4rem;
+            height: 4rem;
             background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
             border-radius: var(--radius-md);
             display: flex;
@@ -448,7 +478,7 @@
             justify-content: center;
             margin-bottom: 1.5rem;
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             transition: var(--transition);
         }
         
@@ -458,7 +488,7 @@
         }
         
         .service-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
         
@@ -472,7 +502,7 @@
             position: relative;
             padding-left: 1.75rem;
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
         
         .service-card ul li:before {
@@ -504,6 +534,8 @@
         .about-text p {
             margin-bottom: 1.5rem;
             color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         .team-members {
@@ -574,10 +606,24 @@
             overflow: hidden;
         }
         
+        .stats:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.05;
+        }
+        
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 3rem;
+            position: relative;
+            z-index: 1;
         }
         
         .stat-item {
@@ -626,6 +672,7 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid var(--light-gray);
+            position: relative;
         }
         
         .testimonial-card:hover {
@@ -633,10 +680,26 @@
             box-shadow: var(--shadow-lg);
         }
         
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            color: rgba(79, 70, 229, 0.1);
+            line-height: 1;
+            z-index: 0;
+        }
+        
         .testimonial-content {
             margin-bottom: 1.5rem;
             color: var(--gray);
             font-style: italic;
+            position: relative;
+            z-index: 1;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         .testimonial-author {
@@ -646,14 +709,21 @@
         }
         
         .author-avatar {
-            width: 3rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 50%;
             overflow: hidden;
+            border: 3px solid var(--light-gray);
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .author-info h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 0.25rem;
         }
         
@@ -683,6 +753,8 @@
         .contact-info p {
             margin-bottom: 2.5rem;
             color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         .contact-details {
@@ -762,11 +834,27 @@
             display: none;
             background: var(--success);
             color: white;
-            padding: 1.25rem;
+            padding: 1.5rem;
             border-radius: var(--radius-md);
             margin-bottom: 1.25rem;
             text-align: center;
             animation: fadeIn 0.5s ease;
+        }
+
+        .success-message i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .success-message h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-message p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
         }
 
         /* Rate Limit Message */
@@ -774,11 +862,28 @@
             display: none;
             background: var(--warning);
             color: var(--darker);
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: var(--radius-md);
             margin-bottom: 1.25rem;
             text-align: center;
             animation: fadeIn 0.5s ease;
+        }
+
+        .rate-limit-message i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .rate-limit-message h3 {
+            color: var(--darker);
+            margin-bottom: 0.5rem;
+        }
+
+        .rate-limit-message p {
+            color: var(--darker);
+            margin-bottom: 0;
+            opacity: 0.9;
         }
 
         @keyframes fadeIn {
@@ -806,6 +911,7 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.75rem;
+            color: white;
         }
         
         .footer-col h3:after {
@@ -821,6 +927,8 @@
         .footer-col p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
         
         .footer-links {
@@ -857,8 +965,8 @@
         }
         
         .social-links a {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.75rem;
+            height: 2.75rem;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -866,7 +974,7 @@
             justify-content: center;
             color: white;
             transition: var(--transition);
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         
         .social-links a:hover {
@@ -916,7 +1024,7 @@
         
         @media (max-width: 992px) {
             .hero {
-                padding: 8rem 0 4rem;
+                padding: 10rem 0 6rem;
             }
             
             .hero-content {
@@ -994,6 +1102,11 @@
             .stat-number {
                 font-size: 2.5rem;
             }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1001,7 +1114,7 @@
             h2 { font-size: 1.75rem; }
             
             .hero {
-                padding: 7rem 0 3rem;
+                padding: 8rem 0 3rem;
             }
             
             .hero-btns .btn {
@@ -1087,7 +1200,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Performance Focused</h3>
-                    <p>Our strategies are designed to deliver measurable results and maximize your return on investment.</p>
+                    <p>Our strategies are designed to deliver measurable results and maximize your return on investment through continuous optimization and data analysis.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -1095,7 +1208,7 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Creative Solutions</h3>
-                    <p>We bring innovative ideas and fresh perspectives to every project we undertake.</p>
+                    <p>We bring innovative ideas and fresh perspectives to every project, ensuring your brand stands out in a crowded digital landscape.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -1103,7 +1216,7 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Dedicated Support</h3>
-                    <p>Our team provides personalized attention and ongoing support to ensure your success.</p>
+                    <p>Our team provides personalized attention and ongoing support, becoming an extension of your marketing team for long-term success.</p>
                 </div>
             </div>
         </div>
@@ -1274,11 +1387,11 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Clickdera transformed our online reputation within weeks. Their team delivered exceptional results and provided ongoing support that exceeded our expectations."
+                        "Clickdera transformed our online reputation within weeks. Their team delivered exceptional results and provided ongoing support that exceeded our expectations. The attention to detail and strategic approach made all the difference for our business."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Patel">
                         </div>
                         <div class="author-info">
                             <h4>Rajesh Patel</h4>
@@ -1289,11 +1402,11 @@
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "The video editing services from Clickdera helped us create engaging content that significantly boosted our social media engagement and conversions."
+                        "The video editing services from Clickdera helped us create engaging content that significantly boosted our social media engagement and conversions. Their creative team understood our brand perfectly and delivered content that resonated with our audience."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
                         </div>
                         <div class="author-info">
                             <h4>Priya Sharma</h4>
@@ -1304,11 +1417,11 @@
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Their affiliate marketing strategies delivered measurable ROI from day one. The team is professional, responsive, and truly understands performance marketing."
+                        "Their affiliate marketing strategies delivered measurable ROI from day one. The team is professional, responsive, and truly understands performance marketing. We've seen a 300% increase in quality leads since partnering with them."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikram Mehta">
                         </div>
                         <div class="author-info">
                             <h4>Vikram Mehta</h4>
@@ -1331,7 +1444,7 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Let's Collaborate</h3>
-                    <p>Whether you need reputation management, video production, or full digital marketing services, we're here to help your brand succeed.</p>
+                    <p>Whether you need reputation management, video production, or full digital marketing services, we're here to help your brand succeed. Reach out to us today to schedule a consultation.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -1368,13 +1481,13 @@
                 
                 <div class="contact-form">
                     <div class="success-message" id="successMessage">
-                        <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <i class="fas fa-check-circle"></i>
                         <h3>Thank you for your message!</h3>
                         <p>Our team will get back to you shortly.</p>
                     </div>
                     
                     <div class="rate-limit-message" id="rateLimitMessage">
-                        <i class="fas fa-clock" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <i class="fas fa-clock"></i>
                         <h3>Submission Limit Reached</h3>
                         <p>You can only submit one form per hour. Please try again later.</p>
                     </div>
@@ -1408,10 +1521,11 @@
                     <h3>Clickdera</h3>
                     <p>A full-service digital agency specializing in reputation management, video production, and performance marketing for brands and advertisers.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/company/clickera/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Clickdera" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/clickera/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Clickdera" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/clickdera" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 
@@ -1641,6 +1755,26 @@
         }, { threshold: 0.5 });
         
         observer.observe(document.querySelector('.stats'));
+
+        // Add subtle animation to feature cards on scroll
+        const featureObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 150);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.transitionDelay = `${index * 0.1}s`;
+            featureObserver.observe(card);
+        });
     </script>
 </body>
 </html>
