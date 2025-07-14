@@ -4,30 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickdera - Premium Digital Marketing Solutions</title>
+    <meta name="description" content="Drive growth with Clickdera's premium digital marketing services including reputation management, video editing, affiliate marketing, and more.">
+    <meta name="keywords" content="digital marketing, reputation management, video editing, affiliate marketing, social media management, influencer marketing">
+    <meta name="author" content="Clickdera">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickdera.in">
+    <meta property="og:title" content="Clickdera - Premium Digital Marketing Solutions">
+    <meta property="og:description" content="Transform your digital presence with Clickdera's premium marketing services.">
+    <meta property="og:image" content="https://clickdera.in/images/social-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://clickdera.in">
+    <meta property="twitter:title" content="Clickdera - Premium Digital Marketing Solutions">
+    <meta property="twitter:description" content="Transform your digital presence with Clickdera's premium marketing services.">
+    <meta property="twitter:image" content="https://clickdera.in/images/social-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #6366F1;
-            --primary-dark: #4F46E5;
-            --primary-light: #818CF8;
+            --primary: #3B82F6;
+            --primary-dark: #2563EB;
+            --primary-light: #60A5FA;
             --secondary: #10B981;
             --accent: #F59E0B;
             --accent-dark: #D97706;
-            --dark: #1F2937;
-            --darker: #111827;
-            --light: #F9FAFB;
-            --light-2: #F3F4F6;
-            --gray: #6B7280;
-            --light-gray: #E5E7EB;
+            --dark: #0f172a;
+            --darker: #0B1120;
+            --light: #1e293b;
+            --light-2: #334155;
+            --gray: #94a3b8;
+            --light-gray: #475569;
             --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             --gradient-dark: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #F97316 100%);
-            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 15px rgba(0,0,0,0.08);
-            --shadow-lg: 0 20px 25px rgba(0,0,0,0.12);
-            --shadow-xl: 0 30px 50px rgba(0,0,0,0.15);
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.15);
+            --shadow-md: 0 10px 15px rgba(0,0,0,0.2);
+            --shadow-lg: 0 20px 25px rgba(0,0,0,0.25);
+            --shadow-xl: 0 30px 50px rgba(0,0,0,0.3);
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
@@ -43,38 +68,35 @@
         }
         
         body {
-            background-color: var(--darker);
-            color: var(--light-gray);
+            background: linear-gradient(135deg, #0b1120 0%, #0f172a 100%);
+            color: #E2E8F0;
             line-height: 1.7;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 20%);
         }
         
         .container {
             width: 100%;
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
         
         section {
-            padding: 7rem 0;
+            padding: 8rem 0;
             position: relative;
         }
         
         h1, h2, h3, h4, h5 {
             font-weight: 700;
             line-height: 1.3;
-            color: var(--light);
+            color: #F8FAFC;
         }
         
-        h1 { font-size: 3.75rem; }
-        h2 { font-size: 2.75rem; }
-        h3 { font-size: 1.875rem; }
-        h4 { font-size: 1.375rem; }
+        h1 { font-size: 4rem; }
+        h2 { font-size: 3.25rem; }
+        h3 { font-size: 2.25rem; }
+        h4 { font-size: 1.5rem; }
         
         a {
             text-decoration: none;
@@ -94,7 +116,7 @@
             justify-content: center;
             background: var(--gradient);
             color: white;
-            padding: 1rem 2.25rem;
+            padding: 1.1rem 2.5rem;
             border-radius: var(--radius-md);
             font-weight: 600;
             transition: var(--transition);
@@ -122,8 +144,8 @@
         }
         
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
         }
         
         .btn:hover:after {
@@ -152,20 +174,21 @@
             background: var(--accent-dark);
         }
         
-        /* Header */
+        /* Header - Enhanced Desktop Navigation */
         header {
             position: fixed;
             width: 100%;
             z-index: 1000;
             transition: var(--transition);
-            background-color: rgba(17, 24, 39, 0.9);
+            background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(12px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         
         header.scrolled {
             box-shadow: var(--shadow-sm);
+            background: rgba(15, 23, 42, 0.95);
         }
         
         nav {
@@ -176,9 +199,9 @@
         }
         
         .logo {
-            font-size: 1.875rem;
+            font-size: 2rem;
             font-weight: 800;
-            color: var(--light);
+            color: #F8FAFC;
             display: flex;
             align-items: center;
             gap: 0.75rem;
@@ -191,14 +214,15 @@
         }
         
         .logo-icon {
-            width: 2.75rem;
-            height: 2.75rem;
+            width: 3rem;
+            height: 3rem;
             background: var(--gradient);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
         }
         
         .nav-links {
@@ -210,7 +234,7 @@
         
         .nav-links a {
             font-weight: 600;
-            color: var(--light);
+            color: #CBD5E1;
             position: relative;
             padding: 0.5rem 0;
             font-size: 1.125rem;
@@ -218,7 +242,7 @@
         }
         
         .nav-links a:hover {
-            color: var(--primary-light);
+            color: var(--primary);
         }
         
         .nav-links a:after {
@@ -230,6 +254,7 @@
             height: 3px;
             background: var(--gradient);
             transition: var(--transition);
+            border-radius: 10px;
         }
         
         .nav-links a:hover:after {
@@ -247,58 +272,64 @@
             background: none;
             border: none;
             font-size: 1.75rem;
-            color: var(--light);
+            color: #CBD5E1;
             cursor: pointer;
             z-index: 1001;
         }
         
-        /* Hero Section */
+        /* Hero Section - Desktop Optimized */
         .hero {
-            padding: 12rem 0 7rem;
+            padding: 16rem 0 10rem;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.97) 100%);
             position: relative;
             overflow: hidden;
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.95));
+            background-image: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%);
         }
         
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
             align-items: center;
             position: relative;
             z-index: 1;
         }
         
         .hero-text h1 {
-            font-size: 3.75rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            background: linear-gradient(135deg, var(--light) 0%, var(--primary-light) 100%);
+            font-size: 4.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.15;
+            background: linear-gradient(135deg, #F8FAFC 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .hero-text p {
-            font-size: 1.375rem;
-            color: var(--light-gray);
-            margin-bottom: 2.5rem;
+            font-size: 1.5rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
             max-width: 36rem;
         }
         
         .hero-btns {
             display: flex;
-            gap: 1.25rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            perspective: 1000px;
         }
         
         .hero-image {
-            position: relative;
             border-radius: var(--radius-xl);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform: perspective(1000px) rotateY(-5deg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transform: rotateY(-5deg) rotateX(5deg);
             transition: transform 0.6s ease;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-image img {
@@ -307,11 +338,11 @@
             transition: transform 0.6s ease;
         }
         
-        .hero-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
+        .hero-image-container:hover .hero-image {
+            transform: rotateY(0) rotateX(0);
         }
         
-        .hero-image:hover img {
+        .hero-image-container:hover .hero-image img {
             transform: scale(1.05);
         }
         
@@ -327,35 +358,66 @@
             z-index: 1;
         }
         
-        /* Features Section */
+        .hero-shape-1 {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            z-index: 1;
+            animation: pulse 4s infinite ease-in-out;
+        }
+        
+        .hero-shape-2 {
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            z-index: 1;
+            animation: pulse 5s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+        
+        /* Features Section - Desktop Enhanced */
         .features {
+            background-color: var(--darker);
             position: relative;
             overflow: hidden;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
         }
         
         .feature-card {
-            background: rgba(31, 41, 55, 0.7);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
             border-radius: var(--radius-lg);
-            padding: 2.5rem;
+            padding: 3.5rem;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px);
         }
         
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(79, 70, 229, 0.4);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.2);
         }
         
         .feature-card:after {
@@ -374,64 +436,67 @@
         }
         
         .feature-icon {
-            width: 4rem;
-            height: 4rem;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            width: 5.5rem;
+            height: 5.5rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-light);
-            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2.25rem;
             transition: var(--transition);
         }
         
         .feature-card:hover .feature-icon {
-            transform: translateY(-8px);
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            transform: translateY(-8px) rotate(5deg);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
         }
         
         .feature-card h3 {
-            font-size: 1.375rem;
-            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
         }
         
         .feature-card p {
-            color: var(--light-gray);
+            color: var(--gray);
             font-size: 1.125rem;
+            line-height: 1.8;
         }
         
-        /* Services Section */
+        /* Services Section - Desktop Layout */
         .services {
             position: relative;
             overflow: hidden;
+            background-image: radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
             position: relative;
             z-index: 1;
         }
         
         .service-card {
-            background: rgba(31, 41, 55, 0.7);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
             border-radius: var(--radius-lg);
-            padding: 2.75rem 2.25rem;
+            padding: 3rem;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(79, 70, 229, 0.4);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.2);
         }
         
         .service-card:before {
@@ -450,40 +515,41 @@
         }
         
         .service-icon {
-            width: 4rem;
-            height: 4rem;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.75rem;
-            color: var(--primary-light);
-            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2rem;
             transition: var(--transition);
         }
         
         .service-card:hover .service-icon {
             transform: rotate(12deg) scale(1.15);
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
         }
         
         .service-card h3 {
-            font-size: 1.375rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
         }
         
         .service-card ul {
             list-style: none;
-            margin-bottom: 1.75rem;
+            margin-bottom: 2rem;
         }
         
         .service-card ul li {
-            margin-bottom: 0.875rem;
+            margin-bottom: 1rem;
             position: relative;
-            padding-left: 1.875rem;
-            color: var(--light-gray);
-            font-size: 1.0625rem;
+            padding-left: 2rem;
+            color: var(--gray);
+            font-size: 1.125rem;
+            line-height: 1.7;
         }
         
         .service-card ul li:before {
@@ -495,8 +561,9 @@
             font-size: 1.25rem;
         }
         
-        /* About Section */
+        /* About Section - Desktop Layout */
         .about {
+            background-color: var(--darker);
             position: relative;
             overflow: hidden;
         }
@@ -504,67 +571,69 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 6rem;
             align-items: center;
         }
         
         .about-text h2 {
-            margin-bottom: 1.75rem;
+            margin-bottom: 2rem;
         }
         
         .about-text p {
-            margin-bottom: 1.75rem;
-            color: var(--light-gray);
-            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: var(--gray);
+            font-size: 1.25rem;
+            line-height: 1.8;
         }
         
         .team-members {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.75rem;
-            margin-top: 2.75rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
         
         .team-member {
-            background: rgba(31, 41, 55, 0.7);
-            padding: 1.75rem;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border-left: 4px solid var(--primary);
-            backdrop-filter: blur(10px);
         }
         
         .team-member:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
         }
         
         .team-member h4 {
-            font-size: 1.1875rem;
-            margin-bottom: 0.375rem;
+            font-size: 1.375rem;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            color: #F8FAFC;
         }
         
         .team-member h4 i {
             color: var(--primary);
-            font-size: 1.0625rem;
+            font-size: 1.125rem;
         }
         
         .team-member p {
-            color: var(--light-gray);
-            font-size: 0.9375rem;
+            color: var(--gray);
+            font-size: 1rem;
         }
         
         .about-image {
             position: relative;
-            height: 36rem;
+            height: 40rem;
             border-radius: var(--radius-xl);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .about-image img {
@@ -590,19 +659,19 @@
             z-index: 1;
         }
         
-        /* Stats Section */
+        /* Stats Section - Desktop Layout */
         .stats {
             background: var(--gradient);
             color: white;
-            padding: 7rem 0;
+            padding: 8rem 0;
             position: relative;
             overflow: hidden;
         }
         
         .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
         }
         
         .stat-item {
@@ -610,14 +679,14 @@
         }
         
         .stat-number {
-            font-size: 3.75rem;
+            font-size: 5rem;
             font-weight: 800;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             line-height: 1;
         }
         
         .stat-label {
-            font-size: 1.375rem;
+            font-size: 1.75rem;
             opacity: 0.9;
             font-weight: 500;
         }
@@ -632,41 +701,41 @@
             animation: countUp 1.5s ease-out forwards;
         }
         
-        /* Testimonials */
+        /* Testimonials - Desktop Layout */
         .testimonials {
-            position: relative;
-            overflow: hidden;
+            background-color: var(--darker);
         }
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
         }
         
         .testimonial-card {
-            background: rgba(31, 41, 55, 0.7);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
             border-radius: var(--radius-lg);
-            padding: 2.25rem;
+            padding: 2.5rem;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .testimonial-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
         }
         
         .testimonial-content {
-            margin-bottom: 1.75rem;
-            color: var(--light-gray);
+            margin-bottom: 2rem;
+            color: var(--gray);
             font-style: italic;
             position: relative;
-            padding-left: 1.75rem;
-            font-size: 1.125rem;
+            padding-left: 2rem;
+            font-size: 1.25rem;
+            line-height: 1.8;
         }
         
         .testimonial-content:before {
@@ -674,7 +743,7 @@
             position: absolute;
             left: 0;
             top: -0.5rem;
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--primary-light);
             font-family: Georgia, serif;
             line-height: 1;
@@ -683,13 +752,13 @@
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 1.25rem;
-            margin-bottom: 1.75rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         .author-avatar {
-            width: 4rem;
-            height: 4rem;
+            width: 4.5rem;
+            height: 4.5rem;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid var(--primary-light);
@@ -702,32 +771,34 @@
         }
         
         .author-info h4 {
-            font-size: 1.1875rem;
-            margin-bottom: 0.375rem;
+            font-size: 1.375rem;
+            margin-bottom: 0.5rem;
+            color: #F8FAFC;
         }
         
         .author-info p {
-            color: var(--light-gray);
-            font-size: 0.9375rem;
+            color: var(--gray);
+            font-size: 1rem;
         }
 
         /* Enhanced Testimonial Graphs */
         .graph-container {
-            background: rgba(17, 24, 39, 0.5);
+            background: rgba(15, 23, 42, 0.5);
             border-radius: var(--radius-md);
-            padding: 1.5rem;
-            margin-top: 1.75rem;
+            padding: 1.75rem;
+            margin-top: 2rem;
             position: relative;
             overflow: hidden;
-            height: 240px;
+            height: 260px;
         }
         
         .graph-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
-            font-size: 1.0625rem;
+            font-size: 1.125rem;
+            color: #CBD5E1;
         }
         
         .graph-before {
@@ -740,7 +811,7 @@
         
         .graph-canvas {
             width: 100%;
-            height: 160px;
+            height: 180px;
         }
         
         .improvement-tag {
@@ -748,113 +819,121 @@
             align-items: center;
             background: rgba(16, 185, 129, 0.1);
             color: var(--secondary);
-            padding: 0.75rem 1.25rem;
+            padding: 0.875rem 1.5rem;
             border-radius: var(--radius-md);
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            margin-top: 1.25rem;
-            gap: 0.75rem;
+            margin-top: 1.5rem;
+            gap: 0.875rem;
         }
         
         .improvement-tag i {
-            font-size: 1.25rem;
+            font-size: 1.375rem;
         }
         
-        /* Contact Section */
+        /* Contact Section - Desktop Layout */
         .contact {
             position: relative;
             overflow: hidden;
+            background-image: radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
         }
         
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 6rem;
         }
         
         .contact-info h3 {
-            font-size: 2.25rem;
-            margin-bottom: 1.75rem;
+            font-size: 2.75rem;
+            margin-bottom: 2rem;
         }
         
         .contact-info p {
-            margin-bottom: 2.75rem;
-            color: var(--light-gray);
-            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            color: var(--gray);
+            font-size: 1.375rem;
+            line-height: 1.8;
         }
         
         .contact-details {
             display: flex;
             flex-direction: column;
-            gap: 1.75rem;
+            gap: 2rem;
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: 1.75rem;
         }
         
         .contact-icon {
-            width: 4rem;
-            height: 4rem;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            width: 4.5rem;
+            height: 4.5rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-light);
-            font-size: 1.5rem;
+            color: var(--primary);
+            font-size: 1.75rem;
             flex-shrink: 0;
             transition: var(--transition);
         }
         
         .contact-item:hover .contact-icon {
             transform: rotate(12deg) scale(1.1);
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
         }
         
         .contact-text h4 {
-            font-size: 1.1875rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.375rem;
+            margin-bottom: 0.75rem;
+            color: #F8FAFC;
         }
         
         .contact-text p, 
         .contact-text a {
-            color: var(--light-gray);
+            color: var(--gray);
             transition: var(--transition);
-            font-size: 1.0625rem;
+            font-size: 1.25rem;
         }
         
         .contact-text a:hover {
-            color: var(--primary-light);
+            color: var(--primary);
         }
         
         .contact-form input,
         .contact-form textarea,
         .contact-form select {
             width: 100%;
-            padding: 1.125rem 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 1.75rem;
+            border: 1px solid var(--light-gray);
             border-radius: var(--radius-md);
-            font-size: 1.0625rem;
+            font-size: 1.125rem;
             transition: var(--transition);
-            background: rgba(31, 41, 55, 0.7);
-            color: var(--light);
+            background-color: rgba(30, 41, 59, 0.6);
+            color: #E2E8F0;
         }
         
         .contact-form input:focus,
         .contact-form textarea:focus,
         .contact-form select:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
             outline: none;
         }
         
         .contact-form textarea {
-            height: 12rem;
+            height: 14rem;
             resize: vertical;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--gray);
         }
 
         /* Success Message */
@@ -862,9 +941,9 @@
             display: none;
             background: var(--secondary);
             color: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: var(--radius-md);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
             text-align: center;
             animation: fadeIn 0.5s ease;
         }
@@ -874,9 +953,9 @@
             display: none;
             background: var(--accent);
             color: var(--darker);
-            padding: 1.25rem;
+            padding: 1.5rem;
             border-radius: var(--radius-md);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
             text-align: center;
             animation: fadeIn 0.5s ease;
         }
@@ -886,26 +965,27 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Footer */
+        /* Footer - Desktop Layout */
         footer {
-            background-color: #0f172a;
+            background-color: #0B1120;
             color: white;
-            padding: 7rem 0 2.5rem;
+            padding: 8rem 0 3rem;
             position: relative;
         }
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3.5rem;
-            margin-bottom: 6rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            margin-bottom: 7rem;
         }
         
         .footer-col h3 {
-            font-size: 1.375rem;
-            margin-bottom: 1.75rem;
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
             position: relative;
-            padding-bottom: 0.875rem;
+            padding-bottom: 1rem;
+            color: #F8FAFC;
         }
         
         .footer-col h3:after {
@@ -913,15 +993,15 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 3.5rem;
-            height: 3px;
+            width: 4rem;
+            height: 4px;
             background: var(--gradient);
         }
         
         .footer-col p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.75rem;
-            font-size: 1.0625rem;
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
         }
         
         .footer-links {
@@ -929,7 +1009,7 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.875rem;
+            margin-bottom: 1rem;
         }
         
         .footer-links a {
@@ -937,29 +1017,29 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            font-size: 1.0625rem;
+            gap: 0.875rem;
+            font-size: 1.125rem;
         }
         
         .footer-links a:hover {
             color: white;
-            transform: translateX(0.375rem);
+            transform: translateX(0.5rem);
         }
         
         .footer-links i {
             color: var(--primary-light);
-            font-size: 0.875rem;
+            font-size: 0.9375rem;
         }
         
         .social-links {
             display: flex;
-            gap: 0.875rem;
-            margin-top: 1.75rem;
+            gap: 1rem;
+            margin-top: 2rem;
         }
         
         .social-links a {
-            width: 2.75rem;
-            height: 2.75rem;
+            width: 3.5rem;
+            height: 3.5rem;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -967,31 +1047,34 @@
             justify-content: center;
             color: white;
             transition: var(--transition);
-            font-size: 1.125rem;
+            font-size: 1.5rem;
         }
         
         .social-links a:hover {
             background: var(--gradient);
-            transform: translateY(-0.375rem);
+            transform: translateY(-0.5rem);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 2.5rem;
+            padding-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9375rem;
+            font-size: 1.125rem;
         }
         
-        /* Section Header */
+        /* Section Header - Desktop */
         .section-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 7rem;
             position: relative;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .section-header h2 {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1002,20 +1085,20 @@
         .section-header h2:after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
+            width: 120px;
+            height: 6px;
             background: var(--gradient);
             border-radius: 3px;
         }
         
         .section-header p {
-            color: var(--light-gray);
-            max-width: 48rem;
-            margin: 1.75rem auto 0;
-            font-size: 1.25rem;
+            color: var(--gray);
+            margin: 2rem auto 0;
+            font-size: 1.375rem;
+            line-height: 1.8;
         }
         
         /* Animation Effects */
@@ -1030,25 +1113,82 @@
             transform: translateY(0);
         }
         
-        /* Responsive Styles */
-        @media (max-width: 1200px) {
-            .hero-text h1 {
-                font-size: 3.25rem;
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.75rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            z-index: 100;
+            border: none;
+        }
+        
+        /* Desktop Hover Effects */
+        @media (hover: hover) and (min-width: 992px) {
+            /* Enhanced hover effects for desktop */
+            .feature-card:hover {
+                transform: translateY(-15px);
             }
             
-            .section-header h2 {
-                font-size: 2.5rem;
+            .service-card:hover {
+                transform: translateY(-15px);
+            }
+            
+            .testimonial-card:hover {
+                transform: translateY(-15px);
+            }
+            
+            .team-member:hover {
+                transform: translateY(-10px);
+            }
+            
+            .social-links a:hover {
+                transform: translateY(-0.75rem);
+            }
+            
+            .btn:hover {
+                transform: translateY(-8px);
             }
         }
         
+        /* Responsive Styles - Tablet */
+        @media (max-width: 1200px) {
+            .hero-text h1 {
+                font-size: 3.75rem;
+            }
+            
+            .section-header h2 {
+                font-size: 3rem;
+            }
+            
+            .features-grid {
+                gap: 2rem;
+            }
+            
+            .feature-card {
+                padding: 3rem;
+            }
+        }
+        
+        /* Responsive Styles - Tablet */
         @media (max-width: 992px) {
             .hero {
-                padding: 10rem 0 5rem;
+                padding: 14rem 0 8rem;
             }
             
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 3.5rem;
+                gap: 4rem;
             }
             
             .hero-text {
@@ -1062,20 +1202,25 @@
             
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 3.5rem;
+                gap: 4rem;
             }
             
             .about-image {
-                height: 28rem;
+                height: 32rem;
                 order: -1;
             }
             
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 4rem;
+                gap: 5rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
+        /* Responsive Styles - Mobile */
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -1084,13 +1229,13 @@
                 width: 85%;
                 max-width: 22rem;
                 height: 100vh;
-                background-color: rgba(17, 24, 39, 0.95);
+                background-color: var(--darker);
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 7rem 2.5rem 2.5rem;
-                box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.1);
+                box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.3);
                 transition: var(--transition);
-                backdrop-filter: blur(10px);
+                z-index: 999;
             }
             
             .nav-links.active {
@@ -1101,6 +1246,7 @@
                 flex-direction: column;
                 margin-left: 0;
                 width: 100%;
+                margin-top: 1.5rem;
             }
             
             .mobile-menu-btn {
@@ -1108,28 +1254,39 @@
             }
             
             .hero-text h1 {
-                font-size: 2.75rem;
+                font-size: 3.25rem;
             }
             
             .hero-text p {
-                font-size: 1.25rem;
+                font-size: 1.375rem;
             }
             
             .section-header h2 {
-                font-size: 2.25rem;
+                font-size: 2.5rem;
             }
             
             .stat-number {
-                font-size: 3rem;
+                font-size: 3.5rem;
+            }
+            
+            .team-members {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid,
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
         }
         
+        /* Responsive Styles - Small Mobile */
         @media (max-width: 576px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
+            h1 { font-size: 2.75rem; }
+            h2 { font-size: 2.25rem; }
             
             .hero {
-                padding: 9rem 0 4rem;
+                padding: 12rem 0 6rem;
             }
             
             .hero-btns .btn {
@@ -1137,17 +1294,58 @@
                 justify-content: center;
             }
             
-            .services-grid {
-                grid-template-columns: 1fr;
+            .section-header h2 {
+                font-size: 2.25rem;
+            }
+
+            .section-header p {
+                font-size: 1.2rem;
+            }
+
+            .feature-card,
+            .service-card,
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .contact-form textarea {
+                height: 12rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.9375rem;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.75rem;
             }
             
-            .team-members {
-                grid-template-columns: 1fr;
+            .hero-text h1 {
+                font-size: 2.5rem;
             }
             
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+            
+            .stat-label {
+                font-size: 1.25rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -1182,26 +1380,30 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Desktop Optimized -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1>Elevate Your Brand with Premium Digital Solutions</h1>
+                    <h1>Transform Your Digital Presence with Premium Solutions</h1>
                     <p>We deliver performance-driven digital marketing services tailored to help your business grow and thrive in the online space.</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn btn-accent">Get Started <i class="fas fa-arrow-right"></i></a>
                         <a href="#services" class="btn btn-outline">Our Services <i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
-                <div class="hero-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing">
+                <div class="hero-image-container fade-in">
+                    <div class="hero-shape-1"></div>
+                    <div class="hero-shape-2"></div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section - Desktop Enhanced -->
     <section class="features">
         <div class="container">
             <div class="section-header fade-in">
@@ -1215,7 +1417,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Performance Focused</h3>
-                    <p>Our strategies are designed to deliver measurable results and maximize your return on investment.</p>
+                    <p>Our strategies are designed to deliver measurable results and maximize your return on investment with data-driven approaches.</p>
                 </div>
                 
                 <div class="feature-card fade-in">
@@ -1223,7 +1425,7 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Creative Solutions</h3>
-                    <p>We bring innovative ideas and fresh perspectives to every project we undertake.</p>
+                    <p>We bring innovative ideas and fresh perspectives to every project we undertake, transforming challenges into opportunities.</p>
                 </div>
                 
                 <div class="feature-card fade-in">
@@ -1231,13 +1433,13 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Dedicated Support</h3>
-                    <p>Our team provides personalized attention and ongoing support to ensure your success.</p>
+                    <p>Our team provides personalized attention and ongoing support to ensure your success at every stage of your journey.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Desktop Layout -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header fade-in">
@@ -1339,13 +1541,13 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Desktop Layout -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text fade-in">
                     <h2>Our Story & Team</h2>
-                    <p>Founded on July 14, 2025 in Jitali, Ankleshwar, Bharuch, Gujarat by Rakesh Kumar Singh, Clickdera was born from a vision to revolutionize digital marketing services. After working unofficially with 36+ brands, Rakesh identified a critical industry problem - agencies were overcharging clients while delivering subpar results.</p>
+                    <p>Founded on July 8th, 2025 in Jitali, Ankleshwar, Bharuch, Gujarat by Rakesh Kumar Singh, Clickdera was born from a vision to revolutionize digital marketing services. After working unofficially with 36+ brands, Rakesh identified a critical industry problem - agencies were overcharging clients while delivering subpar results.</p>
                     <p>Determined to solve this, he established Clickdera with a mission to provide premium-quality services at affordable rates. Our agency helps businesses grow faster by eliminating unnecessary costs while maintaining exceptional service quality.</p>
                     
                     <div class="team-members">
@@ -1371,7 +1573,7 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section - Desktop Layout -->
     <section class="stats">
         <div class="container">
             <div class="stats-container">
@@ -1391,7 +1593,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section - Desktop Layout -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header fade-in">
@@ -1419,7 +1621,6 @@
                             <span class="graph-before">Before: 1.0 ★</span>
                             <span class="graph-after">After: 4.5 ★</span>
                         </div>
-                        <canvas class="graph-canvas" id="ratingChart1"></canvas>
                         <div class="improvement-tag">
                             <i class="fas fa-chart-line"></i> 350% increase in bookings
                         </div>
@@ -1445,7 +1646,6 @@
                             <span class="graph-before">Before: 3.0 ★</span>
                             <span class="graph-after">After: 4.5 ★</span>
                         </div>
-                        <canvas class="graph-canvas" id="ratingChart2"></canvas>
                         <div class="improvement-tag">
                             <i class="fas fa-users"></i> 100% increase in premium sign-ups
                         </div>
@@ -1471,7 +1671,6 @@
                             <span class="graph-before">Before: 1,000 users</span>
                             <span class="graph-after">After: 2,000 users</span>
                         </div>
-                        <canvas class="graph-canvas" id="userChart"></canvas>
                         <div class="improvement-tag">
                             <i class="fas fa-rocket"></i> 100% user growth
                         </div>
@@ -1481,7 +1680,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - Desktop Layout -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header fade-in">
@@ -1540,7 +1739,7 @@
                         <p>You can only submit one form per hour. Please try again later.</p>
                     </div>
                     
-                    <form id="contactForm" action="https://formspree.io/f/xnnvyoag" method="POST">
+                    <form id="contactForm">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <input type="text" name="phone" placeholder="Your Phone Number">
@@ -1561,7 +1760,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Desktop Layout -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1691,39 +1890,20 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Using Formspree to handle form submission
-            fetch(this.action, {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Show success message
-                    document.getElementById('successMessage').style.display = 'block';
-                    document.getElementById('rateLimitMessage').style.display = 'none';
-                    this.reset();
-                    
-                    // Store submission time
-                    localStorage.setItem('lastFormSubmission', now);
-                    
-                    // Reset button after 2 seconds
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalBtnText;
-                        submitBtn.disabled = false;
-                    }, 2000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting your form. Please try again.');
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('rateLimitMessage').style.display = 'none';
+                this.reset();
+                
+                // Store submission time
+                localStorage.setItem('lastFormSubmission', now);
+                
+                // Reset button
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-            });
+            }, 1500);
         });
 
         // Check for existing submission on page load
@@ -1791,211 +1971,6 @@
             }, interval);
         }
         
-        // Create line charts for testimonials
-        function createLineCharts() {
-            // Rating Chart 1 (Tamil Nadu Tour Travel)
-            const ratingCtx1 = document.getElementById('ratingChart1').getContext('2d');
-            new Chart(ratingCtx1, {
-                type: 'line',
-                data: {
-                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                    datasets: [{
-                        label: 'Rating',
-                        data: [1.0, 2.5, 3.8, 4.5],
-                        borderColor: '#F59E0B',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
-                        borderWidth: 4,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#F59E0B',
-                        pointBorderWidth: 2,
-                        pointRadius: 6,
-                        pointHoverRadius: 8,
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            min: 0,
-                            max: 5,
-                            ticks: {
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return value + ' ★';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(31, 41, 55, 0.9)',
-                            titleFont: {
-                                size: 14
-                            },
-                            bodyFont: {
-                                size: 13
-                            },
-                            padding: 10,
-                            displayColors: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return 'Rating: ' + context.parsed.y + ' ★';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Rating Chart 2 (Best Muslim Marriage)
-            const ratingCtx2 = document.getElementById('ratingChart2').getContext('2d');
-            new Chart(ratingCtx2, {
-                type: 'line',
-                data: {
-                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                    datasets: [{
-                        label: 'Rating',
-                        data: [3.0, 3.8, 4.2, 4.5],
-                        borderColor: '#10B981',
-                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                        borderWidth: 4,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#10B981',
-                        pointBorderWidth: 2,
-                        pointRadius: 6,
-                        pointHoverRadius: 8,
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            min: 0,
-                            max: 5,
-                            ticks: {
-                                stepSize: 1,
-                                callback: function(value) {
-                                    return value + ' ★';
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(31, 41, 55, 0.9)',
-                            titleFont: {
-                                size: 14
-                            },
-                            bodyFont: {
-                                size: 13
-                            },
-                            padding: 10,
-                            displayColors: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return 'Rating: ' + context.parsed.y + ' ★';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // User Growth Chart (SJ Panel)
-            const userCtx = document.getElementById('userChart').getContext('2d');
-            new Chart(userCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                    datasets: [{
-                        label: 'Daily Active Users',
-                        data: [1000, 1300, 1600, 2000],
-                        borderColor: '#4F46E5',
-                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
-                        borderWidth: 4,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#4F46E5',
-                        pointBorderWidth: 2,
-                        pointRadius: 6,
-                        pointHoverRadius: 8,
-                        tension: 0.3,
-                        fill: true
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return value.toLocaleString();
-                                }
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(31, 41, 55, 0.9)',
-                            titleFont: {
-                                size: 14
-                            },
-                            bodyFont: {
-                                size: 13
-                            },
-                            padding: 10,
-                            displayColors: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return 'Users: ' + context.parsed.y.toLocaleString();
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
         // Scroll animations
         const fadeElements = document.querySelectorAll('.fade-in');
         
@@ -2021,9 +1996,6 @@
         
         // Initialize everything when page loads
         window.addEventListener('load', function() {
-            // Create charts
-            createLineCharts();
-            
             // Initialize counters observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
