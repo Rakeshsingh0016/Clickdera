@@ -3,1109 +3,723 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickdera - Premium Digital Marketing Solutions</title>
-    <meta name="description" content="Drive growth with Clickdera's premium digital marketing services including reputation management, video editing, affiliate marketing, and more.">
-    <meta name="keywords" content="digital marketing, reputation management, video editing, affiliate marketing, social media management, influencer marketing">
-    <meta name="author" content="Clickdera">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://clickdera.in">
-    <meta property="og:title" content="Clickdera - Premium Digital Marketing Solutions">
-    <meta property="og:description" content="Transform your digital presence with Clickdera's premium marketing services.">
-    <meta property="og:image" content="https://clickdera.in/images/social-preview.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://clickdera.in">
-    <meta property="twitter:title" content="Clickdera - Premium Digital Marketing Solutions">
-    <meta property="twitter:description" content="Transform your digital presence with Clickdera's premium marketing services.">
-    <meta property="twitter:image" content="https://clickdera.in/images/social-preview.jpg">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Fonts & Icons -->
+    <title>Clickdera - Digital Marketing Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #3B82F6;
-            --primary-dark: #2563EB;
-            --primary-light: #60A5FA;
-            --secondary: #10B981;
-            --accent: #F59E0B;
-            --accent-dark: #D97706;
-            --dark: #0f172a;
-            --darker: #0B1120;
-            --light: #1e293b;
-            --light-2: #334155;
-            --gray: #94a3b8;
-            --light-gray: #475569;
-            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            --gradient-dark: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #F97316 100%);
-            --shadow-sm: 0 4px 6px rgba(0,0,0,0.15);
-            --shadow-md: 0 10px 15px rgba(0,0,0,0.2);
-            --shadow-lg: 0 20px 25px rgba(0,0,0,0.25);
-            --shadow-xl: 0 30px 50px rgba(0,0,0,0.3);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --primary-purple: #7C3AED;
+            --secondary-purple: #8B5CF6;
+            --accent-green: #10B981;
+            --accent-yellow: #F59E0B;
+            --dark-bg: #0F172A;
+            --light-bg: #F8FAFC;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #0b1120 0%, #0f172a 100%);
-            color: #E2E8F0;
-            line-height: 1.7;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light-bg);
+            line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
         
-        .container {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        /* Gradient backgrounds */
+        .purple-gradient {
+            background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
         }
         
-        section {
-            padding: 8rem 0;
-            position: relative;
+        .dark-gradient {
+            background: linear-gradient(to right, #1E293B, #0F172A);
         }
         
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.3;
-            color: #F8FAFC;
-        }
-        
-        h1 { font-size: 4rem; }
-        h2 { font-size: 3.25rem; }
-        h3 { font-size: 2.25rem; }
-        h4 { font-size: 1.5rem; }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gradient);
-            color: white;
-            padding: 1.1rem 2.5rem;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            gap: 0.75rem;
-            font-size: 1.125rem;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn:after {
-            content: '';
-            position: absolute;
+        /* Navigation */
+        nav {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: var(--primary-dark);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
-        }
-        
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
-        }
-        
-        .btn:hover:after {
-            opacity: 1;
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            box-shadow: none;
-        }
-        
-        .btn-outline:hover {
-            color: white;
-            border-color: transparent;
-            background: var(--gradient);
-        }
-        
-        .btn-accent {
-            background: var(--gradient-accent);
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-        }
-        
-        .btn-accent:after {
-            background: var(--accent-dark);
-        }
-        
-        /* Header - Enhanced Desktop Navigation */
-        header {
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: var(--transition);
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        header.scrolled {
-            box-shadow: var(--shadow-sm);
-            background: rgba(15, 23, 42, 0.95);
-        }
-        
-        nav {
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: 0.4s;
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.9);
+        }
+        
+        nav.scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
         
         .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #F8FAFC;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
         }
         
         .logo span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .logo-icon {
-            width: 3rem;
-            height: 3rem;
-            background: var(--gradient);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+            color: var(--accent-yellow);
         }
         
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2.5rem;
-            align-items: center;
         }
         
         .nav-links a {
-            font-weight: 600;
-            color: #CBD5E1;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: 0.3s;
             position: relative;
-            padding: 0.5rem 0;
-            font-size: 1.125rem;
-            transition: var(--transition);
         }
         
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--accent-yellow);
         }
         
-        .nav-links a:after {
+        .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 0;
-            height: 3px;
-            background: var(--gradient);
-            transition: var(--transition);
-            border-radius: 10px;
+            height: 2px;
+            background: var(--accent-yellow);
+            transition: 0.3s;
         }
         
-        .nav-links a:hover:after {
+        .nav-links a:hover::after {
             width: 100%;
         }
         
-        .nav-btns {
-            display: flex;
-            gap: 1.25rem;
-            margin-left: 2rem;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.75rem;
-            color: #CBD5E1;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        
-        /* Hero Section - Desktop Optimized */
+        /* Hero Section */
         .hero {
-            padding: 16rem 0 10rem;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.97) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             position: relative;
             overflow: hidden;
-            background-image: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%);
+            padding: 0 5%;
+            background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+            color: white;
         }
         
         .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 6rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-text h1 {
-            font-size: 4.2rem;
-            margin-bottom: 2rem;
-            line-height: 1.15;
-            background: linear-gradient(135deg, #F8FAFC 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-text p {
-            font-size: 1.5rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            max-width: 36rem;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: 1.5rem;
-        }
-        
-        .hero-image-container {
-            position: relative;
-            perspective: 1000px;
-        }
-        
-        .hero-image {
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transform: rotateY(-5deg) rotateX(5deg);
-            transition: transform 0.6s ease;
-            position: relative;
+            max-width: 650px;
             z-index: 2;
         }
         
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.6s ease;
-        }
-        
-        .hero-image-container:hover .hero-image {
-            transform: rotateY(0) rotateX(0);
-        }
-        
-        .hero-image-container:hover .hero-image img {
-            transform: scale(1.05);
-        }
-        
-        .hero-image:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient);
-            opacity: 0.05;
-            z-index: 1;
-        }
-        
-        .hero-shape-1 {
-            position: absolute;
-            top: -30px;
-            right: -30px;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
-            z-index: 1;
-            animation: pulse 4s infinite ease-in-out;
-        }
-        
-        .hero-shape-2 {
-            position: absolute;
-            bottom: -40px;
-            left: -40px;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-            z-index: 1;
-            animation: pulse 5s infinite ease-in-out;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.1); opacity: 0.5; }
-            100% { transform: scale(1); opacity: 0.7; }
-        }
-        
-        /* Features Section - Desktop Enhanced */
-        .features {
-            background-color: var(--darker);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 5rem;
-        }
-        
-        .feature-card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
-            padding: 3.5rem;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.2);
-        }
-        
-        .feature-card:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 0;
-            background: var(--gradient);
-            transition: height 0.4s ease;
-        }
-        
-        .feature-card:hover:after {
-            height: 100%;
-        }
-        
-        .feature-icon {
-            width: 5.5rem;
-            height: 5.5rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            font-size: 2.25rem;
-            transition: var(--transition);
-        }
-        
-        .feature-card:hover .feature-icon {
-            transform: translateY(-8px) rotate(5deg);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.75rem;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
         }
         
-        .feature-card p {
-            color: var(--gray);
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-        
-        /* Services Section - Desktop Layout */
-        .services {
+        .hero h1 span {
+            color: var(--accent-yellow);
             position: relative;
-            overflow: hidden;
-            background-image: radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: 5rem;
-            position: relative;
-            z-index: 1;
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
         }
         
-        .service-card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--accent-green);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.2);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            background-color: #0da271;
         }
         
-        .service-card:before {
-            content: '';
+        .hero-bg-shapes {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: var(--gradient);
-            transition: height 0.3s ease;
+            right: 0;
+            height: 100%;
+            width: 50%;
         }
         
-        .service-card:hover:before {
-            height: 8px;
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
         }
         
-        .service-icon {
-            width: 5rem;
-            height: 5rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            font-size: 2rem;
-            transition: var(--transition);
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
         }
         
-        .service-card:hover .service-icon {
-            transform: rotate(12deg) scale(1.15);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
-        }
-        
-        .service-card h3 {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card ul {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .service-card ul li {
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
             margin-bottom: 1rem;
             position: relative;
-            padding-left: 2rem;
-            color: var(--gray);
-            font-size: 1.125rem;
-            line-height: 1.7;
+            display: inline-block;
         }
         
-        .service-card ul li:before {
-            content: '✓';
+        .section-title h2::after {
+            content: '';
             position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.25rem;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-purple);
+            border-radius: 2px;
         }
         
-        /* About Section - Desktop Layout */
-        .about {
-            background-color: var(--darker);
-            position: relative;
-            overflow: hidden;
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #64748B;
+            font-size: 1.1rem;
         }
         
+        /* About Section */
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            display: flex;
             align-items: center;
+            gap: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .about-text h2 {
-            margin-bottom: 2rem;
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-bg);
         }
         
         .about-text p {
-            margin-bottom: 2rem;
-            color: var(--gray);
-            font-size: 1.25rem;
-            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #475569;
+            font-size: 1.1rem;
         }
         
-        .team-members {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .team-member {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .team-member:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .team-member h4 {
-            font-size: 1.375rem;
-            margin-bottom: 0.5rem;
+        .stats {
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: #F8FAFC;
+            gap: 2rem;
+            margin-top: 2rem;
         }
         
-        .team-member h4 i {
-            color: var(--primary);
-            font-size: 1.125rem;
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            flex: 1;
+            transition: 0.3s;
         }
         
-        .team-member p {
-            color: var(--gray);
-            font-size: 1rem;
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
         }
         
         .about-image {
-            position: relative;
-            height: 40rem;
-            border-radius: var(--radius-xl);
+            flex: 1;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(124, 58, 237, 0.3), rgba(139, 92, 246, 0.3));
         }
         
         .about-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
+            height: auto;
+            display: block;
         }
         
-        .about-image:hover img {
-            transform: scale(1.05);
+        /* Services Section */
+        .services {
+            background-color: #F1F5F9;
         }
         
-        .about-image:before {
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: var(--gradient);
-            opacity: 0.05;
-            z-index: 1;
+            height: 4px;
+            background: var(--primary-purple);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
         }
         
-        /* Stats Section - Desktop Layout */
-        .stats {
-            background: var(--gradient);
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto 1.5rem;
+            color: var(--primary-purple);
+            font-size: 1.8rem;
+            transition: 0.3s;
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary-purple);
             color: white;
-            padding: 8rem 0;
-            position: relative;
-            overflow: hidden;
+            transform: rotateY(180deg);
         }
         
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5rem;
-        }
-        
-        .stat-item {
+        .service-content {
+            padding: 0 2rem 2.5rem;
             text-align: center;
         }
         
-        .stat-number {
-            font-size: 5rem;
-            font-weight: 800;
+        .service-content h3 {
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            line-height: 1;
+            color: var(--dark-bg);
         }
         
-        .stat-label {
-            font-size: 1.75rem;
-            opacity: 0.9;
-            font-weight: 500;
-        }
-
-        /* Counting Animation */
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .service-content p {
+            color: #64748B;
+            margin-bottom: 1.5rem;
         }
         
-        .counting-animation {
-            animation: countUp 1.5s ease-out forwards;
-        }
-        
-        /* Testimonials - Desktop Layout */
-        .testimonials {
-            background-color: var(--darker);
-        }
-        
-        .testimonials-grid {
+        /* Why Choose Us */
+        .features {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .testimonial-card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .feature-box {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: 0.3s;
         }
         
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .testimonial-content {
-            margin-bottom: 2rem;
-            color: var(--gray);
-            font-style: italic;
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark-bg);
+        }
+        
+        .feature-box p {
+            color: #64748B;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(to bottom, #F8FAFC, #E2E8F0);
+        }
+        
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
             position: relative;
-            padding-left: 2rem;
-            font-size: 1.25rem;
-            line-height: 1.8;
         }
         
-        .testimonial-content:before {
-            content: """;
+        .testimonial {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
             position: absolute;
-            left: 0;
-            top: -0.5rem;
-            font-size: 4rem;
-            color: var(--primary-light);
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(124, 58, 237, 0.1);
             font-family: Georgia, serif;
             line-height: 1;
         }
         
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+        .testimonial-content {
+            position: relative;
+            z-index: 2;
         }
         
-        .author-avatar {
-            width: 4.5rem;
-            height: 4.5rem;
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #475569;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid var(--primary-light);
-        }
-        
-        .author-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            font-size: 1.375rem;
-            margin-bottom: 0.5rem;
-            color: #F8FAFC;
-        }
-        
-        .author-info p {
-            color: var(--gray);
-            font-size: 1rem;
-        }
-
-        /* Enhanced Testimonial Graphs */
-        .graph-container {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: var(--radius-md);
-            padding: 1.75rem;
-            margin-top: 2rem;
-            position: relative;
-            overflow: hidden;
-            height: 260px;
-        }
-        
-        .graph-header {
+            margin-right: 1rem;
+            background: var(--primary-purple);
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            font-size: 1.125rem;
-            color: #CBD5E1;
-        }
-        
-        .graph-before {
-            color: #EF4444;
-        }
-        
-        .graph-after {
-            color: var(--secondary);
-        }
-        
-        .graph-canvas {
-            width: 100%;
-            height: 180px;
-        }
-        
-        .improvement-tag {
-            display: inline-flex;
             align-items: center;
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--secondary);
-            padding: 0.875rem 1.5rem;
-            border-radius: var(--radius-md);
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            gap: 0.875rem;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
         
-        .improvement-tag i {
-            font-size: 1.375rem;
+        .client-details h4 {
+            font-size: 1.2rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.2rem;
         }
         
-        /* Contact Section - Desktop Layout */
+        .client-details p {
+            color: var(--primary-purple);
+            font-weight: 500;
+        }
+        
+        /* Contact Section */
         .contact {
-            position: relative;
-            overflow: hidden;
-            background-image: radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            background: var(--dark-bg);
+            color: white;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+        .contact-container {
+            display: flex;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            flex: 1;
         }
         
         .contact-info h3 {
-            font-size: 2.75rem;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
         
-        .contact-info p {
-            margin-bottom: 3rem;
-            color: var(--gray);
-            font-size: 1.375rem;
-            line-height: 1.8;
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-yellow);
+            border-radius: 2px;
         }
         
         .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            margin: 2rem 0;
         }
         
         .contact-item {
             display: flex;
-            align-items: flex-start;
-            gap: 1.75rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
         
         .contact-icon {
-            width: 4.5rem;
-            height: 4.5rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
-            border-radius: var(--radius-md);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
-            font-size: 1.75rem;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-        
-        .contact-item:hover .contact-icon {
-            transform: rotate(12deg) scale(1.1);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: var(--accent-yellow);
         }
         
         .contact-text h4 {
-            font-size: 1.375rem;
-            margin-bottom: 0.75rem;
-            color: #F8FAFC;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
         }
         
-        .contact-text p, 
-        .contact-text a {
-            color: var(--gray);
-            transition: var(--transition);
-            font-size: 1.25rem;
+        .contact-text p, .contact-text a {
+            color: #CBD5E1;
+            text-decoration: none;
+            transition: 0.3s;
         }
         
         .contact-text a:hover {
-            color: var(--primary);
+            color: var(--accent-yellow);
         }
         
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
+        .contact-form {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
             width: 100%;
-            padding: 1.25rem 1.75rem;
-            margin-bottom: 1.75rem;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--radius-md);
-            font-size: 1.125rem;
-            transition: var(--transition);
-            background-color: rgba(30, 41, 59, 0.6);
-            color: #E2E8F0;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: 0.3s;
         }
         
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        .form-control:focus {
             outline: none;
+            border-color: var(--accent-yellow);
+            background: rgba(255, 255, 255, 0.1);
         }
         
-        .contact-form textarea {
-            height: 14rem;
+        textarea.form-control {
+            min-height: 150px;
             resize: vertical;
         }
-
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: var(--gray);
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            background: var(--secondary);
+        
+        .submit-btn {
+            background: var(--accent-green);
             color: white;
-            padding: 2rem;
-            border-radius: var(--radius-md);
-            margin-bottom: 1.75rem;
-            text-align: center;
-            animation: fadeIn 0.5s ease;
-        }
-
-        /* Rate Limit Message */
-        .rate-limit-message {
-            display: none;
-            background: var(--accent);
-            color: var(--darker);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            margin-bottom: 1.75rem;
-            text-align: center;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(1rem); }
-            to { opacity: 1; transform: translateY(0); }
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         
-        /* Footer - Desktop Layout */
+        .submit-btn:hover {
+            background: #0da271;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Footer */
         footer {
-            background-color: #0B1120;
+            background: #0B1120;
+            color: #CBD5E1;
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-col h4 {
             color: white;
-            padding: 8rem 0 3rem;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
         
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4rem;
-            margin-bottom: 7rem;
-        }
-        
-        .footer-col h3 {
-            font-size: 1.75rem;
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 1rem;
-            color: #F8FAFC;
-        }
-        
-        .footer-col h3:after {
+        .footer-col h4::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -8px;
             left: 0;
-            width: 4rem;
-            height: 4px;
-            background: var(--gradient);
+            width: 40px;
+            height: 3px;
+            background: var(--accent-yellow);
         }
         
-        .footer-col p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 2rem;
-            font-size: 1.25rem;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.875rem;
-            font-size: 1.125rem;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            transform: translateX(0.5rem);
-        }
-        
-        .footer-links i {
-            color: var(--primary-light);
-            font-size: 0.9375rem;
+        .footer-about p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
         
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
         }
         
         .social-links a {
-            width: 3.5rem;
-            height: 3.5rem;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
             color: white;
-            transition: var(--transition);
-            font-size: 1.5rem;
+            text-decoration: none;
+            transition: 0.3s;
         }
         
         .social-links a:hover {
-            background: var(--gradient);
-            transform: translateY(-0.5rem);
+            background: var(--primary-purple);
+            transform: translateY(-3px);
         }
         
-        .footer-bottom {
+        .footer-links a {
+            display: block;
+            color: #94A3B8;
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            transition: 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+        
+        .contact-info-footer .item {
+            display: flex;
+            margin-bottom: 1.2rem;
+        }
+        
+        .contact-info-footer .icon {
+            margin-right: 1rem;
+            color: var(--accent-yellow);
+        }
+        
+        .copyright {
             text-align: center;
             padding-top: 3rem;
+            margin-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1.125rem;
-        }
-        
-        /* Section Header - Desktop */
-        .section-header {
-            text-align: center;
-            margin-bottom: 7rem;
-            position: relative;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .section-header h2 {
-            margin-bottom: 1.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-            position: relative;
-        }
-        
-        .section-header h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 6px;
-            background: var(--gradient);
-            border-radius: 3px;
-        }
-        
-        .section-header p {
-            color: var(--gray);
-            margin: 2rem auto 0;
-            font-size: 1.375rem;
-            line-height: 1.8;
+            color: #94A3B8;
+            font-size: 0.9rem;
         }
         
         /* Animation Effects */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
         .fade-in.appear {
@@ -1113,566 +727,254 @@
             transform: translateY(0);
         }
         
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 4rem;
-            height: 4rem;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.75rem;
-            cursor: pointer;
-            box-shadow: var(--shadow-lg);
-            z-index: 100;
-            border: none;
-        }
-        
-        /* Desktop Hover Effects */
-        @media (hover: hover) and (min-width: 992px) {
-            /* Enhanced hover effects for desktop */
-            .feature-card:hover {
-                transform: translateY(-15px);
-            }
-            
-            .service-card:hover {
-                transform: translateY(-15px);
-            }
-            
-            .testimonial-card:hover {
-                transform: translateY(-15px);
-            }
-            
-            .team-member:hover {
-                transform: translateY(-10px);
-            }
-            
-            .social-links a:hover {
-                transform: translateY(-0.75rem);
-            }
-            
-            .btn:hover {
-                transform: translateY(-8px);
-            }
-        }
-        
-        /* Responsive Styles - Tablet */
-        @media (max-width: 1200px) {
-            .hero-text h1 {
-                font-size: 3.75rem;
-            }
-            
-            .section-header h2 {
-                font-size: 3rem;
-            }
-            
-            .features-grid {
-                gap: 2rem;
-            }
-            
-            .feature-card {
-                padding: 3rem;
-            }
-        }
-        
-        /* Responsive Styles - Tablet */
+        /* Responsive */
         @media (max-width: 992px) {
-            .hero {
-                padding: 14rem 0 8rem;
-            }
-            
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-            
-            .hero-text {
-                text-align: center;
-                margin: 0 auto;
-            }
-            
-            .hero-btns {
-                justify-content: center;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
+            .about-content, .contact-container {
+                flex-direction: column;
             }
             
             .about-image {
-                height: 32rem;
                 order: -1;
             }
             
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 5rem;
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero h1 {
+                font-size: 2.8rem;
             }
         }
         
-        /* Responsive Styles - Mobile */
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 85%;
-                max-width: 22rem;
-                height: 100vh;
-                background-color: var(--darker);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 7rem 2.5rem 2.5rem;
-                box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.3);
-                transition: var(--transition);
-                z-index: 999;
+                display: none;
             }
             
-            .nav-links.active {
-                right: 0;
+            .hero h1 {
+                font-size: 2.3rem;
             }
             
-            .nav-btns {
-                flex-direction: column;
-                margin-left: 0;
-                width: 100%;
-                margin-top: 1.5rem;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero-text h1 {
-                font-size: 3.25rem;
-            }
-            
-            .hero-text p {
-                font-size: 1.375rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2.5rem;
-            }
-            
-            .stat-number {
-                font-size: 3.5rem;
-            }
-            
-            .team-members {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid,
-            .services-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Responsive Styles - Small Mobile */
-        @media (max-width: 576px) {
-            h1 { font-size: 2.75rem; }
-            h2 { font-size: 2.25rem; }
-            
-            .hero {
-                padding: 12rem 0 6rem;
-            }
-            
-            .hero-btns .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .section-header h2 {
-                font-size: 2.25rem;
-            }
-
-            .section-header p {
-                font-size: 1.2rem;
-            }
-
-            .feature-card,
-            .service-card,
-            .testimonial-card {
-                padding: 2rem;
-            }
-
-            .contact-form textarea {
-                height: 12rem;
-            }
-
-            .footer-bottom p {
-                font-size: 0.9375rem;
-                padding: 0 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 1.75rem;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-text p {
+            .tagline {
                 font-size: 1.2rem;
             }
             
-            .hero-btns {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 3rem;
-            }
-            
-            .stat-label {
-                font-size: 1.25rem;
-            }
-            
-            .contact-info h3 {
+            .section-title h2 {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <span>Clickdera</span>
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <div class="nav-btns">
-                        <a href="https://clickdera.xyz" class="btn btn-outline"><i class="fas fa-ad"></i> Advertiser Login</a>
-                    </div>
-                </ul>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">Click<span>dera</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section - Desktop Optimized -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text fade-in">
-                    <h1>Transform Your Digital Presence with Premium Solutions</h1>
-                    <p>We deliver performance-driven digital marketing services tailored to help your business grow and thrive in the online space.</p>
-                    <div class="hero-btns">
-                        <a href="#contact" class="btn btn-accent">Get Started <i class="fas fa-arrow-right"></i></a>
-                        <a href="#services" class="btn btn-outline">Our Services <i class="fas fa-chevron-down"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image-container fade-in">
-                    <div class="hero-shape-1"></div>
-                    <div class="hero-shape-2"></div>
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing">
-                    </div>
-                </div>
-            </div>
+        <div class="hero-content fade-in">
+            <h1>Digital Marketing Solutions That <span>Drive Growth</span></h1>
+            <p class="tagline">Click Smart. Convert Fast.</p>
+            <a href="#contact" class="cta-button">Let's Grow Your Brand</a>
+        </div>
+        <div class="hero-bg-shapes">
+            <!-- Background shapes would be implemented with JS or CSS -->
         </div>
     </section>
 
-    <!-- Features Section - Desktop Enhanced -->
-    <section class="features">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Why Choose Clickdera</h2>
-                <p>We combine creativity with data-driven strategies to deliver exceptional results for our clients</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Performance Focused</h3>
-                    <p>Our strategies are designed to deliver measurable results and maximize your return on investment with data-driven approaches.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Creative Solutions</h3>
-                    <p>We bring innovative ideas and fresh perspectives to every project we undertake, transforming challenges into opportunities.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Dedicated Support</h3>
-                    <p>Our team provides personalized attention and ongoing support to ensure your success at every stage of your journey.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section - Desktop Layout -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Our Core Services</h2>
-                <p>Comprehensive digital marketing solutions tailored to your business needs</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Reputation Management</h3>
-                    <ul>
-                        <li>Google Maps listing optimization</li>
-                        <li>App Store & Play Store reviews</li>
-                        <li>Local business directory management</li>
-                        <li>Review monitoring & response</li>
-                        <li>Rating improvement strategies</li>
-                        <li>Brand sentiment analysis</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Professional Video Editing</h3>
-                    <ul>
-                        <li>Gaming video production</li>
-                        <li>Ad video creation & optimization</li>
-                        <li>Reel/short-form video editing</li>
-                        <li>Motion graphics & animation</li>
-                        <li>Branded video storytelling</li>
-                        <li>Social media video packages</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Affiliate Marketing</h3>
-                    <ul>
-                        <li>CPR (Cost Per Registration)</li>
-                        <li>CPI (Cost Per Install)</li>
-                        <li>CPD (Cost Per Deposit)</li>
-                        <li>CPL (Cost Per Lead)</li>
-                        <li>DOI (Cost Per Survey)</li>
-                        <li>Performance tracking & optimization</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Website Development</h3>
-                    <ul>
-                        <li>High-converting landing pages</li>
-                        <li>Brand portfolio websites</li>
-                        <li>Responsive web design</li>
-                        <li>E-commerce solutions</li>
-                        <li>SEO-optimized structures</li>
-                        <li>Performance analytics</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <ul>
-                        <li>Content strategy & creation</li>
-                        <li>Video production for social</li>
-                        <li>Engagement growth strategies</li>
-                        <li>Community management</li>
-                        <li>Platform-specific campaigns</li>
-                        <li>Performance analytics</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Influencer Marketing</h3>
-                    <ul>
-                        <li>Influencer identification & vetting</li>
-                        <li>Campaign strategy & management</li>
-                        <li>Performance tracking</li>
-                        <li>Content collaboration</li>
-                        <li>Relationship management</li>
-                        <li>ROI measurement</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section - Desktop Layout -->
+    <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <h2>Our Story & Team</h2>
-                    <p>Founded on July 8th, 2025 in Jitali, Ankleshwar, Bharuch, Gujarat by Rakesh Kumar Singh, Clickdera was born from a vision to revolutionize digital marketing services. After working unofficially with 36+ brands, Rakesh identified a critical industry problem - agencies were overcharging clients while delivering subpar results.</p>
-                    <p>Determined to solve this, he established Clickdera with a mission to provide premium-quality services at affordable rates. Our agency helps businesses grow faster by eliminating unnecessary costs while maintaining exceptional service quality.</p>
-                    
-                    <div class="team-members">
-                        <div class="team-member fade-in">
-                            <h4><i class="fas fa-crown"></i> Rakesh Kumar Singh</h4>
-                            <p>Founder & CEO</p>
-                        </div>
-                        <div class="team-member fade-in">
-                            <h4><i class="fas fa-bullhorn"></i> Lucky Singh</h4>
-                            <p>Director & Ad Manager</p>
-                        </div>
-                        <div class="team-member fade-in">
-                            <h4><i class="fas fa-users"></i> Sattik Sahoo</h4>
-                            <p>Publisher Manager</p>
-                        </div>
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and what drives us to deliver exceptional results</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <h3>Performance-Driven Digital Marketing</h3>
+                <p>Founded in 2018, Clickdera has been at the forefront of digital marketing innovation, helping businesses of all sizes achieve remarkable growth and online success.</p>
+                <p>Our team of experts combines data-driven strategies with creative solutions to deliver measurable results that exceed expectations. We believe in building long-term partnerships based on transparency, integrity, and exceptional performance.</p>
+                <p>Our mission is to empower businesses with cutting-edge digital marketing solutions that drive sustainable growth and maximize ROI in today's competitive landscape.</p>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="number">250+</div>
+                        <div class="text">Happy Clients</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">98%</div>
+                        <div class="text">Client Retention</div>
                     </div>
                 </div>
-                
-                <div class="about-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Clickdera Team">
+            </div>
+            <div class="about-image fade-in">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clickdera Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Comprehensive digital marketing solutions tailored to your business needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Affiliate Marketing</h3>
+                    <p>CPR, CPI, CPD, CPL, FTD, DOI campaigns that drive conversions and maximize ROI through strategic partnerships.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Website Design & Development</h3>
+                    <p>Responsive, user-friendly websites optimized for conversions and search engine visibility.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Influencer Marketing</h3>
+                    <p>Strategic partnerships with influencers to expand your reach and build brand credibility.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Video Editing</h3>
+                    <p>Professional video production and editing services that captivate your audience.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Social Media Management</h3>
+                    <p>Engaging content strategies to build your brand presence across social platforms.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Reputation Management</h3>
+                    <p>Protect and enhance your online reputation to build trust with your audience.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Google Map Listings</h3>
+                    <p>Optimize your local presence with strategic Google Map listings and management.</p>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="service-content">
+                    <h3>GMB & App Reviews</h3>
+                    <p>Generate authentic reviews to boost credibility and improve local search rankings.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section - Desktop Layout -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stat-item fade-in">
-                    <div class="stat-number" id="brandCounter">0</div>
-                    <div class="stat-label">Brand Partners</div>
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p>Discover what makes Clickdera the preferred choice for digital marketing solutions</p>
+        </div>
+        <div class="features">
+            <div class="feature-box fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-trophy"></i>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" id="projectCounter">0</div>
-                    <div class="stat-label">Projects Completed</div>
+                <h3>Real Results</h3>
+                <p>We focus on delivering measurable outcomes that impact your bottom line, not just vanity metrics.</p>
+            </div>
+            
+            <div class="feature-box fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
                 </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number" id="satisfactionCounter">0</div>
-                    <div class="stat-label">Client Satisfaction</div>
+                <h3>Fast Delivery</h3>
+                <p>Agile methodologies ensure quick implementation without compromising on quality.</p>
+            </div>
+            
+            <div class="feature-box fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
                 </div>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated team is always available to address your concerns and provide assistance.</p>
+            </div>
+            
+            <div class="feature-box fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Transparent Reporting</h3>
+                <p>Clear, comprehensive reports that show exactly how we're driving your business growth.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section - Desktop Layout -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>What Our Clients Say</h2>
-                <p>Don't just take our word for it - hear from some of our satisfied clients</p>
+        <div class="section-title">
+            <h2>Client Testimonials</h2>
+            <p>Hear what our clients have to say about working with us</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial fade-in">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Clickdera transformed our online presence. Our website traffic increased by 180% and conversions by 150% within just three months of working with them. Their team is professional, responsive, and truly understands digital marketing."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">R</div>
+                        <div class="client-details">
+                            <h4>Rajesh Sharma</h4>
+                            <p>CEO, TechSolutions Ltd.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="testimonials-grid">
-                <!-- Tamil Nadu Tour Travel -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        "Clickdera transformed our online reputation within weeks. They increased our Google rating from 1 star to 4.5 stars in just one month, which significantly boosted our bookings."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
-                        </div>
-                        <div class="author-info">
-                            <h4>Rajesh Kumar</h4>
-                            <p>Owner, Tamil Nadu Tour Travel</p>
-                        </div>
-                    </div>
-                    <div class="graph-container">
-                        <div class="graph-header">
-                            <span class="graph-before">Before: 1.0 ★</span>
-                            <span class="graph-after">After: 4.5 ★</span>
-                        </div>
-                        <div class="improvement-tag">
-                            <i class="fas fa-chart-line"></i> 350% increase in bookings
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Best Muslim Marriage -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        "We were amazed by the speed of results. Clickdera boosted our rating from 3 stars to 4.5 stars in just two weeks, resulting in a 100% increase in premium membership sign-ups."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatima Khan">
-                        </div>
-                        <div class="author-info">
-                            <h4>Fatima Khan</h4>
-                            <p>Director, Best Muslim Marriage</p>
-                        </div>
-                    </div>
-                    <div class="graph-container">
-                        <div class="graph-header">
-                            <span class="graph-before">Before: 3.0 ★</span>
-                            <span class="graph-after">After: 4.5 ★</span>
-                        </div>
-                        <div class="improvement-tag">
-                            <i class="fas fa-users"></i> 100% increase in premium sign-ups
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- SJ Panel -->
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        "After implementing Clickdera's strategies, our daily active users grew from 1,000 to 2,000 in just one month. The growth has been consistent and sustainable."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vijay Singh">
-                        </div>
-                        <div class="author-info">
-                            <h4>Vijay Singh</h4>
-                            <p>Founder, SJ Panel</p>
-                        </div>
-                    </div>
-                    <div class="graph-container">
-                        <div class="graph-header">
-                            <span class="graph-before">Before: 1,000 users</span>
-                            <span class="graph-after">After: 2,000 users</span>
-                        </div>
-                        <div class="improvement-tag">
-                            <i class="fas fa-rocket"></i> 100% user growth
+            <div class="testimonial fade-in">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"The influencer marketing campaign designed by Clickdera exceeded all our expectations. We saw a 300% ROI and significant brand awareness growth. Their strategic approach and attention to detail make them stand out in the industry."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">P</div>
+                        <div class="client-details">
+                            <h4>Priya Mehta</h4>
+                            <p>Marketing Director, FashionHub</p>
                         </div>
                     </div>
                 </div>
@@ -1680,333 +982,188 @@
         </div>
     </section>
 
-    <!-- Contact Section - Desktop Layout -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2>Ready to Transform Your Digital Presence?</h2>
-                <p>Get in touch with our team to discuss how we can help grow your business</p>
+        <div class="section-title">
+            <h2 style="color: white;">Get In Touch</h2>
+            <p style="color: #94A3B8;">Reach out to us for a consultation and let's grow your business together</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h3>Contact Information</h3>
+                <p>Have questions or ready to start your project? We'd love to hear from you!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Ankleshwar, Gujarat, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone & WhatsApp</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Address</h4>
+                            <a href="mailto:contact@clickdera.in">contact@clickdera.in</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <h3>Let's Collaborate</h3>
-                    <p>Whether you need reputation management, video production, or full digital marketing services, we're here to help your brand succeed.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email Us</h4>
-                                <a href="mailto:contact@clickdera.in">contact@clickdera.in</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Our Location</h4>
-                                <p>Jitali, Ankleshwar, Bharuch, Gujarat, India</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-ad"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Advertiser Portal</h4>
-                                <a href="https://clickdera.xyz">clickdera.xyz</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form fade-in">
-                    <div class="success-message" id="successMessage">
-                        <i class="fas fa-check-circle" style="font-size: 2.5rem; margin-bottom: 0.75rem;"></i>
-                        <h3>Thank you for your message!</h3>
-                        <p>Our team will get back to you shortly.</p>
+            <div class="contact-form fade-in">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
                     </div>
                     
-                    <div class="rate-limit-message" id="rateLimitMessage">
-                        <i class="fas fa-clock" style="font-size: 2.5rem; margin-bottom: 0.75rem;"></i>
-                        <h3>Submission Limit Reached</h3>
-                        <p>You can only submit one form per hour. Please try again later.</p>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
                     </div>
                     
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="phone" placeholder="Your Phone Number">
-                        <select name="service" required>
-                            <option value="">I'm interested in...</option>
-                            <option value="reputation">Reputation Management</option>
-                            <option value="video">Video Editing Services</option>
-                            <option value="affiliate">Affiliate Marketing</option>
-                            <option value="website">Website Development</option>
-                            <option value="social">Social Media Management</option>
-                            <option value="influencer">Influencer Marketing</option>
-                        </select>
-                        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-                        <button type="submit" class="btn btn-accent">Send Message <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer - Desktop Layout -->
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Clickdera</h3>
-                    <p>A full-service digital agency specializing in reputation management, video production, and performance marketing for brands and advertisers.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/clickera/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Clickdera" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Reputation Management</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Video Editing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Affiliate Marketing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Website Development</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Social Media</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Influencer Marketing</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
-                        <li><a href="https://clickdera.xyz"><i class="fas fa-chevron-right"></i> Advertiser Login</a></li>
-                    </ul>
+        <div class="footer-container">
+            <div class="footer-col footer-about">
+                <h4>About Clickdera</h4>
+                <p>Performance-driven digital marketing agency helping businesses grow through innovative strategies and data-driven solutions.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 Clickdera. All Rights Reserved. | Founded by Rakesh Kumar Singh in Jitali, Ankleshwar, Bharuch, Gujarat</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#why-us">Why Choose Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
+            
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <div class="footer-links">
+                    <a href="#">Affiliate Marketing</a>
+                    <a href="#">Website Development</a>
+                    <a href="#">Influencer Marketing</a>
+                    <a href="#">Social Media Management</a>
+                    <a href="#">Reputation Management</a>
+                    <a href="#">Google Map Listings</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <div class="contact-info-footer">
+                    <div class="item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>Ankleshwar, Gujarat, India</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>+91 98765 43210</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>contact@clickdera.in</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><i class="fas fa-globe"></i></div>
+                        <div>www.clickdera.in</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Clickdera. All Rights Reserved. | <a href="#" style="color: var(--accent-yellow);">Privacy Policy</a> | <a href="#" style="color: var(--accent-yellow);">Terms & Conditions</a></p>
         </div>
     </footer>
 
     <script>
-        // Header Scroll Effect
+        // Navbar scroll effect
         window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
+            const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+                navbar.classList.add('scrolled');
             } else {
-                header.classList.remove('scrolled');
+                navbar.classList.remove('scrolled');
             }
-        });
-        
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
         });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-
-        // Form submission handling with rate limiting
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Check rate limit from localStorage
-            const lastSubmission = localStorage.getItem('lastFormSubmission');
-            const now = new Date().getTime();
-            const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
-            
-            if (lastSubmission && (now - lastSubmission) < oneHour) {
-                // Show rate limit message
-                document.getElementById('rateLimitMessage').style.display = 'block';
-                document.getElementById('successMessage').style.display = 'none';
-                
-                // Calculate remaining time
-                const remainingTime = Math.ceil((oneHour - (now - lastSubmission)) / (60 * 1000));
-                document.getElementById('rateLimitMessage').querySelector('p').textContent = 
-                    `You can only submit one form per hour. Please try again in ${remainingTime} minutes.`;
-                return;
-            }
-            
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Show success message
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('rateLimitMessage').style.display = 'none';
-                this.reset();
-                
-                // Store submission time
-                localStorage.setItem('lastFormSubmission', now);
-                
-                // Reset button
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
-
-        // Check for existing submission on page load
-        window.addEventListener('load', function() {
-            const lastSubmission = localStorage.getItem('lastFormSubmission');
-            const now = new Date().getTime();
-            const oneHour = 60 * 60 * 1000;
-            
-            if (lastSubmission && (now - lastSubmission) < oneHour) {
-                // Calculate remaining time
-                const remainingTime = Math.ceil((oneHour - (now - lastSubmission)) / (60 * 1000));
-                document.getElementById('rateLimitMessage').querySelector('p').textContent = 
-                    `You can only submit one form per hour. Please try again in ${remainingTime} minutes.`;
-            }
-        });
-
-        // Counter animation function
-        function animateCounters() {
-            const brandCounter = document.getElementById('brandCounter');
-            const projectCounter = document.getElementById('projectCounter');
-            const satisfactionCounter = document.getElementById('satisfactionCounter');
-            
-            const brandTarget = 36;
-            const projectTarget = 100;
-            const satisfactionTarget = 98;
-            const duration = 2000; // 2 seconds
-            const interval = 50; // update every 50ms
-            
-            const brandIncrement = brandTarget / (duration / interval);
-            const projectIncrement = projectTarget / (duration / interval);
-            const satisfactionIncrement = satisfactionTarget / (duration / interval);
-            
-            let brandValue = 0;
-            let projectValue = 0;
-            let satisfactionValue = 0;
-            
-            const brandInterval = setInterval(() => {
-                brandValue += brandIncrement;
-                if (brandValue >= brandTarget) {
-                    brandValue = brandTarget;
-                    clearInterval(brandInterval);
-                }
-                brandCounter.textContent = Math.floor(brandValue) + '+';
-                brandCounter.classList.add('counting-animation');
-            }, interval);
-            
-            const projectInterval = setInterval(() => {
-                projectValue += projectIncrement;
-                if (projectValue >= projectTarget) {
-                    projectValue = projectTarget;
-                    clearInterval(projectInterval);
-                }
-                projectCounter.textContent = Math.floor(projectValue) + '+';
-                projectCounter.classList.add('counting-animation');
-            }, interval);
-            
-            const satisfactionInterval = setInterval(() => {
-                satisfactionValue += satisfactionIncrement;
-                if (satisfactionValue >= satisfactionTarget) {
-                    satisfactionValue = satisfactionTarget;
-                    clearInterval(satisfactionInterval);
-                }
-                satisfactionCounter.textContent = Math.floor(satisfactionValue) + '%';
-                satisfactionCounter.classList.add('counting-animation');
-            }, interval);
-        }
         
-        // Scroll animations
+        // Fade-in animation on scroll
         const fadeElements = document.querySelectorAll('.fade-in');
         
-        const appearOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -100px 0px"
-        };
-        
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('appear');
-                    appearOnScroll.unobserve(entry.target);
                 }
             });
-        }, appearOptions);
-        
-        fadeElements.forEach(fader => {
-            appearOnScroll.observe(fader);
+        }, {
+            threshold: 0.1
         });
         
-        // Initialize everything when page loads
-        window.addEventListener('load', function() {
-            // Initialize counters observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounters();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            observer.observe(document.querySelector('.stats'));
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Hero background animation (simplified)
+        const hero = document.querySelector('.hero');
+        window.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX / window.innerWidth) * 50;
+            const moveY = (e.clientY / window.innerHeight) * 50;
+            hero.style.backgroundPosition = `${moveX}% ${moveY}%`;
         });
     </script>
 </body>
