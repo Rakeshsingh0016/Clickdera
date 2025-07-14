@@ -122,8 +122,21 @@
             padding: 0 5%;
             background: linear-gradient(135deg, #7C3AED, #8B5CF6);
             color: white;
-            background-image: radial-gradient(circle at 90% 10%, rgba(255,255,255,0.1) 0%, transparent 30%),
-                              radial-gradient(circle at 10% 90%, rgba(255,255,255,0.1) 0%, transparent 30%);
+            background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
         
         .hero-content {
@@ -218,6 +231,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 2;
         }
         
         .hero-graphic {
@@ -688,25 +702,33 @@
             line-height: 1.7;
         }
         
-        /* Testimonials */
+        /* Testimonials - IMPROVED */
         .testimonials {
             background: linear-gradient(to bottom, #F8FAFC, #E2E8F0);
             padding: 8rem 5%;
         }
         
         .testimonials-container {
-            max-width: 900px;
+            display: flex;
+            gap: 3rem;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
         }
         
         .testimonial {
+            flex: 1;
             background: white;
             padding: 3rem;
             border-radius: 18px;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-            margin: 3rem 0;
             position: relative;
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
         .testimonial::before {
@@ -765,6 +787,12 @@
             color: var(--primary-purple);
             font-weight: 600;
             font-size: 1.1rem;
+        }
+        
+        .testimonial-rating {
+            color: var(--accent-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
         }
         
         /* Contact Section */
@@ -1072,6 +1100,14 @@
             .about-content, .contact-container {
                 gap: 4rem;
             }
+            
+            .testimonials-container {
+                flex-direction: column;
+            }
+            
+            .testimonial {
+                width: 100%;
+            }
         }
         
         @media (max-width: 992px) {
@@ -1366,7 +1402,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section - IMPROVED -->
     <section class="testimonials" id="testimonials">
         <div class="section-title">
             <h2>Client Testimonials</h2>
@@ -1375,12 +1411,19 @@
         <div class="testimonials-container">
             <div class="testimonial fade-in">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"Clickdera transformed our online presence. Our website traffic increased by 180% and conversions by 150% within just three months of working with them. Their team is professional, responsive, and truly understands digital marketing."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Clickdera delivered outstanding results for our affiliate marketing campaign. They provided us with over 2,000 real, engaged users that converted at an exceptional rate. Their team's expertise in performance marketing is unmatched, and their transparent reporting gave us complete visibility into our campaign's success."</p>
                     <div class="client-info">
-                        <div class="client-avatar">R</div>
+                        <div class="client-avatar">U</div>
                         <div class="client-details">
-                            <h4>Rajesh Sharma</h4>
-                            <p>CEO, TechSolutions Ltd.</p>
+                            <h4>Unstop Technologies</h4>
+                            <p>Marketing Director</p>
                         </div>
                     </div>
                 </div>
@@ -1388,12 +1431,19 @@
             
             <div class="testimonial fade-in">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"The influencer marketing campaign designed by Clickdera exceeded all our expectations. We saw a 300% ROI and significant brand awareness growth. Their strategic approach and attention to detail make them stand out in the industry."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Working with Clickdera transformed our online presence. They took our Google My Business profile from a dismal 1.5-star rating to an impressive 4.5 stars in just three months. This dramatic improvement directly resulted in a 220% increase in tour bookings. Their reputation management strategies are truly effective."</p>
                     <div class="client-info">
-                        <div class="client-avatar">P</div>
+                        <div class="client-avatar">T</div>
                         <div class="client-details">
-                            <h4>Priya Mehta</h4>
-                            <p>Marketing Director, FashionHub</p>
+                            <h4>Tamilnadu Tours & Travels</h4>
+                            <p>Business Owner</p>
                         </div>
                     </div>
                 </div>
