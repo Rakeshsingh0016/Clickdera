@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickdera - Affordable Digital Marketing & Map SEO Services</title>
+    <title>Clickdera - Digital Marketing Solutions Since 2025</title>
     <meta name="description" content="Boost your brand with Clickdera. We offer low-cost performance marketing, video editing, Google Map SEO, app reviews, and social media management in India, USA & Nepal.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/ios-filled/100/rocket.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/ios-filled/100/rocket.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/ios-filled/100/rocket.png">
-    
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #dbeafe;
-            --secondary: #f97316;
-            --secondary-light: #ffedd5;
+            --primary: #3E62EE;
+            --primary-dark: #2A4BD7;
+            --primary-light: #E6EBFF;
+            --secondary: #795CF4;
+            --accent: #695FF3;
             --dark: #1e293b;
             --darker: #0f172a;
             --light: #f8fafc;
             --gray: #94a3b8;
             --light-gray: #e2e8f0;
             --success: #10b981;
-            --accent: #8b5cf6;
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ea580c 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #5A4FDE 100%);
             --hero-gradient: linear-gradient(120deg, #0f172a 0%, #1e293b 100%);
             --card-gradient: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
         }
@@ -49,7 +42,7 @@
         
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -82,14 +75,14 @@
         
         .logo h1 {
             color: white;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
         
         .logo span {
-            color: var(--secondary);
+            color: var(--accent);
         }
         
         nav ul {
@@ -105,7 +98,7 @@
             color: var(--light-gray);
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             position: relative;
             padding: 8px 0;
@@ -118,7 +111,7 @@
             height: 3px;
             bottom: 0;
             left: 0;
-            background-color: var(--secondary);
+            background-color: var(--accent);
             transition: width 0.3s ease;
             border-radius: 10px;
         }
@@ -128,7 +121,7 @@
         }
         
         nav ul li a:hover {
-            color: var(--secondary);
+            color: var(--accent);
         }
         
         .cta-button {
@@ -138,26 +131,26 @@
             padding: 12px 30px;
             border-radius: 30px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 15px rgba(62, 98, 238, 0.3);
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 8px 20px rgba(62, 98, 238, 0.4);
         }
         
         /* Hero Section */
         .hero {
             background: var(--hero-gradient), 
-                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000') no-repeat center center/cover;
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000') no-repeat center center/cover;
             background-blend-mode: multiply;
             color: white;
-            padding: 200px 0 120px;
+            padding: 220px 0 140px;
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -171,8 +164,9 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(121, 92, 244, 0.15) 0%, transparent 70%);
             z-index: 1;
+            animation: float 6s infinite ease-in-out;
         }
         
         .hero::after {
@@ -183,28 +177,29 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(62, 98, 238, 0.15) 0%, transparent 70%);
             z-index: 1;
+            animation: float 8s infinite ease-in-out;
         }
         
         .hero-content {
-            max-width: 850px;
+            max-width: 950px;
             position: relative;
             z-index: 2;
             margin: 0 auto;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-family: 'Montserrat', sans-serif;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
         .hero h1 span {
-            color: var(--secondary);
+            color: var(--accent);
             position: relative;
             display: inline-block;
         }
@@ -216,61 +211,236 @@
             left: 0;
             width: 100%;
             height: 15px;
-            background: rgba(249, 115, 22, 0.3);
+            background: rgba(105, 95, 243, 0.3);
             z-index: -1;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin: 0 auto 40px;
+            font-size: 1.4rem;
+            margin: 0 auto 50px;
             color: var(--light-gray);
-            max-width: 700px;
+            max-width: 800px;
             font-weight: 300;
+            line-height: 1.8;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
         }
         
         .btn-secondary {
             background-color: transparent;
             color: white;
-            border: 2px solid var(--secondary);
-            padding: 14px 35px;
+            border: 2px solid var(--accent);
+            padding: 16px 40px;
             border-radius: 30px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         
         .btn-secondary:hover {
-            background-color: var(--secondary);
+            background-color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+            box-shadow: 0 6px 15px rgba(105, 95, 243, 0.3);
         }
         
-        /* Stats Section */
+        /* About Clickdera Section */
+        .about-clickdera {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+            background: rgba(15, 23, 42, 0.8);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            height: 500px;
+            background: linear-gradient(45deg, var(--primary-dark), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000') center/cover;
+            opacity: 0.7;
+        }
+        
+        .about-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background: var(--gradient-secondary);
+            border-radius: 10px;
+        }
+        
+        .about-content h2 span {
+            color: var(--accent);
+        }
+        
+        .about-content p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .mission-statement {
+            margin-top: 30px;
+            padding: 30px;
+            background: var(--card-gradient);
+            border-radius: 20px;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.4s ease;
+        }
+        
+        .mission-statement:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mission-statement h3 {
+            font-size: 1.8rem;
+            color: var(--light);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .mission-statement h3 i {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        
+        .mission-statement p {
+            color: var(--light-gray);
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            background: var(--gradient-primary);
+            left: 10px;
+            top: 0;
+            border-radius: 10px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            box-shadow: 0 0 0 6px rgba(62, 98, 238, 0.2);
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .timeline-content p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Stats Section - FIXED */
         .stats {
-            padding: 80px 0;
+            padding: 100px 0;
             position: relative;
             z-index: 1;
+            background: rgba(15, 23, 42, 0.7);
         }
         
         .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .stat-card {
             background: var(--card-gradient);
             border-radius: 20px;
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
@@ -292,37 +462,49 @@
         
         .stat-card:hover {
             transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+        }
+        
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2);
+            color: var(--primary-light);
         }
         
         .stat-number {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
             color: var(--primary-light);
             font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 1;
         }
         
         .stat-text {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--light-gray);
             font-weight: 600;
         }
         
         /* Services Section */
         .services {
-            padding: 100px 0;
+            padding: 120px 0;
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
         
         .section-title h2 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             color: var(--light);
             margin-bottom: 15px;
             font-family: 'Montserrat', sans-serif;
@@ -333,26 +515,27 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 100px;
+            height: 5px;
             background: var(--gradient-secondary);
             border-radius: 10px;
         }
         
         .section-title p {
             color: var(--gray);
-            max-width: 700px;
-            margin: 20px auto 0;
-            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 25px auto 0;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
         }
         
         .service-card {
@@ -362,7 +545,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 30px;
+            padding: 50px 35px;
             position: relative;
             backdrop-filter: blur(5px);
             display: flex;
@@ -372,20 +555,20 @@
         }
         
         .service-card:hover {
-            transform: translateY(-10px) rotate(1deg);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
         }
         
         .service-icon {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            font-size: 36px;
+            margin-bottom: 30px;
+            font-size: 40px;
             color: white;
             transition: all 0.3s ease;
         }
@@ -396,14 +579,53 @@
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: var(--light);
         }
         
         .service-card p {
             color: var(--gray);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .service-features {
+            width: 100%;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+        
+        .service-features h4 {
+            color: var(--light);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .service-features ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .service-features li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: var(--light-gray);
+            font-size: 1rem;
+        }
+        
+        .service-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent);
         }
         
         .learn-more {
@@ -413,6 +635,8 @@
             display: inline-flex;
             align-items: center;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
+            margin-top: 20px;
         }
         
         .learn-more i {
@@ -421,16 +645,16 @@
         }
         
         .learn-more:hover {
-            color: var(--secondary-light);
+            color: var(--accent);
         }
         
         .learn-more:hover i {
             transform: translateX(5px);
         }
         
-        /* Why Choose Us Section - IMPROVED */
+        /* Why Choose Us Section */
         .why-us {
-            padding: 100px 0;
+            padding: 120px 0;
             position: relative;
             background: rgba(15, 23, 42, 0.7);
         }
@@ -438,19 +662,20 @@
         .why-us-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
         
         .why-us-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
             color: var(--light);
             font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
         }
         
         .why-us-content h2 span {
-            color: var(--secondary);
+            color: var(--accent);
             position: relative;
         }
         
@@ -460,22 +685,28 @@
             bottom: -5px;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 5px;
             background: var(--gradient-secondary);
             border-radius: 10px;
+        }
+        
+        .why-us-content p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
         }
         
         .why-us-points {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 30px;
         }
         
         .why-point {
             background: rgba(30, 41, 59, 0.6);
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             transition: all 0.4s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
@@ -484,7 +715,7 @@
         
         .why-point:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 10px 25px rgba(62, 98, 238, 0.15);
             background: rgba(30, 41, 59, 0.8);
         }
         
@@ -494,7 +725,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 5px;
             background: var(--gradient-primary);
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -505,15 +736,15 @@
         }
         
         .point-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: var(--gradient-primary);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 25px;
+            font-size: 28px;
             transition: all 0.3s ease;
         }
         
@@ -523,21 +754,22 @@
         }
         
         .point-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: var(--light);
         }
         
         .point-content p {
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         .why-us-image {
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            height: 500px;
+            height: 550px;
             background: linear-gradient(45deg, var(--primary-dark), var(--accent));
             display: flex;
             align-items: center;
@@ -562,107 +794,23 @@
             opacity: 0.7;
         }
         
-        /* About Section */
-        .about {
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000') no-repeat center center/cover;
-            opacity: 0.1;
-            z-index: -1;
-        }
-        
-        .about-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--card-gradient);
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            transform: translateY(0);
-            transition: transform 0.4s ease;
-        }
-        
-        .about-container:hover {
-            transform: translateY(-10px);
-        }
-        
-        .about-content h2 {
-            font-size: 2.5rem;
-            color: var(--light);
-            margin-bottom: 25px;
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-        }
-        
-        .about-content h2 span {
-            color: var(--primary);
-        }
-        
-        .about-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: center;
-        }
-        
-        .founder-info {
-            margin-top: 30px;
-            padding: 20px;
-            border-left: 4px solid var(--secondary);
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .founder-info:hover {
-            transform: translateX(10px);
-        }
-        
-        .founder-info h4 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-        
-        .founder-info p {
-            color: var(--gray);
-            margin-bottom: 0;
-            text-align: left;
-        }
-        
         /* Testimonials Section */
         .testimonials {
-            padding: 100px 0;
+            padding: 120px 0;
             background: rgba(15, 23, 42, 0.8);
         }
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
         
         .testimonial-card {
             background: var(--card-gradient);
             border-radius: 20px;
-            padding: 40px;
+            padding: 45px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
@@ -670,23 +818,23 @@
         }
         
         .testimonial-card:hover {
-            transform: translateY(-10px) rotate(1deg);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
         }
         
         .testimonial-content {
             position: relative;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
+            padding-bottom: 35px;
+            margin-bottom: 35px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .testimonial-content::before {
             content: '"';
             position: absolute;
-            top: -30px;
-            left: -15px;
-            font-size: 6rem;
+            top: -40px;
+            left: -20px;
+            font-size: 8rem;
             color: var(--primary);
             opacity: 0.3;
             font-family: serif;
@@ -696,7 +844,8 @@
         .testimonial-content p {
             color: var(--light-gray);
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
         
         .client-info {
@@ -706,17 +855,23 @@
         }
         
         .client-avatar {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
             color: white;
-            flex-shrink: 0;
             transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .client-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .testimonial-card:hover .client-avatar {
@@ -725,31 +880,32 @@
         }
         
         .client-details h4 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--light);
             margin-bottom: 5px;
         }
         
         .client-details p {
             color: var(--gray);
+            font-size: 1.05rem;
         }
         
-        /* FAQ Section - UPDATED */
+        /* FAQ Section */
         .faq {
-            padding: 100px 0;
+            padding: 120px 0;
             background: var(--darker);
         }
         
         .faq-container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .faq-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin-top: 50px;
+            gap: 25px;
+            margin-top: 60px;
         }
         
         .faq-item {
@@ -767,7 +923,7 @@
         }
         
         .faq-question {
-            padding: 25px;
+            padding: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -777,15 +933,15 @@
         }
         
         .faq-question h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--light);
             margin: 0;
         }
         
         .faq-question i {
-            color: var(--secondary);
+            color: var(--accent);
             transition: transform 0.3s ease;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         
         .faq-item.active .faq-question i {
@@ -793,25 +949,26 @@
         }
         
         .faq-answer {
-            padding: 0 25px;
+            padding: 0 30px;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
         }
         
         .faq-item.active .faq-answer {
-            padding: 0 25px 25px;
-            max-height: 500px;
+            padding: 0 30px 30px;
+            max-height: 1000px;
         }
         
         .faq-answer p {
             color: var(--gray);
             line-height: 1.8;
+            font-size: 1.1rem;
         }
         
         /* Contact Section */
         .contact {
-            padding: 120px 0;
+            padding: 140px 0;
             position: relative;
         }
         
@@ -830,16 +987,16 @@
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            max-width: 1100px;
+            gap: 60px;
+            max-width: 1300px;
             margin: 0 auto;
         }
         
         .contact-info {
-            padding: 40px;
+            padding: 50px;
             background: var(--card-gradient);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
             transition: transform 0.4s ease;
@@ -850,11 +1007,11 @@
         }
         
         .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 2rem;
+            margin-bottom: 30px;
             color: var(--light);
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
         
         .contact-info h3::after {
@@ -862,10 +1019,17 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
-            height: 4px;
+            width: 70px;
+            height: 5px;
             background: var(--gradient-primary);
             border-radius: 10px;
+        }
+        
+        .contact-info p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
         }
         
         .contact-details {
@@ -874,7 +1038,7 @@
         
         .contact-item {
             display: flex;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             align-items: flex-start;
             transition: transform 0.3s ease;
         }
@@ -884,16 +1048,16 @@
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: var(--primary-light);
-            border-radius: 12px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary);
-            font-size: 20px;
-            margin-right: 15px;
+            font-size: 24px;
+            margin-right: 20px;
             flex-shrink: 0;
             transition: all 0.3s ease;
         }
@@ -904,73 +1068,28 @@
         }
         
         .contact-text h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
             color: var(--light);
         }
         
         .contact-text p {
             color: var(--gray);
-        }
-        
-        .contact-form {
-            background: var(--card-gradient);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            transition: transform 0.4s ease;
-        }
-        
-        .contact-form:hover {
-            transform: translateY(-5px);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--light);
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            background: rgba(15, 23, 42, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            color: var(--light);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
+            font-size: 1.1rem;
+            margin: 0;
         }
         
         .whatsapp-option {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 30px;
             color: var(--gray);
-            padding: 12px 15px;
+            padding: 15px 20px;
             background: rgba(15, 23, 42, 0.4);
-            border-radius: 10px;
+            border-radius: 12px;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
         .whatsapp-option:hover {
@@ -980,14 +1099,101 @@
         
         .whatsapp-icon {
             color: #25D366;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+        }
+        
+        .contact-form {
+            background: var(--card-gradient);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.4s ease;
+        }
+        
+        .contact-form:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-form h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--light);
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .contact-form h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 5px;
+            background: var(--gradient-secondary);
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--light);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 18px;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            color: var(--light);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(62, 98, 238, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+        
+        button[type="submit"] {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(62, 98, 238, 0.3);
+        }
+        
+        button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(62, 98, 238, 0.4);
         }
         
         /* Footer */
         footer {
             background: var(--darker);
             color: white;
-            padding: 80px 0 30px;
+            padding: 100px 0 40px;
             position: relative;
             overflow: hidden;
         }
@@ -1006,43 +1212,45 @@
         
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
         }
         
         .footer-logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-family: 'Montserrat', sans-serif;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .footer-logo span {
-            color: var(--secondary);
+            color: var(--accent);
         }
         
         .footer-about p {
             color: var(--light-gray);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         .social-links {
             display: flex;
             gap: 15px;
+            margin-bottom: 25px;
         }
         
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
             background-color: rgba(255, 255, 255, 0.08);
             color: white;
             transition: all 0.3s ease;
-            font-size: 18px;
+            font-size: 20px;
         }
         
         .social-links a:hover {
@@ -1058,18 +1266,19 @@
             color: var(--primary-light);
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
         .gmb-link:hover {
-            color: var(--secondary-light);
+            color: var(--accent);
             transform: translateX(5px);
         }
         
         .footer-heading {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             color: var(--light);
         }
         
@@ -1078,8 +1287,8 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
-            height: 3px;
+            width: 60px;
+            height: 4px;
             background: var(--gradient-secondary);
             border-radius: 10px;
         }
@@ -1089,7 +1298,7 @@
         }
         
         .footer-links ul li {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         
         .footer-links ul li a {
@@ -1099,15 +1308,16 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.1rem;
         }
         
         .footer-links ul li a i {
-            color: var(--secondary);
+            color: var(--accent);
             transition: transform 0.3s ease;
         }
         
         .footer-links ul li a:hover {
-            color: var(--secondary);
+            color: var(--accent);
             padding-left: 5px;
         }
         
@@ -1117,16 +1327,68 @@
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             color: var(--light-gray);
-            font-size: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(62, 98, 238, 0.3);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-top:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* Responsive Design */
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.3rem;
             }
             
             .why-us-container {
@@ -1134,23 +1396,32 @@
             }
             
             .why-us-image {
-                height: 400px;
+                height: 450px;
                 margin-top: 40px;
             }
             
             .why-us-points {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
         }
         
         @media (max-width: 992px) {
             .contact-container {
                 grid-template-columns: 1fr;
-                max-width: 600px;
+                max-width: 700px;
             }
             
             .about-container {
-                padding: 40px;
+                padding: 0;
             }
             
             .why-us-points {
@@ -1160,15 +1431,15 @@
         
         @media (max-width: 768px) {
             .hero {
-                padding: 180px 0 80px;
+                padding: 180px 0 100px;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .hero-buttons {
@@ -1183,42 +1454,25 @@
             }
             
             .section-title h2 {
-                font-size: 2.3rem;
-            }
-            
-            nav ul {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
+                font-size: 2.5rem;
             }
         }
         
         @media (max-width: 576px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.3rem;
             }
             
             .stat-number {
-                font-size: 2.8rem;
+                font-size: 3.2rem;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .about-content h2 {
-                font-size: 2rem;
-            }
-            
-            .about-container {
-                padding: 30px 20px;
+                font-size: 2.2rem;
             }
             
             .testimonials-grid {
@@ -1239,42 +1493,30 @@
             transform: scale(1.2);
         }
         
-        /* Improved form styling */
-        .contact-form h3 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--light);
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .contact-form h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 4px;
-            background: var(--gradient-secondary);
-            border-radius: 10px;
-        }
+        /* Animation delays */
+        .service-card:nth-child(1) { transition-delay: 0.1s; }
+        .service-card:nth-child(2) { transition-delay: 0.2s; }
+        .service-card:nth-child(3) { transition-delay: 0.3s; }
+        .service-card:nth-child(4) { transition-delay: 0.4s; }
+        .service-card:nth-child(5) { transition-delay: 0.5s; }
+        .service-card:nth-child(6) { transition-delay: 0.6s; }
         
         /* Better desktop spacing */
-        @media (min-width: 1200px) {
+        @media (min-width: 1600px) {
             .container {
-                max-width: 1300px;
+                max-width: 1500px;
             }
             
             .hero-content {
-                max-width: 950px;
+                max-width: 1100px;
             }
             
             .services-grid {
-                gap: 35px;
+                gap: 45px;
             }
             
             .testimonials-grid {
-                gap: 40px;
+                gap: 50px;
             }
         }
     </style>
@@ -1289,6 +1531,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
@@ -1304,11 +1547,93 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Low-Cost Digital Marketing & SEO Services That Deliver <span>Real Results</span></h1>
-                <p>Clickdera helps startups, local businesses, and apps grow faster with powerful performance marketing, map SEO, and review strategies — all at budget-friendly pricing.</p>
+                <h1>Affordable Digital Growth Solutions That Actually <span>Drive Revenue</span></h1>
+                <p>Specializing in ROI-driven marketing, we help startups, SMBs, and apps dominate local search, boost reviews, and convert more customers - without the agency price tag.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="cta-button">Explore Services</a>
-                    <a href="#contact" class="btn-secondary">Contact Us</a>
+                    <a href="#contact" class="btn-secondary">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Clickdera Section -->
+    <section class="about-clickdera" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About <span>Clickdera</span></h2>
+                    <p>Clickdera was founded in 2025 to address a critical problem in the digital marketing industry - agencies overcharging for simple services regardless of the actual work involved.</p>
+                    
+                    <p>Frustrated with the status quo and unable to find an affordable solution that maintained quality, our founder envisioned a new kind of agency. Clickdera was created to provide all digital marketing services at low cost without compromising on quality, creating a game-changer for businesses of all sizes.</p>
+                    
+                    <div class="mission-statement">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To democratize digital marketing by providing high-quality, performance-driven services at prices that empower businesses rather than burden them. We believe every business deserves access to effective digital marketing regardless of their budget size.</p>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Founded in 2025</h4>
+                                <p>Established with a vision to provide affordable digital marketing solutions</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Global Expansion</h4>
+                                <p>Expanded services to USA, India, Nepal and beyond</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Industry Recognition</h4>
+                                <p>Recognized as a leader in affordable performance marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <i class="fas fa-lightbulb" style="font-size: 8rem; color: rgba(255,255,255,0.2);"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section - FIXED COUNTERS -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" data-target="35">0</div>
+                    <div class="stat-text">Direct Brands Managed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number" data-target="98" data-suffix="%">0</div>
+                    <div class="stat-text">Client Satisfaction</div>
                 </div>
             </div>
         </div>
@@ -1328,6 +1653,15 @@
                     </div>
                     <h3>Performance Marketing</h3>
                     <p>Data-driven strategies to drive leads and conversions for your business with measurable ROI.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>ROI-focused campaigns</li>
+                            <li>Conversion tracking</li>
+                            <li>Audience segmentation</li>
+                            <li>Multi-channel strategy</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
@@ -1337,6 +1671,15 @@
                     </div>
                     <h3>Video Editing & Production</h3>
                     <p>Professional video content creation and editing for social media ads and marketing campaigns.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Social media optimized</li>
+                            <li>Motion graphics</li>
+                            <li>Branded content</li>
+                            <li>Ad-ready formats</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
@@ -1346,6 +1689,15 @@
                     </div>
                     <h3>Google Map SEO</h3>
                     <p>Boost local visibility with our expert Google Map SEO and listing optimization services.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Local ranking improvement</li>
+                            <li>Listing optimization</li>
+                            <li>Review management</li>
+                            <li>Local citation building</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
@@ -1355,6 +1707,15 @@
                     </div>
                     <h3>App & Map Reviews</h3>
                     <p>Build trust and reputation with authentic reviews for your apps and Google Maps listings.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Review generation</li>
+                            <li>Reputation monitoring</li>
+                            <li>Response management</li>
+                            <li>Star rating improvement</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
@@ -1364,6 +1725,15 @@
                     </div>
                     <h3>Social Media Management</h3>
                     <p>Grow your online presence with strategic social media management tailored to your audience.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Content calendar</li>
+                            <li>Engagement strategy</li>
+                            <li>Performance analytics</li>
+                            <li>Community building</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
@@ -1373,13 +1743,22 @@
                     </div>
                     <h3>App Marketing</h3>
                     <p>Specialized marketing strategies to boost downloads and engagement for mobile applications.</p>
+                    <div class="service-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>App store optimization</li>
+                            <li>User acquisition</li>
+                            <li>Retention campaigns</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                    </div>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section - IMPROVED -->
+    <!-- Why Choose Us Section -->
     <section class="why-us" id="why-us">
         <div class="container">
             <div class="section-title">
@@ -1390,7 +1769,7 @@
             <div class="why-us-container">
                 <div class="why-us-content">
                     <h2>We Deliver <span>Results-Driven</span> Marketing Solutions</h2>
-                    <p>At Clickdera, we combine industry expertise with innovative strategies to deliver measurable results for your business.</p>
+                    <p>At Clickdera, we combine industry expertise with innovative strategies to deliver measurable results for your business. Our focus on performance and affordability sets us apart in the competitive digital marketing landscape.</p>
                     
                     <div class="why-us-points">
                         <div class="why-point">
@@ -1422,6 +1801,36 @@
                                 <p>We serve clients across India, USA, Nepal, and worldwide with localized strategies that work.</p>
                             </div>
                         </div>
+                        
+                        <div class="why-point">
+                            <div class="point-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="point-content">
+                                <h3>Rapid Implementation</h3>
+                                <p>Quick setup and execution with measurable results starting within the first 30 days.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-point">
+                            <div class="point-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="point-content">
+                                <h3>Transparent Reporting</h3>
+                                <p>Comprehensive monthly reports showing exactly how your marketing budget is performing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-point">
+                            <div class="point-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="point-content">
+                                <h3>Dedicated Support</h3>
+                                <p>Your own account manager and support team available to answer questions and optimize campaigns.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1447,7 +1856,7 @@
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">
-                            <i class="fas fa-user"></i>
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma">
                         </div>
                         <div class="client-details">
                             <h4>Rajesh Sharma</h4>
@@ -1462,7 +1871,7 @@
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">
-                            <i class="fas fa-user"></i>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
                         </div>
                         <div class="client-details">
                             <h4>Priya Patel</h4>
@@ -1477,7 +1886,7 @@
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">
-                            <i class="fas fa-user"></i>
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Michael Johnson">
                         </div>
                         <div class="client-details">
                             <h4>Michael Johnson</h4>
@@ -1489,7 +1898,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section - UPDATED -->
+    <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-title">
@@ -1526,6 +1935,26 @@
                         </div>
                         <div class="faq-answer">
                             <p>We employ proven, ethical strategies to enhance your online reputation. For Google Maps and Play Store reviews, we utilize established methodologies that encourage genuine feedback from authentic users. Our approach focuses on creating positive experiences that naturally result in higher ratings and reviews, helping to build trust and credibility for your business.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What industries do you specialize in?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We have extensive experience working with businesses across various industries including restaurants, retail, healthcare, professional services, technology startups, e-commerce, real estate, and mobile applications. Our strategies are customized to address the unique challenges and opportunities within each sector.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer customized marketing packages?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely. We understand that every business has unique needs and goals. After our initial consultation, we'll create a customized marketing package that addresses your specific requirements and budget. Our flexible approach ensures you only pay for services that deliver measurable results for your business.</p>
                         </div>
                     </div>
                 </div>
@@ -1576,6 +2005,16 @@
                                 <p>info@clickdera.com</p>
                             </div>
                         </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Monday-Friday: 9AM-6PM<br>Saturday: 10AM-2PM</p>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="whatsapp-option">
@@ -1612,6 +2051,7 @@
                                 <option value="reviews">App & Map Reviews</option>
                                 <option value="social">Social Media Management</option>
                                 <option value="app">App Marketing</option>
+                                <option value="package">Custom Package</option>
                             </select>
                         </div>
                         
@@ -1620,7 +2060,7 @@
                             <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project" required></textarea>
                         </div>
                         
-                        <button type="submit" class="cta-button" style="width: 100%; padding: 16px; font-size: 1.1rem;">Send Message</button>
+                        <button type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1635,10 +2075,10 @@
                     <div class="footer-logo">Click<span>dera</span></div>
                     <p>Affordable digital marketing agency providing performance marketing, video editing, Google Map SEO, app reviews, and social media management in India, USA & Nepal.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/company/clickera/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Clickdera" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/clickera/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Clickdera" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                     <a href="#" class="gmb-link">
                         <i class="fas fa-external-link-alt"></i> Our Google Business Profile
@@ -1653,6 +2093,7 @@
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Google Map SEO</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> App & Map Reviews</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> App Marketing</a></li>
                     </ul>
                 </div>
                 
@@ -1660,9 +2101,11 @@
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul>
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
                         <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
                 
@@ -1678,10 +2121,15 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Clickdera. All rights reserved. | Revolutionizing Digital Marketing Since 2020</p>
+                <p>&copy; 2025 Clickdera. All rights reserved. | Revolutionizing Digital Marketing Since 2025</p>
             </div>
         </div>
     </footer>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -1704,6 +2152,14 @@
             } else {
                 header.style.boxShadow = 'none';
                 header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+            
+            // Scroll to top button visibility
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
             }
         });
         
@@ -1764,37 +2220,55 @@
             });
         }
         
-        // Animated counting for stats
-        const counterObserver = new IntersectionObserver((entries) => {
+        // Fixed Stats Counter Animation
+        function animateCounter(element, target, suffix = '') {
+            const duration = 2000; // Animation duration in ms
+            const frameDuration = 1000 / 60; // 60fps
+            const totalFrames = Math.round(duration / frameDuration);
+            let frame = 0;
+            
+            const counter = setInterval(() => {
+                frame++;
+                const progress = frame / totalFrames;
+                const currentCount = Math.floor(target * progress);
+                
+                if (currentCount < target) {
+                    element.textContent = currentCount + suffix;
+                } else {
+                    element.textContent = target + suffix;
+                    clearInterval(counter);
+                }
+            }, frameDuration);
+        }
+        
+        // Stats counter observer
+        const statsSection = document.querySelector('.stats');
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let statsAnimated = false;
+        
+        const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = document.querySelectorAll('.stat-number');
-                    counters.forEach(counter => {
-                        const target = +counter.getAttribute('data-count');
-                        const speed = 200; // ms
-                        const increment = target / speed;
+                if (entry.isIntersecting && !statsAnimated) {
+                    statNumbers.forEach(element => {
+                        const target = parseInt(element.getAttribute('data-target'));
+                        const suffix = element.getAttribute('data-suffix') || '+';
                         
-                        let count = 0;
-                        const updateCount = () => {
-                            count += increment;
-                            if (count < target) {
-                                counter.innerText = Math.ceil(count);
-                                setTimeout(updateCount, 1);
-                            } else {
-                                counter.innerText = target + '+';
-                            }
-                        };
+                        // Reset to 0 before animating
+                        element.textContent = '0';
                         
-                        updateCount();
+                        // Start animation
+                        animateCounter(element, target, suffix);
                     });
-                    counterObserver.unobserve(entry.target);
+                    
+                    statsAnimated = true;
+                    statsObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.5 });
         
-        counterObserver.observe(document.querySelector('.stats'));
+        statsObserver.observe(statsSection);
         
-        // FAQ Accordion - Fixed
+        // FAQ Accordion
         const faqItems = document.querySelectorAll('.faq-item');
         
         faqItems.forEach(item => {
@@ -1802,14 +2276,17 @@
             
             question.addEventListener('click', () => {
                 // Toggle current item
-                item.classList.toggle('active');
+                const isActive = item.classList.contains('active');
                 
-                // Close other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
+                // Close all items first
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
                 });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
             });
         });
         
@@ -1821,6 +2298,16 @@
             });
             icon.addEventListener('mouseleave', () => {
                 icon.style.transform = '';
+            });
+        });
+        
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     </script>
