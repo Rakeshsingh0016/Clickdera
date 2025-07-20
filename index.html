@@ -492,10 +492,11 @@
             font-weight: 600;
         }
         
-        /* Services Section */
-        .services {
+        /* Why Choose Us Section - Enhanced */
+        .why-us {
             padding: 120px 0;
             position: relative;
+            background: rgba(15, 23, 42, 0.7);
         }
         
         .section-title {
@@ -532,154 +533,31 @@
             line-height: 1.8;
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
-        }
-        
-        .service-card {
-            background: var(--card-gradient);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 50px 35px;
-            position: relative;
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .why-us-container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
+        .why-us-header {
+            max-width: 900px;
+            margin: 0 auto 60px;
         }
         
-        .service-icon {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            font-size: 40px;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(10deg);
-            background: var(--gradient-secondary);
-        }
-        
-        .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--light);
-        }
-        
-        .service-card p {
-            color: var(--gray);
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .service-features {
-            width: 100%;
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: left;
-        }
-        
-        .service-features h4 {
-            color: var(--light);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .service-features ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-        
-        .service-features li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-            color: var(--light-gray);
-            font-size: 1rem;
-        }
-        
-        .service-features li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent);
-        }
-        
-        .learn-more {
-            color: var(--primary-light);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            margin-top: 20px;
-        }
-        
-        .learn-more i {
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .learn-more:hover {
-            color: var(--accent);
-        }
-        
-        .learn-more:hover i {
-            transform: translateX(5px);
-        }
-        
-        /* Why Choose Us Section */
-        .why-us {
-            padding: 120px 0;
-            position: relative;
-            background: rgba(15, 23, 42, 0.7);
-        }
-        
-        .why-us-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .why-us-content h2 {
+        .why-us-header h2 {
             font-size: 2.8rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: var(--light);
             font-family: 'Montserrat', sans-serif;
             line-height: 1.2;
         }
         
-        .why-us-content h2 span {
+        .why-us-header h2 span {
             color: var(--accent);
             position: relative;
         }
         
-        .why-us-content h2 span::after {
+        .why-us-header h2 span::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -690,36 +568,33 @@
             border-radius: 10px;
         }
         
-        .why-us-content p {
+        .why-us-header p {
             color: var(--gray);
             font-size: 1.2rem;
             line-height: 1.8;
-            margin-bottom: 40px;
         }
         
-        .why-us-points {
+        .why-points-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 35px;
+            margin-top: 40px;
         }
         
-        .why-point {
-            background: rgba(30, 41, 59, 0.6);
-            border-radius: 15px;
-            padding: 30px;
+        .why-point-card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 45px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(5px);
         }
         
-        .why-point:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(62, 98, 238, 0.15);
-            background: rgba(30, 41, 59, 0.8);
-        }
-        
-        .why-point::before {
+        .why-point-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -727,71 +602,53 @@
             width: 100%;
             height: 5px;
             background: var(--gradient-primary);
+            transition: all 0.4s ease;
             opacity: 0;
-            transition: opacity 0.3s ease;
         }
         
-        .why-point:hover::before {
+        .why-point-card:hover::before {
             opacity: 1;
         }
         
+        .why-point-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
+        }
+        
         .point-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient-primary);
-            border-radius: 15px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            font-size: 28px;
-            transition: all 0.3s ease;
+            font-size: 40px;
+            color: white;
+            transition: all 0.4s ease;
         }
         
-        .why-point:hover .point-icon {
+        .why-point-card:hover .point-icon {
             transform: scale(1.1) rotate(10deg);
             background: var(--gradient-secondary);
         }
         
-        .point-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+        .why-point-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
             color: var(--light);
+            transition: color 0.3s ease;
         }
         
-        .point-content p {
+        .why-point-card:hover h3 {
+            color: var(--accent);
+        }
+        
+        .why-point-card p {
             color: var(--gray);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        .why-us-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            height: 550px;
-            background: linear-gradient(45deg, var(--primary-dark), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            transform: perspective(1000px) rotateY(10deg);
-            transition: transform 0.5s ease;
-        }
-        
-        .why-us-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-        
-        .why-us-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000') center/cover;
-            opacity: 0.7;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         /* Testimonials Section */
@@ -1391,16 +1248,7 @@
                 font-size: 3.3rem;
             }
             
-            .why-us-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .why-us-image {
-                height: 450px;
-                margin-top: 40px;
-            }
-            
-            .why-us-points {
+            .why-points-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -1424,7 +1272,7 @@
                 padding: 0;
             }
             
-            .why-us-points {
+            .why-points-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1476,10 +1324,6 @@
             }
             
             .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .why-us-points {
                 grid-template-columns: 1fr;
             }
         }
@@ -1639,126 +1483,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Digital Marketing Services</h2>
-                <p>Comprehensive solutions tailored to your business needs and marketing goals</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Performance Marketing</h3>
-                    <p>Data-driven strategies to drive leads and conversions for your business with measurable ROI.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>ROI-focused campaigns</li>
-                            <li>Conversion tracking</li>
-                            <li>Audience segmentation</li>
-                            <li>Multi-channel strategy</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Editing & Production</h3>
-                    <p>Professional video content creation and editing for social media ads and marketing campaigns.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Social media optimized</li>
-                            <li>Motion graphics</li>
-                            <li>Branded content</li>
-                            <li>Ad-ready formats</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Google Map SEO</h3>
-                    <p>Boost local visibility with our expert Google Map SEO and listing optimization services.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Local ranking improvement</li>
-                            <li>Listing optimization</li>
-                            <li>Review management</li>
-                            <li>Local citation building</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>App & Map Reviews</h3>
-                    <p>Build trust and reputation with authentic reviews for your apps and Google Maps listings.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Review generation</li>
-                            <li>Reputation monitoring</li>
-                            <li>Response management</li>
-                            <li>Star rating improvement</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <p>Grow your online presence with strategic social media management tailored to your audience.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Content calendar</li>
-                            <li>Engagement strategy</li>
-                            <li>Performance analytics</li>
-                            <li>Community building</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>App Marketing</h3>
-                    <p>Specialized marketing strategies to boost downloads and engagement for mobile applications.</p>
-                    <div class="service-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>App store optimization</li>
-                            <li>User acquisition</li>
-                            <li>Retention campaigns</li>
-                            <li>Performance analytics</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
+    <!-- Why Choose Us Section - Enhanced -->
     <section class="why-us" id="why-us">
         <div class="container">
             <div class="section-title">
@@ -1767,75 +1492,35 @@
             </div>
             
             <div class="why-us-container">
-                <div class="why-us-content">
+                <div class="why-us-header">
                     <h2>We Deliver <span>Results-Driven</span> Marketing Solutions</h2>
                     <p>At Clickdera, we combine industry expertise with innovative strategies to deliver measurable results for your business. Our focus on performance and affordability sets us apart in the competitive digital marketing landscape.</p>
-                    
-                    <div class="why-us-points">
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-rupee-sign"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Affordable Pricing</h3>
-                                <p>Quality marketing services at prices that won't break your budget. We focus on value, not high prices.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Performance Focused</h3>
-                                <p>We prioritize measurable results - leads, conversions, and ROI - not just vanity metrics.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-globe-asia"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Global Coverage</h3>
-                                <p>We serve clients across India, USA, Nepal, and worldwide with localized strategies that work.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Rapid Implementation</h3>
-                                <p>Quick setup and execution with measurable results starting within the first 30 days.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Transparent Reporting</h3>
-                                <p>Comprehensive monthly reports showing exactly how your marketing budget is performing.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-point">
-                            <div class="point-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="point-content">
-                                <h3>Dedicated Support</h3>
-                                <p>Your own account manager and support team available to answer questions and optimize campaigns.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 
-                <div class="why-us-image">
-                    <i class="fas fa-trophy" style="font-size: 8rem; color: rgba(255,255,255,0.2);"></i>
+                <div class="why-points-grid">
+                    <div class="why-point-card">
+                        <div class="point-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Affordable Pricing</h3>
+                        <p>Quality marketing services at prices that won't break your budget. We focus on value, not high prices, making professional marketing accessible to all businesses.</p>
+                    </div>
+                    
+                    <div class="why-point-card">
+                        <div class="point-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Performance Focused</h3>
+                        <p>We prioritize measurable results - leads, conversions, and ROI - not just vanity metrics. Our data-driven approach ensures your marketing budget delivers real growth.</p>
+                    </div>
+                    
+                    <div class="why-point-card">
+                        <div class="point-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h3>Global Coverage</h3>
+                        <p>We serve clients across India, USA, Nepal, and worldwide with localized strategies that work. Wherever your customers are, we can help you reach them.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1891,70 +1576,6 @@
                         <div class="client-details">
                             <h4>Michael Johnson</h4>
                             <p>App Developer, USA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked <span>Questions</span></h2>
-                <p>Find answers to common questions about our services</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How to contact Clickdera?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>You can reach us via email at <strong>info@clickdera.com</strong> or by filling out the contact form on our website. Our dedicated team will respond to your inquiry within 24 business hours to discuss your requirements and provide personalized assistance.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How long does it take to see results from Google Map SEO?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Typically, it takes about a month to start seeing improvements in your Google Maps rankings. However, the timeframe can vary depending on factors such as your industry competitiveness, location, and the current state of your business listing. In some cases, it may take longer to achieve optimal positioning.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How do you increase our reviews on Google Maps and Play Store?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We employ proven, ethical strategies to enhance your online reputation. For Google Maps and Play Store reviews, we utilize established methodologies that encourage genuine feedback from authentic users. Our approach focuses on creating positive experiences that naturally result in higher ratings and reviews, helping to build trust and credibility for your business.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What industries do you specialize in?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We have extensive experience working with businesses across various industries including restaurants, retail, healthcare, professional services, technology startups, e-commerce, real estate, and mobile applications. Our strategies are customized to address the unique challenges and opportunities within each sector.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer customized marketing packages?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, absolutely. We understand that every business has unique needs and goals. After our initial consultation, we'll create a customized marketing package that addresses your specific requirements and budget. Our flexible approach ensures you only pay for services that deliver measurable results for your business.</p>
                         </div>
                     </div>
                 </div>
@@ -2167,7 +1788,7 @@
         const serviceCards = document.querySelectorAll('.service-card');
         const statCards = document.querySelectorAll('.stat-card');
         const testimonialCards = document.querySelectorAll('.testimonial-card');
-        const whyPoints = document.querySelectorAll('.why-point');
+        const whyPoints = document.querySelectorAll('.why-point-card');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2268,25 +1889,13 @@
         
         statsObserver.observe(statsSection);
         
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
         
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                // Toggle current item
-                const isActive = item.classList.contains('active');
-                
-                // Close all items first
-                faqItems.forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
         
@@ -2298,16 +1907,6 @@
             });
             icon.addEventListener('mouseleave', () => {
                 icon.style.transform = '';
-            });
-        });
-        
-        // Scroll to top button
-        const scrollTopBtn = document.querySelector('.scroll-top');
-        
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
             });
         });
     </script>
