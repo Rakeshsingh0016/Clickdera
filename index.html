@@ -421,6 +421,100 @@
             line-height: 1.7;
         }
         
+        /* Services Section */
+        .services {
+            padding: 120px 0;
+            background: rgba(15, 23, 42, 0.7);
+            position: relative;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .service-card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
+        }
+        
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: var(--gradient-secondary);
+        }
+        
+        .service-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .service-features {
+            text-align: left;
+            margin-top: 25px;
+        }
+        
+        .service-features li {
+            color: var(--light-gray);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .service-features li i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+        
         /* Stats Section - FIXED */
         .stats {
             padding: 100px 0;
@@ -651,15 +745,20 @@
             line-height: 1.8;
         }
         
-        /* Testimonials Section */
+        /* Testimonials Section - Enhanced */
         .testimonials {
             padding: 120px 0;
             background: rgba(15, 23, 42, 0.8);
         }
         
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 40px;
             margin-top: 60px;
         }
@@ -667,11 +766,14 @@
         .testimonial-card {
             background: var(--card-gradient);
             border-radius: 20px;
-            padding: 45px;
+            padding: 50px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .testimonial-card:hover {
@@ -684,6 +786,7 @@
             padding-bottom: 35px;
             margin-bottom: 35px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-grow: 1;
         }
         
         .testimonial-content::before {
@@ -703,6 +806,8 @@
             font-style: italic;
             font-size: 1.2rem;
             line-height: 1.8;
+            position: relative;
+            z-index: 2;
         }
         
         .client-info {
@@ -712,8 +817,8 @@
         }
         
         .client-avatar {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             background: var(--gradient-primary);
             display: flex;
@@ -723,6 +828,7 @@
             color: white;
             transition: all 0.3s ease;
             overflow: hidden;
+            flex-shrink: 0;
         }
         
         .client-avatar img {
@@ -737,14 +843,14 @@
         }
         
         .client-details h4 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--light);
             margin-bottom: 5px;
         }
         
         .client-details p {
             color: var(--gray);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
         
         /* FAQ Section */
@@ -936,29 +1042,6 @@
             margin: 0;
         }
         
-        .whatsapp-option {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 30px;
-            color: var(--gray);
-            padding: 15px 20px;
-            background: rgba(15, 23, 42, 0.4);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-        
-        .whatsapp-option:hover {
-            background: rgba(15, 23, 42, 0.7);
-            transform: translateX(5px);
-        }
-        
-        .whatsapp-icon {
-            color: #25D366;
-            font-size: 2.2rem;
-        }
-        
         .contact-form {
             background: var(--card-gradient);
             border-radius: 25px;
@@ -1115,22 +1198,6 @@
             transform: translateY(-3px);
         }
         
-        .gmb-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 15px;
-            color: var(--primary-light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-        
-        .gmb-link:hover {
-            color: var(--accent);
-            transform: translateX(5px);
-        }
-        
         .footer-heading {
             font-size: 1.4rem;
             margin-bottom: 30px;
@@ -1260,6 +1327,14 @@
             .about-image {
                 height: 400px;
             }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
         }
         
         @media (max-width: 992px) {
@@ -1304,6 +1379,14 @@
             .section-title h2 {
                 font-size: 2.5rem;
             }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1323,8 +1406,14 @@
                 font-size: 2.2rem;
             }
             
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .testimonial-card {
+                padding: 30px;
+            }
+            
+            .testimonial-content::before {
+                top: -30px;
+                left: -15px;
+                font-size: 6rem;
             }
         }
         
@@ -1454,6 +1543,108 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Services</span></h2>
+                <p>Comprehensive digital marketing solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Leads Generation</h3>
+                    <p>Targeted lead generation strategies to fill your sales pipeline with high-quality prospects.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom lead generation models</li>
+                        <li><i class="fas fa-check"></i> Targeted audience segmentation</li>
+                        <li><i class="fas fa-check"></i> Multi-channel lead capture</li>
+                        <li><i class="fas fa-check"></i> Lead nurturing strategies</li>
+                        <li><i class="fas fa-check"></i> Performance tracking & optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Reputation Management</h3>
+                    <p>Build and maintain a stellar online reputation that attracts more customers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> App store review management</li>
+                        <li><i class="fas fa-check"></i> Google Maps review optimization</li>
+                        <li><i class="fas fa-check"></i> Justdial review management</li>
+                        <li><i class="fas fa-check"></i> Review response strategy</li>
+                        <li><i class="fas fa-check"></i> Negative review mitigation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>GMB Optimization</h3>
+                    <p>Maximize your local visibility with expert Google My Business optimization.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> GMB account setup & verification</li>
+                        <li><i class="fas fa-check"></i> Complete profile optimization</li>
+                        <li><i class="fas fa-check"></i> Local SEO strategy</li>
+                        <li><i class="fas fa-check"></i> Post scheduling & management</li>
+                        <li><i class="fas fa-check"></i> Review generation strategy</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Professional social media management to grow your brand online.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Content creation & scheduling</li>
+                        <li><i class="fas fa-check"></i> Platform-specific strategies</li>
+                        <li><i class="fas fa-check"></i> Community engagement</li>
+                        <li><i class="fas fa-check"></i> Performance analytics</li>
+                        <li><i class="fas fa-check"></i> Ad campaign management</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing services to make your content stand out.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Game highlight reels</li>
+                        <li><i class="fas fa-check"></i> Social media video content</li>
+                        <li><i class="fas fa-check"></i> Promotional videos</li>
+                        <li><i class="fas fa-check"></i> Motion graphics</li>
+                        <li><i class="fas fa-check"></i> Short-form content editing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Eye-catching designs that communicate your brand message effectively.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Social media graphics</li>
+                        <li><i class="fas fa-check"></i> Marketing posters</li>
+                        <li><i class="fas fa-check"></i> Brand identity design</li>
+                        <li><i class="fas fa-check"></i> Infographics</li>
+                        <li><i class="fas fa-check"></i> Print & digital collateral</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section - FIXED COUNTERS -->
     <section class="stats">
         <div class="container">
@@ -1526,7 +1717,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section - Enhanced -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
@@ -1534,48 +1725,114 @@
                 <p>Hear what our clients say about working with us</p>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Clickdera transformed our local visibility with their Google Map SEO service. Our business now appears in the top 3 for all relevant searches in our area. Highly recommended for any local business in India!"</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma">
+            <div class="testimonials-container">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Clickdera transformed our local visibility with their Google Map SEO service. Our business now appears in the top 3 for all relevant searches in our area. The team's attention to detail and strategic approach delivered results that exceeded our expectations."</p>
                         </div>
-                        <div class="client-details">
-                            <h4>Rajesh Sharma</h4>
-                            <p>Restaurant Owner, Delhi</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma">
+                            </div>
+                            <div class="client-details">
+                                <h4>Rajesh Sharma</h4>
+                                <p>Restaurant Owner, Delhi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As a startup with limited budget, Clickdera's affordable digital marketing services were a game-changer. Their performance marketing strategies helped us achieve 3x ROI in just 90 days. Their team became an extension of our marketing department."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                            </div>
+                            <div class="client-details">
+                                <h4>Priya Patel</h4>
+                                <p>CEO, Tech Startup, Bangalore</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The app review management service helped us improve our Play Store rating from 3.2 to 4.7 in just two months. This significantly boosted our download rates and user trust. Clickdera's systematic approach to reputation management is truly impressive."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Michael Johnson">
+                            </div>
+                            <div class="client-details">
+                                <h4>Michael Johnson</h4>
+                                <p>App Developer, USA</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"As a startup with limited budget, Clickdera's affordable digital marketing services were a game-changer. Their performance marketing strategies helped us achieve 3x ROI in just 90 days."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How quickly can I see results from your services?</h3>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="client-details">
-                            <h4>Priya Patel</h4>
-                            <p>CEO, Tech Startup, Bangalore</p>
+                        <div class="faq-answer">
+                            <p>Results vary depending on the service and your industry, but most clients start seeing measurable improvements within 30-60 days. For services like Google Map SEO and review management, you may see initial results within 2-4 weeks.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The app review management service helped us improve our Play Store rating from 3.2 to 4.7 in just two months. This significantly boosted our download rates and user trust."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Michael Johnson">
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What makes Clickdera different from other agencies?</h3>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="client-details">
-                            <h4>Michael Johnson</h4>
-                            <p>App Developer, USA</p>
+                        <div class="faq-answer">
+                            <p>We focus on delivering tangible business results rather than just vanity metrics. Our affordable pricing model makes professional marketing accessible to businesses of all sizes without compromising on quality or results.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer customized packages?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We understand every business has unique needs. Our team will work with you to create a customized package that aligns with your specific goals and budget.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do you measure success for your clients?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We focus on key performance indicators that directly impact your business, such as lead generation, conversion rates, online visibility, and revenue growth. We provide transparent reporting so you can see exactly what you're getting for your investment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What industries do you specialize in?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We've successfully worked with clients across various industries including healthcare, retail, hospitality, technology, and professional services. Our strategies are adaptable to any industry that benefits from digital marketing.</p>
                         </div>
                     </div>
                 </div>
@@ -1609,16 +1866,6 @@
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone Number</h4>
-                                <p>+91 98765 43210 (India)<br>+1 (555) 123-4567 (USA)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-text">
@@ -1626,27 +1873,12 @@
                                 <p>info@clickdera.com</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Working Hours</h4>
-                                <p>Monday-Friday: 9AM-6PM<br>Saturday: 10AM-2PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="whatsapp-option">
-                        <i class="fab fa-whatsapp whatsapp-icon"></i>
-                        <p>Chat with us on WhatsApp: +91 98765 43210</p>
                     </div>
                 </div>
                 
                 <div class="contact-form">
                     <h3>Send a Message</h3>
-                    <form action="https://formspree.io/f/xnnvyoag" method="POST">
+                    <form action="https://formspree.io/f/xjkrzkld" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
@@ -1658,20 +1890,15 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
-                        </div>
-                        
-                        <div class="form-group">
                             <label for="service">Service Interested In</label>
                             <select id="service" name="service" class="form-control" required>
                                 <option value="">Select a service</option>
-                                <option value="performance">Performance Marketing</option>
-                                <option value="video">Video Editing</option>
-                                <option value="map">Google Map SEO</option>
-                                <option value="reviews">App & Map Reviews</option>
+                                <option value="leads">Leads Generation</option>
+                                <option value="reputation">Reputation Management</option>
+                                <option value="gmb">GMB Optimization</option>
                                 <option value="social">Social Media Management</option>
-                                <option value="app">App Marketing</option>
+                                <option value="video">Video Editing</option>
+                                <option value="graphics">Graphic Design</option>
                                 <option value="package">Custom Package</option>
                             </select>
                         </div>
@@ -1701,20 +1928,17 @@
                         <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@Clickdera" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
-                    <a href="#" class="gmb-link">
-                        <i class="fas fa-external-link-alt"></i> Our Google Business Profile
-                    </a>
                 </div>
                 
                 <div class="footer-links">
                     <h3 class="footer-heading">Services</h3>
                     <ul>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Performance Marketing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Video Editing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Google Map SEO</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> App & Map Reviews</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Leads Generation</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Reputation Management</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> GMB Optimization</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> App Marketing</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Video Editing</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Graphic Design</a></li>
                     </ul>
                 </div>
                 
@@ -1734,9 +1958,7 @@
                     <h3 class="footer-heading">Contact Info</h3>
                     <ul>
                         <li><a href="#"><i class="fas fa-map-marker-alt"></i> India • USA • Nepal</a></li>
-                        <li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li>
                         <li><a href="mailto:info@clickdera.com"><i class="fas fa-envelope"></i> info@clickdera.com</a></li>
-                        <li><a href="https://wa.me/919876543210"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
                     </ul>
                 </div>
             </div>
@@ -1789,6 +2011,7 @@
         const statCards = document.querySelectorAll('.stat-card');
         const testimonialCards = document.querySelectorAll('.testimonial-card');
         const whyPoints = document.querySelectorAll('.why-point-card');
+        const faqItems = document.querySelectorAll('.faq-item');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1827,6 +2050,29 @@
             point.style.transform = 'translateY(30px)';
             point.style.transition = 'all 0.6s ease';
             observer.observe(point);
+        });
+        
+        // FAQ accordion functionality
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const currentlyActive = document.querySelector('.faq-item.active');
+                
+                // If this item is already active, close it
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    return;
+                }
+                
+                // Close any other active item
+                if (currentlyActive) {
+                    currentlyActive.classList.remove('active');
+                }
+                
+                // Open this item
+                item.classList.add('active');
+            });
         });
         
         // Form submission
@@ -1872,7 +2118,7 @@
                 if (entry.isIntersecting && !statsAnimated) {
                     statNumbers.forEach(element => {
                         const target = parseInt(element.getAttribute('data-target'));
-                        const suffix = element.getAttribute('data-suffix') || '+';
+                        const suffix = element.getAttribute('data-suffix') || '';
                         
                         // Reset to 0 before animating
                         element.textContent = '0';
