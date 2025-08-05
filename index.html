@@ -24,6 +24,7 @@
             --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #5A4FDE 100%);
             --hero-gradient: linear-gradient(120deg, #0f172a 0%, #1e293b 100%);
             --card-gradient: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
+            --blog-gradient: linear-gradient(135deg, rgba(30,41,59,0.95) 0%, rgba(15,23,42,0.97) 100%);
         }
         
         * {
@@ -515,7 +516,7 @@
             margin-top: 3px;
         }
         
-        /* Stats Section - FIXED */
+        /* Stats Section */
         .stats {
             padding: 100px 0;
             position: relative;
@@ -586,7 +587,7 @@
             font-weight: 600;
         }
         
-        /* Why Choose Us Section - Enhanced */
+        /* Why Choose Us Section */
         .why-us {
             padding: 120px 0;
             position: relative;
@@ -745,7 +746,7 @@
             line-height: 1.8;
         }
         
-        /* Testimonials Section - Enhanced */
+        /* Testimonials Section */
         .testimonials {
             padding: 120px 0;
             background: rgba(15, 23, 42, 0.8);
@@ -1309,6 +1310,223 @@
             }
         }
         
+        /* Blogs Section */
+        .blogs {
+            padding: 120px 0;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .blog-card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(62, 98, 238, 0.15);
+        }
+        
+        .blog-card-header h3 {
+            font-size: 1.7rem;
+            color: var(--light);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .blog-card-content {
+            flex-grow: 1;
+        }
+        
+        .blog-card-content p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .blog-card-footer {
+            margin-top: auto;
+        }
+        
+        /* Blog Post Page */
+        .blog-post {
+            padding: 150px 0 100px;
+            background: var(--darker);
+            min-height: 100vh;
+        }
+        
+        .back-to-blogs {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(105, 95, 243, 0.1);
+        }
+        
+        .back-to-blogs:hover {
+            background: rgba(105, 95, 243, 0.2);
+            text-decoration: none;
+        }
+        
+        .blog-post h1 {
+            font-size: 2.8rem;
+            color: var(--light);
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.3;
+        }
+        
+        .blog-content {
+            color: var(--light-gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            background: var(--blog-gradient);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .blog-content h2 {
+            font-size: 2rem;
+            color: var(--light);
+            margin: 40px 0 20px;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .blog-content h2 i {
+            color: var(--accent);
+            font-size: 2.5rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.6rem;
+            color: var(--light);
+            margin: 30px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .blog-content h3 i {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+        
+        .blog-content li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .blog-content li i {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+        
+        .blog-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .blog-content th, .blog-content td {
+            border: 1px solid var(--gray);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .blog-content th {
+            background-color: rgba(62, 98, 238, 0.1);
+            color: var(--light);
+        }
+        
+        .blog-content .callout {
+            background: rgba(105, 95, 243, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .blog-content .callout p {
+            margin: 0;
+            color: var(--light-gray);
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blog-contact {
+            background: var(--gradient-primary);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .blog-contact h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .blog-contact p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .blog-contact .email {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+        
         /* Responsive Design */
         @media (max-width: 1200px) {
             .hero h1 {
@@ -1387,6 +1605,14 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .blog-post h1 {
+                font-size: 2.3rem;
+            }
+            
+            .blog-content {
+                padding: 20px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1415,6 +1641,73 @@
                 left: -15px;
                 font-size: 6rem;
             }
+            
+            .blog-card-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            background: var(--darker);
+            z-index: 1100;
+            transition: left 0.4s ease;
+            padding: 80px 30px 30px;
+            box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-menu ul li a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
         }
         
         /* Improved Icons */
@@ -1467,507 +1760,1744 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Affordable Digital Growth Solutions That Actually <span>Drive Revenue</span></h1>
-                <p>Specializing in ROI-driven marketing, we help startups, SMBs, and apps dominate local search, boost reviews, and convert more customers - without the agency price tag.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="cta-button">Explore Services</a>
-                    <a href="#contact" class="btn-secondary">Schedule Consultation</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Post Pages -->
+    <div id="blog-pages">
+        <!-- Blog 1 Content -->
+        <div id="blog1" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>What Are Install, Signup, Survey & Gameplay Leads? | Complete Guide 2025</h1>
+                
+                <div class="blog-content">
+                    <h2><i class="fas fa-brain"></i> Introduction</h2>
+                    <p>In the world of performance marketing, the word <strong>“lead”</strong> means more than just contact details. A lead could be someone who installs your app, signs up for your service, fills out a survey, or even plays a game. Each action represents intent—and in 2025, understanding this <strong>intent-based lead generation</strong> is key to growing your business online.</p>
+                    <p>Let’s dive into the 4 most common lead types: <strong>Install, Signup, Survey Completion</strong>, and <strong>Gameplay</strong>, and how your agency or business can leverage them for better ROI.</p>
+
+                    <h2><i class="fas fa-mobile-alt"></i> 1. Install Leads</h2>
+                    <p><strong>Install leads</strong> are generated when a user installs your mobile app through a campaign.</p>
+
+                    <h3><i class="fas fa-question-circle"></i> Why they matter:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Ideal for startups and SaaS-based apps</li>
+                        <li><i class="fas fa-check-circle"></i> Build a loyal app user base</li>
+                        <li><i class="fas fa-check-circle"></i> Retarget users via push notifications</li>
+                    </ul>
+
+                    <h3><i class="fas fa-cogs"></i> How to get install leads:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Run <strong>Google App Campaigns</strong> or <strong>Meta App Ads</strong></li>
+                        <li><i class="fas fa-check"></i> Use platforms like AppSamurai, AppTweak for ASO (App Store Optimization)</li>
+                        <li><i class="fas fa-check"></i> Collaborate with influencers or use Telegram groups to boost installs</li>
+                    </ul>
+
+                    <div class="callout">
+                        <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Target niche audiences with custom creatives. Use install incentives (like coins, discounts, or trial access).</p>
+                    </div>
+
+                    <h2><i class="fas fa-file-signature"></i> 2. Signup Leads</h2>
+                    <p>These are users who submit their <strong>email, name, or phone number</strong> by signing up on your website or app.</p>
+
+                    <h3><i class="fas fa-map-marker-alt"></i> Where they work:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> EdTech platforms</li>
+                        <li><i class="fas fa-check"></i> SaaS tools</li>
+                        <li><i class="fas fa-check"></i> Newsletter or community-based models</li>
+                        <li><i class="fas fa-check"></i> Trial offers</li>
+                    </ul>
+
+                    <h3><i class="fas fa-tools"></i> How to generate signups:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Offer a <strong>free eBook</strong>, audit, or trial service</li>
+                        <li><i class="fas fa-check"></i> Use <strong>Facebook Lead Ads</strong> or <strong>landing pages</strong> with strong CTAs</li>
+                        <li><i class="fas fa-check"></i> Retarget using Google Display Network for those who visited but didn’t sign up</li>
+                    </ul>
+
+                    <div class="callout">
+                        <p><i class="fas fa-magnet"></i> Use urgency tactics: <em>"Only 100 Free Signups Left!"</em></p>
+                    </div>
+
+                    <h2><i class="fas fa-poll"></i> 3. Survey Completion Leads</h2>
+                    <p>Survey leads are often used for <strong>research or qualification</strong>, especially in CPL (Cost Per Lead) campaigns.</p>
+
+                    <h3><i class="fas fa-briefcase"></i> Use cases:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Market research firms</li>
+                        <li><i class="fas fa-check"></i> E-commerce (for product feedback)</li>
+                        <li><i class="fas fa-check"></i> Affiliate marketers</li>
+                        <li><i class="fas fa-check"></i> Data selling businesses (with consent)</li>
+                    </ul>
+
+                    <h3><i class="fas fa-tasks"></i> How to collect survey leads:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Use Google Forms, Typeform, or SurveyMonkey</li>
+                        <li><i class="fas fa-check"></i> Run paid ads with <em>"Complete a 2-Min Survey & Win ₹50"</em> model</li>
+                        <li><i class="fas fa-check"></i> Incentivize honestly but legally</li>
+                    </ul>
+
+                    <div class="callout">
+                        <p><i class="fas fa-exclamation-triangle"></i> Always ensure your survey follows data privacy norms (GDPR, etc.).</p>
+                    </div>
+
+                    <h2><i class="fas fa-gamepad"></i> 4. Gameplay Leads</h2>
+                    <p>This unique type of lead is generated when a user <strong>plays a game for a certain amount of time</strong>, completes a level, or reaches a milestone.</p>
+
+                    <h3><i class="fas fa-trophy"></i> Best for:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Gaming studios</li>
+                        <li><i class="fas fa-check"></i> Game-testing campaigns</li>
+                        <li><i class="fas fa-check"></i> App monetization through ad engagement</li>
+                    </ul>
+
+                    <h3><i class="fas fa-cogs"></i> Generation methods:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> In-app rewarded ads</li>
+                        <li><i class="fas fa-check"></i> Play & Earn campaigns via influencers</li>
+                        <li><i class="fas fa-check"></i> Gamified tasks on platforms like Taskbucks or RozDhan</li>
+                    </ul>
+
+                    <div class="callout">
+                        <p><i class="fas fa-bullseye"></i> Focus on <strong>CPE (Cost Per Engagement)</strong> or <strong>CPD (Cost Per Download with action)</strong> metrics.</p>
+                    </div>
+
+                    <h2><i class="fas fa-chart-line"></i> Which Lead Type is Best for You?</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Business Type</th>
+                                <th>Best Lead Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>E-learning app</td>
+                                <td>Signup + Survey</td>
+                            </tr>
+                            <tr>
+                                <td>Game development</td>
+                                <td>Gameplay + Install</td>
+                            </tr>
+                            <tr>
+                                <td>Market research firm</td>
+                                <td>Survey</td>
+                            </tr>
+                            <tr>
+                                <td>SaaS tool</td>
+                                <td>Signup + Install</td>
+                            </tr>
+                            <tr>
+                                <td>News/blog site</td>
+                                <td>Signup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout">
+                        <p><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> Run A/B tests to see which lead type delivers <strong>better quality</strong> over just quantity.</p>
+                    </div>
+
+                    <h2><i class="fas fa-tools"></i> Tools for Lead Tracking & Automation</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Google Analytics</strong> – Traffic & conversion source tracking</li>
+                        <li><i class="fas fa-check"></i> <strong>Facebook Pixel</strong> – Retargeting users who didn’t convert</li>
+                        <li><i class="fas fa-check"></i> <strong>Zapier + Google Sheets</strong> – Auto-store leads in real-time</li>
+                        <li><i class="fas fa-check"></i> <strong>Firebase / Appsflyer</strong> – For app install tracking</li>
+                    </ul>
+
+                    <h2><i class="fas fa-phone-alt"></i> Final Thoughts + CTA</h2>
+                    <p>Understanding lead types allows you to <strong>design better campaigns</strong>, measure <strong>real ROI</strong>, and scale your client’s performance results with clarity.</p>
+                    <p>At Clickdera, we specialize in low-cost performance campaigns across <strong>all lead types</strong>. Whether you want <strong>₹5 installs</strong>, <strong>signup leads for your SaaS</strong>, or <strong>game engagement leads</strong>, we’ve done it all.</p>
+                    <p>👉 Want a trial campaign to test lead quality?<br>
+                    📲 Contact us today and let’s drive performance together.</p>
+
+                    <div class="callout">
+                        <p><i class="fas fa-clipboard-list"></i> <strong>Blog Summary</strong></p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> App Installs = Downloads</li>
+                            <li><i class="fas fa-check"></i> Signup = Form Submissions</li>
+                            <li><i class="fas fa-check"></i> Survey = Completion of Questionnaires</li>
+                            <li><i class="fas fa-check"></i> Gameplay = User interaction (time or actions)</li>
+                            <li><i class="fas fa-check"></i> Track with tools, test with creatives, and retarget with precision</li>
+                        </ul>
+                    </div>
+
+                    <div class="blog-contact">
+                        <h3>Ready to boost your lead generation?</h3>
+                        <p>Contact our experts today for a personalized strategy</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">Schedule a Consultation</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- About Clickdera Section -->
-    <section class="about-clickdera" id="about">
-        <div class="container">
-            <div class="about-container">
-                <div class="about-content">
-                    <h2>About <span>Clickdera</span></h2>
-                    <p>Clickdera was founded in 2025 to address a critical problem in the digital marketing industry - agencies overcharging for simple services regardless of the actual work involved.</p>
-                    
-                    <p>Frustrated with the status quo and unable to find an affordable solution that maintained quality, our founder envisioned a new kind of agency. Clickdera was created to provide all digital marketing services at low cost without compromising on quality, creating a game-changer for businesses of all sizes.</p>
-                    
-                    <div class="mission-statement">
-                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                        <p>To democratize digital marketing by providing high-quality, performance-driven services at prices that empower businesses rather than burden them. We believe every business deserves access to effective digital marketing regardless of their budget size.</p>
-                    </div>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h4>Founded in 2025</h4>
-                                <p>Established with a vision to provide affordable digital marketing solutions</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h4>Global Expansion</h4>
-                                <p>Expanded services to USA, India, Nepal and beyond</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h4>Industry Recognition</h4>
-                                <p>Recognized as a leader in affordable performance marketing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Blog 2 Content -->
+        <div id="blog2" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>Google Map SEO – Boosting Listings, Reviews & Local Ranking in 2025</h1>
                 
-                <div class="about-image">
-                    <i class="fas fa-lightbulb" style="font-size: 8rem; color: rgba(255,255,255,0.2);"></i>
+                <div class="blog-content">
+                    <h2><i class="fas fa-compass"></i> Introduction</h2>
+                    <p>In today’s hyper-local digital world, customers often <strong>Google a service near them</strong> before making any decision. That’s why ranking on <strong>Google Maps (via Google My Business)</strong> is no longer optional—it’s a necessity.</p>
+                    <p>Whether you run a restaurant, agency, gym, or local store, this blog will show you how to <strong>optimize your Google Map listing</strong>, get real <strong>customer reviews</strong>, and <strong>rank higher locally</strong> using smart SEO techniques in 2025.</p>
+
+                    <h2><i class="fas fa-map-marked-alt"></i> 1. What is Google Map SEO?</h2>
+                    <p><strong>Google Map SEO</strong> is the process of optimizing your Google Business Profile (formerly Google My Business - GMB) to improve your visibility in local search results and Google Maps.</p>
+                    <p><strong>Example:</strong><br>
+                    When someone searches "digital marketing agency near me," businesses that are well-optimized on Maps appear at the top.</p>
+                    <p>This is called the <strong>Local 3-Pack</strong>—only 3 listings appear by default, so ranking here means more foot traffic and leads.</p>
+
+                    <h2><i class="fas fa-building"></i> 2. How to Set Up Your Google Map Listing Correctly</h2>
+                    <p>If you haven’t already created your listing, go to: <a href="https://www.google.com/business/" target="_blank">https://www.google.com/business/</a></p>
+                    <p>Follow these steps:</p>
+                    <ol>
+                        <li>Add your <strong>exact business name</strong> (avoid stuffing keywords)</li>
+                        <li>Choose the most <strong>relevant business category</strong> (e.g., Marketing Agency, Graphic Designer)</li>
+                        <li>Add your <strong>location</strong> or opt for service-based business (no physical location)</li>
+                        <li>Fill in <strong>opening hours, phone number, and website</strong></li>
+                        <li>Upload <strong>high-quality photos</strong> (your office, team, work samples)</li>
+                        <li>Verify your business (via postcard, call, or email)</li>
+                    </ol>
+                    <div class="callout">
+                        <p><i class="fas fa-check-circle"></i> Pro Tip: Fill <strong>EVERY field</strong> completely. Google rewards fully-completed listings.</p>
+                    </div>
+
+                    <h2><i class="fas fa-star"></i> 3. Importance of Google Reviews in SEO Ranking</h2>
+                    <p>Google reviews play a <strong>crucial role</strong> in how high your business ranks on Maps.</p>
+
+                    <h3><i class="fas fa-question-circle"></i> Why Reviews Matter:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Build <strong>trust and credibility</strong></li>
+                        <li><i class="fas fa-check"></i> Increase <strong>click-through rate</strong></li>
+                        <li><i class="fas fa-check"></i> Boost your <strong>local SEO signals</strong></li>
+                        <li><i class="fas fa-check"></i> Help <strong>conversion rate</strong> from search traffic</li>
+                    </ul>
+
+                    <h3><i class="fas fa-tools"></i> How to Get More Reviews:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ask happy customers to leave a review with a direct link</li>
+                        <li><i class="fas fa-check"></i> Offer a <strong>small incentive</strong> (like 5% off on next order)</li>
+                        <li><i class="fas fa-check"></i> Share your review link via WhatsApp, email, SMS</li>
+                        <li><i class="fas fa-check"></i> Use a <strong>QR code</strong> at your shop/office</li>
+                    </ul>
+                    <div class="callout">
+                        <p><i class="fas fa-exclamation-triangle"></i> Never buy fake reviews. Google’s AI detects this and penalizes listings.</p>
+                    </div>
+
+                    <h2><i class="fas fa-search"></i> 4. Local Ranking Factors in 2025</h2>
+                    <p>Google uses the following major <strong>ranking signals</strong> for Map results:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ranking Factor</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Relevance</td>
+                                <td>How well your business matches the search query</td>
+                            </tr>
+                            <tr>
+                                <td>Distance</td>
+                                <td>Proximity to the user’s location</td>
+                            </tr>
+                            <tr>
+                                <td>Prominence</td>
+                                <td>Popularity, reviews, backlinks, and mentions</td>
+                            </tr>
+                            <tr>
+                                <td>Keyword in Profile</td>
+                                <td>Keywords in business title and description</td>
+                            </tr>
+                            <tr>
+                                <td>Engagement</td>
+                                <td>Clicks, calls, direction requests, etc.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="callout">
+                        <p><i class="fas fa-check-circle"></i> <strong>Use keywords smartly</strong> in your business description and services.</p>
+                        <p><strong>Example:</strong><br>
+                        "We are a top-rated digital marketing agency in Delhi offering performance-based campaigns, app reviews, and SEO."<br>
+                        This boosts <strong>relevance</strong>.</p>
+                    </div>
+
+                    <h2><i class="fas fa-wrench"></i> 5. Pro Tips to Boost Google Map Ranking</h2>
+                    <p>Here’s a battle-tested list of <strong>optimization hacks</strong>:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Post weekly updates via GMB (offers, blogs, news)</li>
+                        <li><i class="fas fa-check"></i> Add <strong>services/products</strong> and describe each clearly</li>
+                        <li><i class="fas fa-check"></i> Upload videos and photos regularly</li>
+                        <li><i class="fas fa-check"></i> Use <strong>local keywords</strong> (e.g., “graphic design in Andheri East”)</li>
+                        <li><i class="fas fa-check"></i> Get listed on local business directories (JustDial, Sulekha)</li>
+                        <li><i class="fas fa-check"></i> Create backlinks to your GMB link (from blogs, press releases, etc.)</li>
+                        <li><i class="fas fa-check"></i> Reply to <strong>every review</strong> (good or bad)</li>
+                    </ul>
+
+                    <h2><i class="fas fa-tools"></i> 6. Tools to Monitor & Improve Your Map SEO</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Google Business Profile Manager</strong> – Official dashboard</li>
+                        <li><i class="fas fa-check"></i> <strong>Local Falcon</strong> – Visual map rank tracking</li>
+                        <li><i class="fas fa-check"></i> <strong>BrightLocal</strong> – Full local SEO analysis</li>
+                        <li><i class="fas fa-check"></i> <strong>Whitespark</strong> – Citation finder for backlinks</li>
+                        <li><i class="fas fa-check"></i> <strong>Reputation.com</strong> – Review tracking and response automation</li>
+                    </ul>
+                    <div class="callout">
+                        <p><i class="fas fa-lightbulb"></i> Also, track actions like <strong>calls, direction requests, and messages</strong> via GMB insights.</p>
+                    </div>
+
+                    <h2><i class="fas fa-chart-line"></i> Real Use Case Example – From Hidden to Highlighted</h2>
+                    <p>One of our clients, a home tutor based in Pune, wasn’t getting any leads despite good services.</p>
+                    <p>We:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Added service keywords (maths tuition, science coaching)</li>
+                        <li><i class="fas fa-check"></i> Collected 35+ authentic reviews in 20 days</li>
+                        <li><i class="fas fa-check"></i> Got listed in 5 local directories</li>
+                        <li><i class="fas fa-check"></i> Started weekly posts with attractive creatives</li>
+                    </ul>
+                    <p><i class="fas fa-chart-line"></i> <strong>Result:</strong> Ranked in <strong>top 3</strong> on Maps for "home tutor in Pune" in 2 months, with 5x lead growth.</p>
+
+                    <h2><i class="fas fa-phone-alt"></i> Final Thoughts + CTA</h2>
+                    <p>Your Google Map presence is your <strong>digital front desk</strong>. Whether someone needs a plumber, a salon, or a marketing agency—they’ll look on Maps first.</p>
+                    <p>Make sure your business is <strong>visible, trusted, and active</strong> with:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Reviews</li>
+                        <li><i class="fas fa-check"></i> Keywords</li>
+                        <li><i class="fas fa-check"></i> Photos</li>
+                        <li><i class="fas fa-check"></i> Local content</li>
+                    </ul>
+                    <p>Clickdera helps businesses <strong>rank higher locally</strong>, get real reviews, and convert views into leads. Want us to optimize your Google listing?</p>
+                    <p>👉 <strong>Contact us now</strong> for a free GMB audit and personalized strategy.</p>
+
+                    <div class="callout">
+                        <p><i class="fas fa-key"></i> <strong>Keywords Used in Blog</strong><br>
+                        Google Map SEO, Google reviews, GMB optimization, map listing ranking, local SEO 2025, local business SEO, map review strategy, business visibility, Google My Business ranking</p>
+                    </div>
+
+                    <div class="blog-contact">
+                        <h3>Boost your local presence today!</h3>
+                        <p>Get expert help with Google Maps optimization</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">Request Free Audit</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our <span>Services</span></h2>
-                <p>Comprehensive digital marketing solutions tailored to your business needs</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Leads Generation</h3>
-                    <p>Targeted lead generation strategies to fill your sales pipeline with high-quality prospects.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Custom lead generation models</li>
-                        <li><i class="fas fa-check"></i> Targeted audience segmentation</li>
-                        <li><i class="fas fa-check"></i> Multi-channel lead capture</li>
-                        <li><i class="fas fa-check"></i> Lead nurturing strategies</li>
-                        <li><i class="fas fa-check"></i> Performance tracking & optimization</li>
-                    </ul>
-                </div>
+        <!-- Blog 3 Content -->
+        <div id="blog3" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>App Reviews & App Ranking – How to Boost Your App on Play Store & App Store (2025 Guide)</h1>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Reputation Management</h3>
-                    <p>Build and maintain a stellar online reputation that attracts more customers.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> App store review management</li>
-                        <li><i class="fas fa-check"></i> Google Maps review optimization</li>
-                        <li><i class="fas fa-check"></i> Justdial review management</li>
-                        <li><i class="fas fa-check"></i> Review response strategy</li>
-                        <li><i class="fas fa-check"></i> Negative review mitigation</li>
+                <div class="blog-content">
+                    <h2><i class="fas fa-mobile-alt"></i> Introduction: Why App Ranking Matters</h2>
+                    <p>With over <strong>5 million apps</strong> on Google Play Store and Apple App Store combined, your app <strong>won’t succeed</strong> unless it’s visible. The higher your app ranks, the more <strong>organic installs, user trust, and engagement</strong> you’ll get.</p>
+                    <p>And what's the <strong>core of ranking?</strong><br>
+                    <i class="fas fa-check-circle"></i> Reviews<br>
+                    <i class="fas fa-check-circle"></i> Ratings<br>
+                    <i class="fas fa-check-circle"></i> ASO (App Store Optimization)</p>
+                    <p>In this guide, we’ll explain how to get <strong>real app reviews</strong>, boost your <strong>app store ranking</strong>, and make your app stand out in 2025.</p>
+
+                    <h2><i class="fas fa-brain"></i> Understanding How App Stores Rank Apps</h2>
+                    <p>Both Google and Apple use <strong>AI algorithms</strong> to determine which apps appear first in search and category listings.</p>
+                    <p>Here are key ranking factors:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>App Title</td>
+                                <td>Should include your primary keyword (e.g., “Budget Tracker – Personal Finance”)</td>
+                            </tr>
+                            <tr>
+                                <td>App Description</td>
+                                <td>Must be keyword-optimized and clearly explain app value</td>
+                            </tr>
+                            <tr>
+                                <td>App Reviews</td>
+                                <td>The more <strong>positive</strong> and <strong>authentic</strong> reviews you get, the better</td>
+                            </tr>
+                            <tr>
+                                <td>Ratings</td>
+                                <td>Average rating above 4.0 helps build credibility</td>
+                            </tr>
+                            <tr>
+                                <td>Installs & Retention</td>
+                                <td>How many people install and continue using your app</td>
+                            </tr>
+                            <tr>
+                                <td>App Engagement</td>
+                                <td>Time spent in the app, usage frequency</td>
+                            </tr>
+                            <tr>
+                                <td>ASO</td>
+                                <td>App Store Optimization (title, description, icons, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td>App Updates</td>
+                                <td>Regular updates show the app is maintained</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2><i class="fas fa-star"></i> Why App Reviews Are Crucial for Ranking</h2>
+                    <p>App reviews affect your <strong>ranking, credibility, and conversions</strong>. According to studies:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 79% of users check reviews <strong>before installing</strong> any app</li>
+                        <li><i class="fas fa-check"></i> Apps with more <strong>recent, detailed reviews</strong> get prioritized in ranking</li>
+                        <li><i class="fas fa-check"></i> <strong>Fake or spammy reviews</strong> lead to penalties and de-ranking</li>
                     </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>GMB Optimization</h3>
-                    <p>Maximize your local visibility with expert Google My Business optimization.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> GMB account setup & verification</li>
-                        <li><i class="fas fa-check"></i> Complete profile optimization</li>
-                        <li><i class="fas fa-check"></i> Local SEO strategy</li>
-                        <li><i class="fas fa-check"></i> Post scheduling & management</li>
-                        <li><i class="fas fa-check"></i> Review generation strategy</li>
+
+                    <h2><i class="fas fa-chart-line"></i> How to Get Real & Positive App Reviews</h2>
+                    <p>Here’s how you can collect <strong>authentic, high-quality reviews</strong> for your app:</p>
+                    
+                    <h3><i class="fas fa-bell"></i> 1. In-App Prompt (Smartly)</h3>
+                    <p>After the user completes a task (e.g., finishes a level, uploads a file), prompt:<br>
+                    <em>“Enjoying the app? Leave us a 5-star review!”</em></p>
+                    
+                    <h3><i class="fas fa-gift"></i> 2. Offer Small Incentives</h3>
+                    <p>Example: “Rate us 5 stars and unlock premium wallpaper pack!”<br>
+                    (Note: Apple restricts incentivized reviews, so apply only on Android)</p>
+                    
+                    <h3><i class="fas fa-share-alt"></i> 3. Use Social Media & Website</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Create a post with your <strong>review link</strong></li>
+                        <li><i class="fas fa-check"></i> Add QR codes on print materials</li>
+                        <li><i class="fas fa-check"></i> Run limited-time giveaways for reviewers</li>
                     </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <p>Professional social media management to grow your brand online.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Content creation & scheduling</li>
-                        <li><i class="fas fa-check"></i> Platform-specific strategies</li>
-                        <li><i class="fas fa-check"></i> Community engagement</li>
-                        <li><i class="fas fa-check"></i> Performance analytics</li>
-                        <li><i class="fas fa-check"></i> Ad campaign management</li>
+                    
+                    <h3><i class="fas fa-envelope"></i> 4. Email or WhatsApp Existing Users</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ask your past customers or app users directly</li>
+                        <li><i class="fas fa-check"></i> Send follow-up reminders politely</li>
                     </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Video Editing</h3>
-                    <p>Professional video editing services to make your content stand out.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Game highlight reels</li>
-                        <li><i class="fas fa-check"></i> Social media video content</li>
-                        <li><i class="fas fa-check"></i> Promotional videos</li>
-                        <li><i class="fas fa-check"></i> Motion graphics</li>
-                        <li><i class="fas fa-check"></i> Short-form content editing</li>
+                    
+                    <h3><i class="fas fa-headset"></i> 5. Use App Review Services (Ethical Ones)</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Use agencies that provide <strong>real human reviews</strong>, not bots or fake installs</li>
                     </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Graphic Design</h3>
-                    <p>Eye-catching designs that communicate your brand message effectively.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Social media graphics</li>
-                        <li><i class="fas fa-check"></i> Marketing posters</li>
-                        <li><i class="fas fa-check"></i> Brand identity design</li>
-                        <li><i class="fas fa-check"></i> Infographics</li>
-                        <li><i class="fas fa-check"></i> Print & digital collateral</li>
+
+                    <h2><i class="fas fa-search"></i> What is ASO? (App Store Optimization)</h2>
+                    <p><strong>ASO</strong> is like SEO, but for mobile apps. It helps your app <strong>rank higher</strong> in app stores.</p>
+                    
+                    <h3><i class="fas fa-clipboard-list"></i> ASO Checklist:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Optimization Tip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>App Title</td>
+                                <td>Must include 1–2 target keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Short Description</td>
+                                <td>Use benefits + keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Long Description</td>
+                                <td>Add features, benefits, use cases, keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Icon</td>
+                                <td>Visually appealing, high resolution</td>
+                            </tr>
+                            <tr>
+                                <td>Screenshots</td>
+                                <td>Show best UI features, highlight benefits</td>
+                            </tr>
+                            <tr>
+                                <td>App Category</td>
+                                <td>Choose accurate category for better relevance</td>
+                            </tr>
+                            <tr>
+                                <td>Reviews</td>
+                                <td>Try to get reviews that mention target keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Localized Content</td>
+                                <td>If targeting India, add Hindi descriptions too</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><i class="fas fa-check-circle"></i> Use tools like <strong>AppTweak, SensorTower, MobileAction</strong> for ASO tracking.</p>
+
+                    <h2><i class="fas fa-rocket"></i> Advanced Tips to Boost App Ranking in 2025</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Regular Updates</strong>: Update your app monthly with new features or bug fixes</li>
+                        <li><i class="fas fa-check"></i> <strong>User Feedback Loop</strong>: Add a “Send Feedback” button in-app</li>
+                        <li><i class="fas fa-check"></i> <strong>Engagement Push Notifications</strong>: Keep users active</li>
+                        <li><i class="fas fa-check"></i> <strong>Referral Program</strong>: Let users invite others and earn rewards</li>
+                        <li><i class="fas fa-check"></i> <strong>Retargeting Ads</strong>: Bring back dropped users via ads</li>
                     </ul>
+
+                    <h2><i class="fas fa-exclamation-triangle"></i> Avoid These Common Mistakes</h2>
+                    <ul>
+                        <li><i class="fas fa-times"></i> Buying fake reviews (easily detected and penalized)</li>
+                        <li><i class="fas fa-times"></i> Keyword stuffing in description (hurts readability and ranking)</li>
+                        <li><i class="fas fa-times"></i> Ignoring feedback in bad reviews</li>
+                        <li><i class="fas fa-times"></i> Not replying to reviews at all</li>
+                    </ul>
+
+                    <h2><i class="fas fa-chart-bar"></i> Case Study: From 100 Installs to 10,000+ in 3 Months</h2>
+                    <p>A utility app (free PDF merger) contacted us in March 2025 with 98 installs.</p>
+                    <p>We:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Optimized their title and description with proper keywords</li>
+                        <li><i class="fas fa-check"></i> Collected 40+ genuine reviews in 20 days</li>
+                        <li><i class="fas fa-check"></i> Ran 2 small ad campaigns</li>
+                        <li><i class="fas fa-check"></i> Added engaging screenshots and video demo</li>
+                        <li><i class="fas fa-check"></i> Reached out to influencers for app mention</li>
+                    </ul>
+                    <p><i class="fas fa-chart-line"></i> <strong>Result:</strong> Crossed <strong>10,000 installs</strong>, <strong>rated 4.8</strong>, ranked #3 for “PDF tool for mobile”</p>
+
+                    <h2><i class="fas fa-phone-alt"></i> Final Thoughts & CTA</h2>
+                    <p>App success today is not just about <strong>functionality</strong>. It’s about <strong>visibility + trust</strong>.<br>
+                    With better app reviews, smart ASO, and ethical growth strategies—you can <strong>outrank bigger apps</strong> in your niche.</p>
+                    <p>🚀 Want help getting app reviews or optimizing your app store presence?</p>
+                    <p>👉 Contact <strong>Clickdera</strong> for real review solutions, ASO help, and ranking growth.</p>
+
+                    <div class="callout">
+                        <p><i class="fas fa-key"></i> <strong>Keywords Used in Blog</strong><br>
+                        App Reviews and Ranking, ASO 2025, Google Play reviews, App Store optimization, increase app rating, real app reviews, boost installs, Play Store ASO, app SEO strategy, app feedback tips</p>
+                    </div>
+
+                    <div class="blog-contact">
+                        <h3>Boost your app ranking today!</h3>
+                        <p>Get expert help with app store optimization</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">Request Strategy Session</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Stats Section - FIXED COUNTERS -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-project-diagram"></i>
+        <!-- Blog 4 Content -->
+        <div id="blog4" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>Social Media Management – How Daily Posting, Reach & Replies Grow Your Brand in 2025</h1>
+                
+                <div class="blog-content">
+                    <h2><i class="fas fa-hashtag"></i> Introduction: Why Social Media is Non-Negotiable in 2025</h2>
+                    <p>Social media is no longer just a trend—it’s your <strong>brand’s voice, visibility, and value</strong>. Whether you're a startup, agency, or influencer, your audience is already on platforms like <strong>Instagram, Facebook, Twitter/X, YouTube, and LinkedIn</strong>.</p>
+                    <p>But simply creating an account won’t help. You need:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Daily posting</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Increased reach</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Fast replies</strong></li>
+                        <li><i class="fas fa-check"></i> And <strong>consistent engagement</strong></li>
+                    </ul>
+                    <p>That’s the power of <strong>Social Media Management (SMM)</strong>—the process of creating, publishing, analyzing, and engaging with content across social platforms.</p>
+                    <p>In this blog, you’ll learn how daily actions can deliver long-term <strong>brand success and leads</strong>.</p>
+
+                    <h2><i class="fas fa-cogs"></i> What is Social Media Management?</h2>
+                    <p>Social Media Management (SMM) involves:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Planning & scheduling content</strong> across platforms</li>
+                        <li><i class="fas fa-check"></i> <strong>Engaging</strong> with followers through likes, comments, replies</li>
+                        <li><i class="fas fa-check"></i> <strong>Monitoring performance</strong> with analytics</li>
+                        <li><i class="fas fa-check"></i> <strong>Running ads</strong> for increased visibility</li>
+                        <li><i class="fas fa-check"></i> <strong>Maintaining your brand’s online voice</strong></li>
+                    </ul>
+                    <p>Whether you hire a team or use tools like <strong>Clickdera</strong>, proper SMM builds your digital reputation.</p>
+
+                    <h2><i class="fas fa-calendar-alt"></i> The Power of Daily Posting (Consistency = Visibility)</h2>
+                    <p>Why post daily? Because algorithms <strong>favor consistency</strong>.</p>
+                    <p>Benefits of daily content:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Increases <strong>organic reach</strong></li>
+                        <li><i class="fas fa-check"></i> Builds <strong>audience trust</strong></li>
+                        <li><i class="fas fa-check"></i> Improves <strong>engagement rate</strong></li>
+                        <li><i class="fas fa-check"></i> Shows you are <strong>active & professional</strong></li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-clipboard-list"></i> Posting Strategy:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Recommended Posts Per Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Instagram</td>
+                                <td>1 Reel + 1 Story</td>
+                            </tr>
+                            <tr>
+                                <td>Facebook</td>
+                                <td>1 Post or Story</td>
+                            </tr>
+                            <tr>
+                                <td>LinkedIn</td>
+                                <td>1 Post Every 2 Days</td>
+                            </tr>
+                            <tr>
+                                <td>Twitter/X</td>
+                                <td>2 Tweets a Day</td>
+                            </tr>
+                            <tr>
+                                <td>YouTube</td>
+                                <td>1 Short Every 2 Days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><i class="fas fa-lightbulb"></i> Use a <strong>content calendar</strong> to stay organized.</p>
+                    <p><i class="fas fa-tools"></i> Tools: Buffer, Canva, Hootsuite, Meta Creator Studio</p>
+
+                    <h2><i class="fas fa-bullhorn"></i> Increasing Reach: Organic + Paid Tactics</h2>
+                    <p>You may be posting daily, but how many people actually <strong>see your content</strong>?</p>
+                    <p>Here’s how to <strong>increase social media reach</strong>:</p>
+                    
+                    <h3><i class="fas fa-hashtag"></i> 1. Use Hashtags (Smartly)</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Add <strong>relevant</strong> trending hashtags (e.g., #DigitalMarketing #2025Tips)</li>
+                        <li><i class="fas fa-check"></i> Mix of 5–10 popular + niche hashtags</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-clock"></i> 2. Optimize Timing</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Post when your audience is most active<br>
+                        (e.g., 10 AM to 1 PM, 6 PM to 9 PM)</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-ad"></i> 3. Run Targeted Ads</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Boost key posts for ₹100–₹500 to reach thousands</li>
+                        <li><i class="fas fa-check"></i> Facebook Ads + Instagram Ads + LinkedIn Ads</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-share-alt"></i> 4. Cross-Platform Sharing</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Share Instagram Reels to Facebook & YouTube Shorts</li>
+                        <li><i class="fas fa-check"></i> Promote new posts via WhatsApp Status or Telegram</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-handshake"></i> 5. Collaborations & Mentions</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tag influencers, clients, or partners</li>
+                        <li><i class="fas fa-check"></i> Do joint giveaways or collab videos</li>
+                    </ul>
+
+                    <h2><i class="fas fa-comments"></i> The Importance of Replies & Engagement</h2>
+                    <p>A <strong>fast reply</strong> builds trust. Whether it’s:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> A comment on your reel</li>
+                        <li><i class="fas fa-check"></i> A DM about your service</li>
+                        <li><i class="fas fa-check"></i> A complaint from a customer</li>
+                    </ul>
+                    <p>Responding fast makes you look <strong>professional and reliable</strong>.</p>
+                    
+                    <h3><i class="fas fa-hand-point-right"></i> Engagement Tips:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Set aside 30–60 mins daily to <strong>reply to all comments and DMs</strong></li>
+                        <li><i class="fas fa-check"></i> Use emojis to appear friendly 😊</li>
+                        <li><i class="fas fa-check"></i> Thank people who share or tag you</li>
+                        <li><i class="fas fa-check"></i> Use “engage-to-sell” method:<br>
+                        <blockquote>Reply → Solve query → Pitch your service</blockquote></li>
+                    </ul>
+                    <p><i class="fas fa-bolt"></i> Tip: Platforms like Instagram increase your reach when you <strong>reply quickly</strong> to comments within the first 30 minutes.</p>
+
+                    <h2><i class="fas fa-chart-bar"></i> Social Media Analytics: Track What Works</h2>
+                    <p>Don’t guess—<strong>track</strong>.</p>
+                    <p>Use analytics to understand:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Which content performed best</li>
+                        <li><i class="fas fa-check"></i> What time gave the most engagement</li>
+                        <li><i class="fas fa-check"></i> Which format (Reels vs. Static vs. Stories) works for you</li>
+                        <li><i class="fas fa-check"></i> Follower growth rate</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-ruler"></i> Track metrics like:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reach</td>
+                                <td>How many people saw your content</td>
+                            </tr>
+                            <tr>
+                                <td>Impressions</td>
+                                <td>How many times your post was shown</td>
+                            </tr>
+                            <tr>
+                                <td>Engagement Rate</td>
+                                <td>Likes, comments, shares divided by reach</td>
+                            </tr>
+                            <tr>
+                                <td>CTR</td>
+                                <td>Click-through rate (for links or ads)</td>
+                            </tr>
+                            <tr>
+                                <td>Follower Growth</td>
+                                <td>Are people interested in your page long-term?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><i class="fas fa-tools"></i> Tools: Meta Insights, Instagram Analytics, SocialPilot</p>
+
+                    <h2><i class="fas fa-rocket"></i> Best Practices for 2025 Social Media Success</h2>
+                    <ol>
+                        <li><strong>Focus on Video</strong><br>
+                        <i class="fas fa-check"></i> Reels, Shorts, Lives, Behind-the-scenes</li>
+                        <li><strong>Use AI Tools</strong><br>
+                        <i class="fas fa-check"></i> Like ChatGPT for content ideas, Canva AI for graphics</li>
+                        <li><strong>Use Human Faces</strong><br>
+                        <i class="fas fa-check"></i> People trust people. Use your photo in posts.</li>
+                        <li><strong>User-Generated Content</strong><br>
+                        <i class="fas fa-check"></i> Repost stories or feedback shared by your clients</li>
+                        <li><strong>Interactive Stories & Polls</strong><br>
+                        <i class="fas fa-check"></i> Instagram story polls = high engagement</li>
+                        <li><strong>Festive Posting</strong><br>
+                        <i class="fas fa-check"></i> Celebrate Diwali, Independence Day, New Year, etc., with creatives</li>
+                        <li><strong>Showcase Testimonials & Results</strong><br>
+                        <i class="fas fa-check"></i> Highlight what you delivered (e.g., 10K leads, 50K reach)</li>
+                    </ol>
+
+                    <h2><i class="fas fa-chart-line"></i> Real-Life Example (Clickdera Client)</h2>
+                    <p>One of our clients in the fitness niche had only <strong>400 followers</strong> in March 2025.</p>
+                    <p>We:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Posted daily Reels + infographics</li>
+                        <li><i class="fas fa-check"></i> Replied to all DMs & story replies within 5 mins</li>
+                        <li><i class="fas fa-check"></i> Ran 2 paid boost campaigns for ₹300</li>
+                        <li><i class="fas fa-check"></i> Highlighted client testimonials</li>
+                        <li><i class="fas fa-check"></i> Used AI captions and trendy music</li>
+                    </ul>
+                    <p><i class="fas fa-chart-line"></i> <strong>Result:</strong> In 45 days:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 4,200+ followers</li>
+                        <li><i class="fas fa-check"></i> 30+ leads from Instagram</li>
+                        <li><i class="fas fa-check"></i> Daily reach grew from 80 to 7,500+</li>
+                    </ul>
+
+                    <h2><i class="fas fa-phone-alt"></i> Final Thoughts & CTA</h2>
+                    <p>Social Media Management is not just about posting. It’s about <strong>planning, interacting, analyzing, and growing</strong>.</p>
+                    <p>When done right, it becomes your <strong>24/7 sales and branding machine</strong>.</p>
+                    <p>Whether you're a business owner or creator—<strong>daily actions lead to monthly results</strong>.</p>
+                    <p>💼 Need help managing your Instagram, Facebook, or YouTube?</p>
+                    <p>📲 Let <strong>Clickdera</strong> manage your full social media—daily posting, replies, reach, and reporting included.</p>
+
+                    <div class="callout">
+                        <p><i class="fas fa-key"></i> <strong>Keywords Used in Blog</strong><br>
+                        Social Media Management, daily social media posting, social media engagement, increase reach on Instagram, SMM strategy, reply to DMs, grow brand via Facebook, real social media results, post planning, social media in 2025</p>
                     </div>
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-text">Projects Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-building"></i>
+
+                    <div class="blog-contact">
+                        <h3>Transform your social media presence!</h3>
+                        <p>Get expert social media management services</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">Schedule Free Consultation</a>
                     </div>
-                    <div class="stat-number" data-target="35">0</div>
-                    <div class="stat-text">Direct Brands Managed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="stat-number" data-target="98" data-suffix="%">0</div>
-                    <div class="stat-text">Client Satisfaction</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Why Choose Us Section - Enhanced -->
-    <section class="why-us" id="why-us">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose <span>Clickdera</span></h2>
-                <p>Discover what makes us different from other digital marketing agencies</p>
-            </div>
-            
-            <div class="why-us-container">
-                <div class="why-us-header">
-                    <h2>We Deliver <span>Results-Driven</span> Marketing Solutions</h2>
-                    <p>At Clickdera, we combine industry expertise with innovative strategies to deliver measurable results for your business. Our focus on performance and affordability sets us apart in the competitive digital marketing landscape.</p>
-                </div>
+        <!-- Blog 5 Content -->
+        <div id="blog5" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>Video Editing for Business Growth – Full Videos, Shorts, Reels & More</h1>
                 
-                <div class="why-points-grid">
-                    <div class="why-point-card">
-                        <div class="point-icon">
-                            <i class="fas fa-rupee-sign"></i>
+                <div class="blog-content">
+                    <h2><i class="fas fa-film"></i> Introduction</h2>
+                    <p>In today’s digital world, <strong>video content rules the internet</strong>—and not just any video, but <strong>edited, branded, and high-quality</strong> visuals that grab attention in the first 5 seconds.</p>
+                    <p>Whether you're a startup, personal brand, or eCommerce store, using <strong>professional video editing services</strong> is no longer optional—it's the <strong>difference between scroll and stop</strong>.</p>
+                    <p>Let’s break down the power of <strong>video editing</strong> across all formats: full-length videos, YouTube Shorts, Instagram Reels, and more—and how it can <strong>amplify your brand’s voice, reach, and sales</strong>.</p>
+
+                    <h2><i class="fas fa-video"></i> Why Video Editing Matters in 2025</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 80%+ of internet traffic is video content (Statista)</li>
+                        <li><i class="fas fa-check"></i> Unedited videos lose attention in the first 8 seconds</li>
+                        <li><i class="fas fa-check"></i> Short-form videos convert 2x more than static content</li>
+                        <li><i class="fas fa-check"></i> Edited videos get <strong>70% higher watch time</strong> on average</li>
+                    </ul>
+                    <p>Without professional editing, your content is just another video in the feed. But with the right edits, it becomes <strong>a story, a message, and a conversion tool</strong>.</p>
+
+                    <h2><i class="fas fa-th-large"></i> Types of Video Editing Services You Need</h2>
+                    <p>Let’s go over the essential formats and editing styles that every brand should consider.</p>
+                    
+                    <h3><i class="fas fa-play-circle"></i> 1. Full-Length Videos</h3>
+                    <p><em>(Ideal for YouTube, business intros, vlogs, product demos)</em></p>
+                    <p>Full videos (2–10 mins) are used to:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tell your brand story</li>
+                        <li><i class="fas fa-check"></i> Showcase services or products in detail</li>
+                        <li><i class="fas fa-check"></i> Build a loyal audience (YouTube & landing pages)</li>
+                    </ul>
+                    <p><strong>Editing includes:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Trimming long pauses</li>
+                        <li><i class="fas fa-check"></i> B-roll integration</li>
+                        <li><i class="fas fa-check"></i> Intro/outro design</li>
+                        <li><i class="fas fa-check"></i> Color correction</li>
+                        <li><i class="fas fa-check"></i> Subtitles & branding overlays</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> Tip: Use <strong>motion graphics and call-to-actions (CTAs)</strong> in between to boost watch duration.</p>
+                    
+                    <h3><i class="fas fa-mobile-alt"></i> 2. Shorts, Reels & TikToks</h3>
+                    <p><em>(15–60 second clips that hook the viewer)</em></p>
+                    <p>These formats are your <strong>top-funnel goldmines</strong>—they drive awareness, engagement, and viral growth.</p>
+                    <p><strong>Editing includes:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Quick cuts</li>
+                        <li><i class="fas fa-check"></i> Background music</li>
+                        <li><i class="fas fa-check"></i> Text overlays</li>
+                        <li><i class="fas fa-check"></i> Transitions</li>
+                        <li><i class="fas fa-check"></i> Emojis, stickers, trending sounds</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> Add <strong>hooks</strong> like “Wait till the end” or “Most people miss this” in the first 2 seconds.</p>
+                    <p><strong>Platforms:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instagram Reels</li>
+                        <li><i class="fas fa-check"></i> YouTube Shorts</li>
+                        <li><i class="fas fa-check"></i> TikTok</li>
+                        <li><i class="fas fa-check"></i> Facebook Reels</li>
+                        <li><i class="fas fa-check"></i> WhatsApp Channels</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-briefcase"></i> 3. Business & Corporate Video Editing</h3>
+                    <p><em>(Formal, branded content for B2B or client-facing communication)</em></p>
+                    <p>Includes:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Company profile videos</li>
+                        <li><i class="fas fa-check"></i> Client testimonials</li>
+                        <li><i class="fas fa-check"></i> Product walkthroughs</li>
+                        <li><i class="fas fa-check"></i> Training videos</li>
+                    </ul>
+                    <p><i class="fas fa-check-circle"></i> Should match brand colors, tone, and professionalism.</p>
+                    <p><strong>Use cases:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Websites</li>
+                        <li><i class="fas fa-check"></i> Email campaigns</li>
+                        <li><i class="fas fa-check"></i> LinkedIn</li>
+                        <li><i class="fas fa-check"></i> Events & presentations</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-calendar-alt"></i> 4. Event Highlights & Festival Videos</h3>
+                    <p>Businesses also need festive edits like:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Diwali/New Year greetings</li>
+                        <li><i class="fas fa-check"></i> Workshop recaps</li>
+                        <li><i class="fas fa-check"></i> Anniversary celebration videos</li>
+                        <li><i class="fas fa-check"></i> Instagram Festival creatives (animated)</li>
+                    </ul>
+                    <p><i class="fas fa-gift"></i> These keep your social presence active and emotionally connect with your audience.</p>
+
+                    <h2><i class="fas fa-tools"></i> Tools We Use for Editing</h2>
+                    <p>At Clickdera, we use:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>Adobe Premiere Pro</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Final Cut Pro</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>CapCut Pro</strong> (for shorts)</li>
+                        <li><i class="fas fa-check"></i> <strong>DaVinci Resolve</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>After Effects</strong> (for intros, motion graphics)</li>
+                    </ul>
+                    <p>We optimize each video for <strong>the specific platform and audience</strong>. Shorts for Instagram? Horizontal or vertical? Business pitch for LinkedIn? We tailor it all.</p>
+
+                    <h2><i class="fas fa-chart-line"></i> Benefits of Professional Video Editing</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Benefit</th>
+                                <th>Why It Matters</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Higher Engagement</td>
+                                <td>Clean visuals keep viewers longer</td>
+                            </tr>
+                            <tr>
+                                <td>Platform Optimization</td>
+                                <td>Videos are tailored per platform style</td>
+                            </tr>
+                            <tr>
+                                <td>Brand Awareness</td>
+                                <td>Logos, brand colors, and fonts</td>
+                            </tr>
+                            <tr>
+                                <td>Increased Conversion Rates</td>
+                                <td>Good editing leads to better storytelling</td>
+                            </tr>
+                            <tr>
+                                <td>Consistent Aesthetic</td>
+                                <td>Builds trust and recognition</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2><i class="fas fa-box-open"></i> Video Editing Packages We Offer</h2>
+                    <p>At <strong>Clickdera</strong>, we offer:</p>
+                    <ol>
+                        <li><i class="fas fa-play-circle"></i> <strong>YouTube Full Video Edit – ₹499 per video</strong></li>
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Instagram Reel Editing – ₹99 per reel</strong></li>
+                        <li><i class="fas fa-cut"></i> <strong>Bulk Shorts Package – 10 for ₹799</strong></li>
+                        <li><i class="fas fa-briefcase"></i> <strong>Business Package – Monthly Video Plan</strong><br>
+                        (Includes full + short videos with content strategy)</li>
+                    </ol>
+                    <p>You get:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 24–48 hour delivery</li>
+                        <li><i class="fas fa-check-circle"></i> 100% rights to your videos</li>
+                        <li><i class="fas fa-check-circle"></i> Revisions included</li>
+                        <li><i class="fas fa-check-circle"></i> Scriptwriting help (if needed)</li>
+                    </ul>
+
+                    <h2><i class="fas fa-industry"></i> Use Cases Across Industries</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Industry</th>
+                                <th>Video Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coaching</td>
+                                <td>Instagram reels + webinars</td>
+                            </tr>
+                            <tr>
+                                <td>E-Commerce</td>
+                                <td>Product demo videos + reels</td>
+                            </tr>
+                            <tr>
+                                <td>Gaming</td>
+                                <td>Gameplay highlights + shorts</td>
+                            </tr>
+                            <tr>
+                                <td>Fitness</td>
+                                <td>Transformation reels</td>
+                            </tr>
+                            <tr>
+                                <td>Real Estate</td>
+                                <td>Property walkthroughs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2><i class="fas fa-bullhorn"></i> Call to Action</h2>
+                    <p>Want to boost your <strong>Instagram Reels</strong>, <strong>YouTube videos</strong>, or create content that actually converts?<br>
+                    Clickdera can help you with professional video editing at <strong>budget-friendly rates</strong>.</p>
+                    <p>📩 DM us on Instagram or visit <strong>Clickdera.in</strong> to get started.</p>
+
+                    <h2><i class="fas fa-book"></i> Blog Summary</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Edited videos increase engagement and conversions</li>
+                        <li><i class="fas fa-check"></i> Short-form content is king in 2025</li>
+                        <li><i class="fas fa-check"></i> You need a mix of reels, full-length, and brand videos</li>
+                        <li><i class="fas fa-check"></i> Choose the right platform, tone, and edit style</li>
+                        <li><i class="fas fa-check"></i> Let pros handle the editing while you focus on growth</li>
+                    </ul>
+
+                    <div class="callout">
+                        <p><i class="fas fa-key"></i> <strong>SEO Keywords Used in Content:</strong><br>
+                        video editing services, short-form video editing, YouTube video editing, Instagram reels, editing for business, brand video content, corporate video editing</p>
+                    </div>
+
+                    <div class="blog-contact">
+                        <h3>Elevate your video content today!</h3>
+                        <p>Get professional video editing services</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">View Pricing Plans</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog 6 Content -->
+        <div id="blog6" class="blog-post" style="display: none;">
+            <div class="container">
+                <a href="javascript:void(0)" onclick="hideBlogs()" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+                <h1>Graphic Design Services for Brands – Posters, Festival Creatives, Ads & More</h1>
+                
+                <div class="blog-content">
+                    <h2><i class="fas fa-paint-brush"></i> Introduction</h2>
+                    <p>In the age of <strong>visual-first marketing</strong>, graphic design isn’t just about aesthetics—it’s a powerful tool to <strong>communicate, convince, and convert</strong>. Whether you run a local business, digital brand, or startup, your visual identity directly impacts how customers perceive and engage with your brand.</p>
+                    <p>At Clickdera, we specialize in creating <strong>stunning, conversion-focused designs</strong> for all platforms and purposes—from social media posts to festival campaigns and everything in between.</p>
+
+                    <h2><i class="fas fa-vector-square"></i> Why Professional Design Matters in 2025</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <strong>First impressions matter</strong>: 94% of first impressions relate to design</li>
+                        <li><i class="fas fa-check"></i> <strong>Brand recognition</strong>: Consistent visuals increase recognition by 80%</li>
+                        <li><i class="fas fa-check"></i> <strong>Higher engagement</strong>: Visual content gets 40X more shares than text</li>
+                        <li><i class="fas fa-check"></i> <strong>Increased conversions</strong>: Good design can improve conversion rates by 200%</li>
+                    </ul>
+                    <p>In today's crowded digital landscape, professional design is no longer optional—it's essential for standing out.</p>
+
+                    <h2><i class="fas fa-th-large"></i> Our Graphic Design Services</h2>
+                    <p>We offer comprehensive design solutions for all your visual needs:</p>
+                    
+                    <h3><i class="fas fa-newspaper"></i> 1. Social Media Graphics</h3>
+                    <p>Eye-catching designs optimized for each platform:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instagram posts & stories</li>
+                        <li><i class="fas fa-check"></i> Facebook covers & posts</li>
+                        <li><i class="fas fa-check"></i> LinkedIn banners</li>
+                        <li><i class="fas fa-check"></i> Pinterest pins</li>
+                        <li><i class="fas fa-check"></i> Twitter headers</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> We create platform-specific designs that drive engagement and shares.</p>
+                    
+                    <h3><i class="fas fa-ad"></i> 2. Digital Ad Creatives</h3>
+                    <p>High-converting designs for all ad platforms:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Google Display Ads</li>
+                        <li><i class="fas fa-check"></i> Facebook/Instagram Ads</li>
+                        <li><i class="fas fa-check"></i> LinkedIn Sponsored Content</li>
+                        <li><i class="fas fa-check"></i> YouTube Bumper Ads</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> We A/B test designs to maximize your ROI.</p>
+                    
+                    <h3><i class="fas fa-calendar-alt"></i> 3. Festival & Event Creatives</h3>
+                    <p>Special designs for holidays and events:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Diwali offers & greetings</li>
+                        <li><i class="fas fa-check"></i> Christmas campaigns</li>
+                        <li><i class="fas fa-check"></i> New Year promotions</li>
+                        <li><i class="fas fa-check"></i> Independence Day specials</li>
+                        <li><i class="fas fa-check"></i> Seasonal sales events</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> We capture the festive spirit while maintaining brand consistency.</p>
+                    
+                    <h3><i class="fas fa-file-alt"></i> 4. Print Design</h3>
+                    <p>Traditional media with modern design:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Business cards</li>
+                        <li><i class="fas fa-check"></i> Brochures & flyers</li>
+                        <li><i class="fas fa-check"></i> Posters & banners</li>
+                        <li><i class="fas fa-check"></i> Product packaging</li>
+                        <li><i class="fas fa-check"></i> Event signage</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> We ensure print designs translate your digital brand to physical media.</p>
+                    
+                    <h3><i class="fas fa-palette"></i> 5. Brand Identity Design</h3>
+                    <p>Foundational elements for brand recognition:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Logo design</li>
+                        <li><i class="fas fa-check"></i> Color palette development</li>
+                        <li><i class="fas fa-check"></i> Typography systems</li>
+                        <li><i class="fas fa-check"></i> Brand style guides</li>
+                        <li><i class="fas fa-check"></i> Icon sets</li>
+                    </ul>
+                    <p><i class="fas fa-lightbulb"></i> We create cohesive visual systems that work across all platforms.</p>
+
+                    <h2><i class="fas fa-cogs"></i> Our Design Process</h2>
+                    <p>We follow a structured approach to ensure your designs meet objectives:</p>
+                    <ol>
+                        <li><strong>Discovery</strong>: Understand your brand, audience, and goals</li>
+                        <li><strong>Research</strong>: Analyze competitors and industry trends</li>
+                        <li><strong>Concept Development</strong>: Create initial design directions</li>
+                        <li><strong>Design Creation</strong>: Develop full design concepts</li>
+                        <li><strong>Revision</strong>: Refine based on your feedback</li>
+                        <li><strong>Delivery</strong>: Provide final files in all required formats</li>
+                    </ol>
+                    <p><i class="fas fa-check-circle"></i> Average turnaround time: 24-72 hours depending on complexity</p>
+
+                    <h2><i class="fas fa-tools"></i> Tools We Use</h2>
+                    <p>Our designers are experts in industry-standard software:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Adobe Photoshop</li>
+                        <li><i class="fas fa-check"></i> Adobe Illustrator</li>
+                        <li><i class="fas fa-check"></i> Adobe InDesign</li>
+                        <li><i class="fas fa-check"></i> Figma</li>
+                        <li><i class="fas fa-check"></i> Canva Pro</li>
+                    </ul>
+                    <p>We stay updated with the latest design trends and techniques to ensure your visuals stand out.</p>
+
+                    <h2><i class="fas fa-box-open"></i> Pricing Packages</h2>
+                    <p>Flexible options for every budget:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>What's Included</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Starter</td>
+                                <td>5 social media posts + 2 ad creatives</td>
+                                <td>₹999/month</td>
+                            </tr>
+                            <tr>
+                                <td>Growth</td>
+                                <td>15 social posts + 5 ads + 2 festival creatives</td>
+                                <td>₹2499/month</td>
+                            </tr>
+                            <tr>
+                                <td>Premium</td>
+                                <td>Unlimited designs + brand identity + priority support</td>
+                                <td>₹4999/month</td>
+                            </tr>
+                            <tr>
+                                <td>Custom</td>
+                                <td>Tailored to your specific needs</td>
+                                <td>Contact us</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><i class="fas fa-gift"></i> All packages include unlimited revisions and 24-48 hour turnaround.</p>
+
+                    <h2><i class="fas fa-phone-alt"></i> Get Started Today</h2>
+                    <p>Ready to elevate your brand with professional design? Contact us for a free consultation and design audit.</p>
+                    <p>📧 Email: <a href="mailto:info@clickdera.in">info@clickdera.in</a><br>
+                    🌐 Website: <a href="https://clickdera.in">clickdera.in</a></p>
+                    <p>Let's create visuals that convert!</p>
+
+                    <div class="callout">
+                        <p><i class="fas fa-key"></i> <strong>Keywords Used in Blog</strong><br>
+                        graphic design services, poster design, festival creatives, social media graphics, ad creatives, branding design, business posters, affordable design services, creative design solutions</p>
+                    </div>
+
+                    <div class="blog-contact">
+                        <h3>Transform your brand visuals!</h3>
+                        <p>Get professional graphic design services</p>
+                        <a href="mailto:info@clickdera.in" class="email">info@clickdera.in</a>
+                        <p>or</p>
+                        <a href="#contact" class="cta-button">Request Design Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Affordable Digital Growth Solutions That Actually <span>Drive Revenue</span></h1>
+                    <p>Specializing in ROI-driven marketing, we help startups, SMBs, and apps dominate local search, boost reviews, and convert more customers - without the agency price tag.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="cta-button">Explore Services</a>
+                        <a href="#contact" class="btn-secondary">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Clickdera Section -->
+        <section class="about-clickdera" id="about">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>About <span>Clickdera</span></h2>
+                        <p>Clickdera was founded in 2025 to address a critical problem in the digital marketing industry - agencies overcharging for simple services regardless of the actual work involved.</p>
+                        
+                        <p>Frustrated with the status quo and unable to find an affordable solution that maintained quality, our founder envisioned a new kind of agency. Clickdera was created to provide all digital marketing services at low cost without compromising on quality, creating a game-changer for businesses of all sizes.</p>
+                        
+                        <div class="mission-statement">
+                            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                            <p>To democratize digital marketing by providing high-quality, performance-driven services at prices that empower businesses rather than burden them. We believe every business deserves access to effective digital marketing regardless of their budget size.</p>
                         </div>
-                        <h3>Affordable Pricing</h3>
-                        <p>Quality marketing services at prices that won't break your budget. We focus on value, not high prices, making professional marketing accessible to all businesses.</p>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Founded in 2025</h4>
+                                    <p>Established with a vision to provide affordable digital marketing solutions</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Global Expansion</h4>
+                                    <p>Expanded services to USA, India, Nepal and beyond</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Industry Recognition</h4>
+                                    <p>Recognized as a leader in affordable performance marketing</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="why-point-card">
-                        <div class="point-icon">
+                    <div class="about-image">
+                        <i class="fas fa-lightbulb" style="font-size: 8rem; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our <span>Services</span></h2>
+                    <p>Comprehensive digital marketing solutions tailored to your business needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>Performance Focused</h3>
-                        <p>We prioritize measurable results - leads, conversions, and ROI - not just vanity metrics. Our data-driven approach ensures your marketing budget delivers real growth.</p>
+                        <h3>Leads Generation</h3>
+                        <p>Targeted lead generation strategies to fill your sales pipeline with high-quality prospects.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Custom lead generation models</li>
+                            <li><i class="fas fa-check"></i> Targeted audience segmentation</li>
+                            <li><i class="fas fa-check"></i> Multi-channel lead capture</li>
+                            <li><i class="fas fa-check"></i> Lead nurturing strategies</li>
+                            <li><i class="fas fa-check"></i> Performance tracking & optimization</li>
+                        </ul>
                     </div>
                     
-                    <div class="why-point-card">
-                        <div class="point-icon">
-                            <i class="fas fa-globe-asia"></i>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h3>Global Coverage</h3>
-                        <p>We serve clients across India, USA, Nepal, and worldwide with localized strategies that work. Wherever your customers are, we can help you reach them.</p>
+                        <h3>Reputation Management</h3>
+                        <p>Build and maintain a stellar online reputation that attracts more customers.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> App store review management</li>
+                            <li><i class="fas fa-check"></i> Google Maps review optimization</li>
+                            <li><i class="fas fa-check"></i> Justdial review management</li>
+                            <li><i class="fas fa-check"></i> Review response strategy</li>
+                            <li><i class="fas fa-check"></i> Negative review mitigation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>GMB Optimization</h3>
+                        <p>Maximize your local visibility with expert Google My Business optimization.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> GMB account setup & verification</li>
+                            <li><i class="fas fa-check"></i> Complete profile optimization</li>
+                            <li><i class="fas fa-check"></i> Local SEO strategy</li>
+                            <li><i class="fas fa-check"></i> Post scheduling & management</li>
+                            <li><i class="fas fa-check"></i> Review generation strategy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social Media Management</h3>
+                        <p>Professional social media management to grow your brand online.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Content creation & scheduling</li>
+                            <li><i class="fas fa-check"></i> Platform-specific strategies</li>
+                            <li><i class="fas fa-check"></i> Community engagement</li>
+                            <li><i class="fas fa-check"></i> Performance analytics</li>
+                            <li><i class="fas fa-check"></i> Ad campaign management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3>Video Editing</h3>
+                        <p>Professional video editing services to make your content stand out.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Game highlight reels</li>
+                            <li><i class="fas fa-check"></i> Social media video content</li>
+                            <li><i class="fas fa-check"></i> Promotional videos</li>
+                            <li><i class="fas fa-check"></i> Motion graphics</li>
+                            <li><i class="fas fa-check"></i> Short-form content editing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Graphic Design</h3>
+                        <p>Eye-catching designs that communicate your brand message effectively.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Social media graphics</li>
+                            <li><i class="fas fa-check"></i> Marketing posters</li>
+                            <li><i class="fas fa-check"></i> Brand identity design</li>
+                            <li><i class="fas fa-check"></i> Infographics</li>
+                            <li><i class="fas fa-check"></i> Print & digital collateral</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section - Enhanced -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client <span>Testimonials</span></h2>
-                <p>Hear what our clients say about working with us</p>
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-text">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stat-number" data-target="35">0</div>
+                        <div class="stat-text">Direct Brands Managed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-number" data-target="98" data-suffix="%">0</div>
+                        <div class="stat-text">Client Satisfaction</div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="testimonials-container">
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Clickdera transformed our local visibility with their Google Map SEO service. Our business now appears in the top 3 for all relevant searches in our area. The team's attention to detail and strategic approach delivered results that exceeded our expectations."</p>
-                        </div>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma">
-                            </div>
-                            <div class="client-details">
-                                <h4>Rajesh Sharma</h4>
-                                <p>Restaurant Owner, Delhi</p>
-                            </div>
-                        </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose <span>Clickdera</span></h2>
+                    <p>Discover what makes us different from other digital marketing agencies</p>
+                </div>
+                
+                <div class="why-us-container">
+                    <div class="why-us-header">
+                        <h2>We Deliver <span>Results-Driven</span> Marketing Solutions</h2>
+                        <p>At Clickdera, we combine industry expertise with innovative strategies to deliver measurable results for your business. Our focus on performance and affordability sets us apart in the competitive digital marketing landscape.</p>
                     </div>
                     
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"As a startup with limited budget, Clickdera's affordable digital marketing services were a game-changer. Their performance marketing strategies helped us achieve 3x ROI in just 90 days. Their team became an extension of our marketing department."</p>
+                    <div class="why-points-grid">
+                        <div class="why-point-card">
+                            <div class="point-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <h3>Affordable Pricing</h3>
+                            <p>Quality marketing services at prices that won't break your budget. We focus on value, not high prices, making professional marketing accessible to all businesses.</p>
                         </div>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                        
+                        <div class="why-point-card">
+                            <div class="point-icon">
+                                <i class="fas fa-bullseye"></i>
                             </div>
-                            <div class="client-details">
-                                <h4>Priya Patel</h4>
-                                <p>CEO, Tech Startup, Bangalore</p>
-                            </div>
+                            <h3>Performance Focused</h3>
+                            <p>We prioritize measurable results - leads, conversions, and ROI - not just vanity metrics. Our data-driven approach ensures your marketing budget delivers real growth.</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The app review management service helped us improve our Play Store rating from 3.2 to 4.7 in just two months. This significantly boosted our download rates and user trust. Clickdera's systematic approach to reputation management is truly impressive."</p>
-                        </div>
-                        <div class="client-info">
-                            <div class="client-avatar">
-                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Michael Johnson">
+                        
+                        <div class="why-point-card">
+                            <div class="point-icon">
+                                <i class="fas fa-globe-asia"></i>
                             </div>
-                            <div class="client-details">
-                                <h4>Michael Johnson</h4>
-                                <p>App Developer, USA</p>
-                            </div>
+                            <h3>Global Coverage</h3>
+                            <p>We serve clients across India, USA, Nepal, and worldwide with localized strategies that work. Wherever your customers are, we can help you reach them.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked <span>Questions</span></h2>
-                <p>Find answers to common questions about our services</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How quickly can I see results from your services?</h3>
-                            <i class="fas fa-chevron-down"></i>
+        <!-- Blogs Section -->
+        <section class="blogs" id="blogs">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Latest <span>Blogs</span></h2>
+                    <p>Insights and strategies to grow your business online</p>
+                </div>
+
+                <div class="blogs-grid">
+                    <!-- Blog Card 1 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>What Are Install, Signup, Survey & Gameplay Leads? | Complete Guide 2025</h3>
                         </div>
-                        <div class="faq-answer">
-                            <p>Results vary depending on the service and your industry, but most clients start seeing measurable improvements within 30-60 days. For services like Google Map SEO and review management, you may see initial results within 2-4 weeks.</p>
+                        <div class="blog-card-content">
+                            <p>Explore the different types of leads—app installs, signups, survey completions, and gameplay. Learn how to generate each cost-effectively in 2025.</p>
                         </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What makes Clickdera different from other agencies?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We focus on delivering tangible business results rather than just vanity metrics. Our affordable pricing model makes professional marketing accessible to businesses of all sizes without compromising on quality or results.</p>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog1')" class="cta-button">Read More</a>
                         </div>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer customized packages?</h3>
-                            <i class="fas fa-chevron-down"></i>
+
+                    <!-- Blog Card 2 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>Google Map SEO – Boosting Listings, Reviews & Local Ranking in 2025</h3>
                         </div>
-                        <div class="faq-answer">
-                            <p>Absolutely! We understand every business has unique needs. Our team will work with you to create a customized package that aligns with your specific goals and budget.</p>
+                        <div class="blog-card-content">
+                            <p>Learn how to boost your business visibility on Google Maps through optimized listings, local reviews, and smart SEO tactics. Step-by-step guide for 2025.</p>
                         </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How do you measure success for your clients?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We focus on key performance indicators that directly impact your business, such as lead generation, conversion rates, online visibility, and revenue growth. We provide transparent reporting so you can see exactly what you're getting for your investment.</p>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog2')" class="cta-button">Read More</a>
                         </div>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What industries do you specialize in?</h3>
-                            <i class="fas fa-chevron-down"></i>
+
+                    <!-- Blog Card 3 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>App Reviews & App Ranking – How to Boost Your App in 2025</h3>
                         </div>
-                        <div class="faq-answer">
-                            <p>We've successfully worked with clients across various industries including healthcare, retail, hospitality, technology, and professional services. Our strategies are adaptable to any industry that benefits from digital marketing.</p>
+                        <div class="blog-card-content">
+                            <p>Struggling to rank your mobile app? Learn how app reviews, ASO, and engagement impact your app ranking in 2025.</p>
+                        </div>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog3')" class="cta-button">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 4 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>Social Media Management – Daily Posting, Reach & Replies</h3>
+                        </div>
+                        <div class="blog-card-content">
+                            <p>Discover how daily posts, boosting reach, and timely replies can transform your brand with expert strategies in 2025.</p>
+                        </div>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog4')" class="cta-button">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 5 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>Video Editing for Business Growth – Full Videos, Shorts, Reels</h3>
+                        </div>
+                        <div class="blog-card-content">
+                            <p>Learn how video editing—including full videos, YouTube shorts, Instagram reels—can grow your brand online.</p>
+                        </div>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog5')" class="cta-button">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 6 -->
+                    <div class="blog-card">
+                        <div class="blog-card-header">
+                            <h3>Graphic Design Services – Posters, Festival Creatives, Ads</h3>
+                        </div>
+                        <div class="blog-card-content">
+                            <p>Discover professional graphic design services for posters, festival creatives, ads, and branding.</p>
+                        </div>
+                        <div class="blog-card-footer">
+                            <a href="javascript:void(0)" onclick="showBlog('blog6')" class="cta-button">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team to discuss your project</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Have a project in mind or want to learn more about our services? Reach out to us and our team will get back to you within 24 hours.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Client <span>Testimonials</span></h2>
+                    <p>Hear what our clients say about working with us</p>
+                </div>
+                
+                <div class="testimonials-container">
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Clickdera transformed our local visibility with their Google Map SEO service. Our business now appears in the top 3 for all relevant searches in our area. The team's attention to detail and strategic approach delivered results that exceeded our expectations."</p>
                             </div>
-                            <div class="contact-text">
-                                <h4>Our Locations</h4>
-                                <p>India • USA • Nepal</p>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma">
+                                </div>
+                                <div class="client-details">
+                                    <h4>Rajesh Sharma</h4>
+                                    <p>Restaurant Owner, Delhi</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"As a startup with limited budget, Clickdera's affordable digital marketing services were a game-changer. Their performance marketing strategies helped us achieve 3x ROI in just 90 days. Their team became an extension of our marketing department."</p>
                             </div>
-                            <div class="contact-text">
-                                <h4>Email Address</h4>
-                                <p>info@clickdera.com</p>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                                </div>
+                                <div class="client-details">
+                                    <h4>Priya Patel</h4>
+                                    <p>CEO, Tech Startup, Bangalore</p>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The app review management service helped us improve our Play Store rating from 3.2 to 4.7 in just two months. This significantly boosted our download rates and user trust. Clickdera's systematic approach to reputation management is truly impressive."</p>
+                            </div>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Michael Johnson">
+                                </div>
+                                <div class="client-details">
+                                    <h4>Michael Johnson</h4>
+                                    <p>App Developer, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                    <p>Find answers to common questions about our services</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How quickly can I see results from your services?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Results vary depending on the service and your industry, but most clients start seeing measurable improvements within 30-60 days. For services like Google Map SEO and review management, you may see initial results within 2-4 weeks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What makes Clickdera different from other agencies?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We focus on delivering tangible business results rather than just vanity metrics. Our affordable pricing model makes professional marketing accessible to businesses of all sizes without compromising on quality or results.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you offer customized packages?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We understand every business has unique needs. Our team will work with you to create a customized package that aligns with your specific goals and budget.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do you measure success for your clients?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We focus on key performance indicators that directly impact your business, such as lead generation, conversion rates, online visibility, and revenue growth. We provide transparent reporting so you can see exactly what you're getting for your investment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What industries do you specialize in?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We've successfully worked with clients across various industries including healthcare, retail, hospitality, technology, and professional services. Our strategies are adaptable to any industry that benefits from digital marketing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with our team to discuss your project</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Have a project in mind or want to learn more about our services? Reach out to us and our team will get back to you within 24 hours.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Our Locations</h4>
+                                    <p>India • USA • Nepal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Email Address</h4>
+                                    <p>info@clickdera.in</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form action="https://formspree.io/f/xjkrzkld" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service" class="form-control" required>
+                                    <option value="">Select a service</option>
+                                    <option value="leads">Leads Generation</option>
+                                    <option value="reputation">Reputation Management</option>
+                                    <option value="gmb">GMB Optimization</option>
+                                    <option value="social">Social Media Management</option>
+                                    <option value="video">Video Editing</option>
+                                    <option value="graphics">Graphic Design</option>
+                                    <option value="package">Custom Package</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project" required></textarea>
+                            </div>
+                            
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <div class="footer-logo">Click<span>dera</span></div>
+                        <p>Affordable digital marketing agency providing performance marketing, video editing, Google Map SEO, app reviews, and social media management in India, USA & Nepal.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/company/clickera/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Clickdera" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3 class="footer-heading">Services</h3>
+                        <ul>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Leads Generation</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Reputation Management</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> GMB Optimization</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Video Editing</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                            <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3 class="footer-heading">Contact Info</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> India • USA • Nepal</a></li>
+                            <li><a href="mailto:info@clickdera.in"><i class="fas fa-envelope"></i> info@clickdera.in</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form action="https://formspree.io/f/xjkrzkld" method="POST">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service" class="form-control" required>
-                                <option value="">Select a service</option>
-                                <option value="leads">Leads Generation</option>
-                                <option value="reputation">Reputation Management</option>
-                                <option value="gmb">GMB Optimization</option>
-                                <option value="social">Social Media Management</option>
-                                <option value="video">Video Editing</option>
-                                <option value="graphics">Graphic Design</option>
-                                <option value="package">Custom Package</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project" required></textarea>
-                        </div>
-                        
-                        <button type="submit">Send Message</button>
-                    </form>
+                <div class="copyright">
+                    <p>&copy; 2025 Clickdera. All rights reserved. | Revolutionizing Digital Marketing Since 2025</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">Click<span>dera</span></div>
-                    <p>Affordable digital marketing agency providing performance marketing, video editing, Google Map SEO, app reviews, and social media management in India, USA & Nepal.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/clickera/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/clickdera?t=om66jJA8Z9y9OnIUhZ_8tg&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/clickdera?igsh=cWUxNDlrNzhvaHVz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Clickdera" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-heading">Services</h3>
-                    <ul>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Leads Generation</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Reputation Management</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> GMB Optimization</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Video Editing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Graphic Design</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul>
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#why-us"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-heading">Contact Info</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> India • USA • Nepal</a></li>
-                        <li><a href="mailto:info@clickdera.com"><i class="fas fa-envelope"></i> info@clickdera.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Clickdera. All rights reserved. | Revolutionizing Digital Marketing Since 2025</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
     
     <!-- Scroll to Top Button -->
     <div class="scroll-top">
@@ -1975,14 +3505,53 @@
     </div>
 
     <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Blog navigation functions
+        function showBlog(blogId) {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById(blogId).style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+        
+        function hideBlogs() {
+            const blogs = document.querySelectorAll('.blog-post');
+            blogs.forEach(blog => {
+                blog.style.display = 'none';
+            });
+            document.getElementById('main-content').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
         
@@ -2012,6 +3581,7 @@
         const testimonialCards = document.querySelectorAll('.testimonial-card');
         const whyPoints = document.querySelectorAll('.why-point-card');
         const faqItems = document.querySelectorAll('.faq-item');
+        const blogCards = document.querySelectorAll('.blog-card');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2050,6 +3620,13 @@
             point.style.transform = 'translateY(30px)';
             point.style.transition = 'all 0.6s ease';
             observer.observe(point);
+        });
+        
+        blogCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
         });
         
         // FAQ accordion functionality
