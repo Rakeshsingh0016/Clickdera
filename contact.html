@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Clickdera - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, query, orderBy, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        
+        // Your web app's Firebase configuration
+       const firebaseConfig = {
+  apiKey: "AIzaSyCHyHY4nloMaHTtnbTl4S8o-xySIr5WRtQ",
+  authDomain: "clickdera-d7a13.firebaseapp.com",
+  databaseURL: "https://clickdera-d7a13-default-rtdb.firebaseio.com",
+  projectId: "clickdera-d7a13",
+  storageBucket: "clickdera-d7a13.firebasestorage.app",
+  messagingSenderId: "29336159224",
+  appId: "1:29336159224:web:46526411ec667cd5074c0d",
+  measurementId: "G-8KX4KKXP80"
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = getFirestore(app);
+        
+        // Make Firebase available globally
+        window.firebase = {
+            db,
+            collection,
+            addDoc,
+            getDocs,
+            query,
+            orderBy,
+            deleteDoc,
+            doc
+        };
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#0D6EFD",
+                            light: "#E7F1FF",
+                        },
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0A0A",
+                        "foreground-light": "#0A0A0A",
+                        "foreground-dark": "#FBFBFB",
+                        "subtle-light": "#6B7280",
+                        "subtle-dark": "#A0A0A0",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#27272A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px",
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-left': 'fadeInLeft 0.6s ease-out',
+                        'fade-in-right': 'fadeInRight 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'tilt': 'tilt 10s infinite linear',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(20px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        tilt: {
+                            '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(1deg)' },
+                            '75%': { transform: 'rotate(-1deg)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            font-size: 24px;
+        }
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu.active {
+            transform: translateY(0);
+            max-height: 500px;
+        }
+        /* Hamburger menu animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        /* Animated gradient background */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0D6EFD, #4F46E5, #06B6D4, #0D6EFD);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Glow effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(13, 110, 253, 0.5);
+        }
+        .glow:hover {
+            box-shadow: 0 0 30px rgba(13, 110, 253, 0.7);
+        }
+        /* Prevent scrolling when mobile menu is open */
+        body.menu-open {
+            overflow: hidden;
+        }
+        /* Fixed header line issue */
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+        }
+        .header-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #E5E7EB;
+        }
+        .dark .header-border {
+            background-color: #27272A;
+        }
+        .main-content {
+            margin-top: 76px; /* Adjust based on header height */
+        }
+        .form-input:focus,
+        .form-textarea:focus {
+            --tw-ring-color: rgba(13, 110, 253, 0.5);
+        }
+        /* Admin Panel Styles */
+        .admin-panel {
+            display: none;
+        }
+        .admin-panel.active {
+            display: block;
+        }
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .status-new {
+            background-color: #E7F1FF;
+            color: #0D6EFD;
+        }
+        .status-read {
+            background-color: #D1FAE5;
+            color: #059669;
+        }
+        .status-archived {
+            background-color: #F3F4F6;
+            color: #6B7280;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Fixed Header Container -->
+        <div class="header-container">
+            <header class="flex items-center justify-between whitespace-nowrap px-4 sm:px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center animate-pulse">
+                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M15 15l-2 5L8 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tighter text-primary animate-fade-in-left">Clickdera</h2>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex flex-1 justify-end items-center gap-10">
+                    <div class="flex items-center gap-8 text-base font-medium text-subtle-light dark:text-subtle-dark">
+                        <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="index.html">Home</a>
+                        <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="about.html">About Us</a>
+                        <div class="relative group">
+                            <a class="hover:text-primary transition-all duration-300 flex items-center gap-1" href="#">
+                                <span>Services</span>
+                                <span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                            </a>
+                            <div class="absolute hidden group-hover:block bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-lg mt-4 py-2 w-64 animate-fade-in-up">
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="video-editing.html">Video Editing</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="lead-generation.html">Lead Generation</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="influencer-marketing.html">Influencer Marketing</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="graphic-design.html">Graphic Design & Image Creation</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="social-media-management.html">Social Media Management</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="gmb-account-creation.html">GMB Account Creation</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="reviews-management.html">Reviews Management</a>
+                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="website-development.html">Website Development</a>
+                            </div>
+                        </div>
+                        <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="testimonials.html">Testimonials</a>
+                        <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="blog.html">Blog</a>
+                        <a class="text-primary font-semibold transition-all duration-300 transform hover:scale-105" href="contact.html">Contact</a>
+                        <button id="admin-toggle" class="hover:text-primary transition-all duration-300 transform hover:scale-105 bg-primary/10 px-3 py-1 rounded-full text-sm">
+                            Admin
+                        </button>
+                    </div>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 hamburger">
+                    <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5 mb-1.5"></span>
+                    <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5 mb-1.5"></span>
+                    <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5"></span>
+                </button>
+            </header>
+            <!-- Fixed Border Line -->
+            <div class="header-border"></div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu lg:hidden bg-background-light dark:bg-background-dark shadow-lg z-40 transition-all duration-300">
+                <div class="px-4 py-6 space-y-4">
+                    <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="index.html">Home</a>
+                    <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="about.html">About Us</a>
+                    
+                    <!-- Mobile Services Dropdown -->
+                    <div class="relative">
+                        <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2">
+                            <span>Services</span>
+                            <span class="material-symbols-outlined transition-transform duration-300" id="mobile-services-arrow">expand_more</span>
+                        </button>
+                        <div id="mobile-services-menu" class="hidden pl-4 mt-2 space-y-2 border-l border-border-light dark:border-border-dark">
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="video-editing.html">Video Editing</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="lead-generation.html">Lead Generation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="influencer-marketing.html">Influencer Marketing</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="graphic-design.html">Graphic Design & Image Creation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="social-media-management.html">Social Media Management</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="gmb-account-creation.html">GMB Account Creation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="reviews-management.html">Reviews Management</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="website-development.html">Website Development</a>
+                        </div>
+                    </div>
+                    
+                    <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="testimonials.html">Testimonials</a>
+                    <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="blog.html">Blog</a>
+                    <a class="block text-lg font-medium text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="contact.html">Contact</a>
+                    <button id="mobile-admin-toggle" class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2 bg-primary/10 px-3 py-1 rounded-full text-sm w-full text-left">
+                        Admin Panel
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex h-full grow flex-col main-content">
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <section class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-background-light dark:from-primary/10 dark:to-background-dark">
+                    <div class="absolute inset-0 -z-10 h-full w-full bg-background-light dark:bg-background-dark bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-background-light dark:from-primary/10 dark:via-transparent dark:to-background-dark"></div>
+                    </div>
+                    <div class="max-w-7xl mx-auto z-20 text-center">
+                        <div class="flex flex-col items-center gap-6">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-tight animate-fade-in-up">
+                                Let's Start a Conversation
+                            </h1>
+                            <p class="text-lg md:text-xl font-normal max-w-3xl mx-auto text-subtle-light dark:text-subtle-dark animate-fade-in-up" style="animation-delay: 0.2s;">
+                                Ready to elevate your digital presence? Contact us today and let's discuss how Clickdera can transform your business.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Form & Info Section -->
+                <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                            <!-- Contact Form -->
+                            <div class="animate-fade-in-left">
+                                <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-2xl shadow-lg p-8 md:p-10">
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2 text-foreground-light dark:text-foreground-dark">Send Us a Message</h2>
+                                    <p class="text-subtle-light dark:text-subtle-dark mb-8">We'll get back to you within 24 hours</p>
+                                    
+                                    <form id="contact-form" class="space-y-6">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label for="first-name" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">First Name</label>
+                                                <input type="text" id="first-name" class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your first name" required>
+                                            </div>
+                                            <div>
+                                                <label for="last-name" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">Last Name</label>
+                                                <input type="text" id="last-name" class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your last name" required>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="email" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">Email Address</label>
+                                            <input type="email" id="email" class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="you@example.com" required>
+                                        </div>
+                                        <div>
+                                            <label for="company" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">Company (Optional)</label>
+                                            <input type="text" id="company" class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your company name">
+                                        </div>
+                                        <div>
+                                            <label for="service" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">Service of Interest</label>
+                                            <select id="service" class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                                <option value="">Select a service</option>
+                                                <option value="video-editing">Video Editing</option>
+                                                <option value="lead-generation">Lead Generation</option>
+                                                <option value="influencer-marketing">Influencer Marketing</option>
+                                                <option value="graphic-design">Graphic Design & Image Creation</option>
+                                                <option value="social-media">Social Media Management</option>
+                                                <option value="gmb-creation">GMB Account Creation</option>
+                                                <option value="reviews-management">Reviews Management</option>
+                                                <option value="website-development">Website Development</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="message" class="block text-sm font-medium mb-2 text-foreground-light dark:text-foreground-dark">Message</label>
+                                            <textarea id="message" rows="5" class="form-textarea w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us about your project..." required></textarea>
+                                        </div>
+                                        <div id="form-message" class="hidden p-4 rounded-lg"></div>
+                                        <button type="submit" id="submit-button" class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-primary/30 glow">
+                                            Send Message
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Information -->
+                            <div class="animate-fade-in-right">
+                                <div class="space-y-10">
+                                    <div>
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-foreground-light dark:text-foreground-dark">Get in Touch</h2>
+                                        <p class="text-lg text-subtle-light dark:text-subtle-dark mb-8">We're here to help and answer any questions you might have. Let's start a conversation about your digital growth.</p>
+                                        
+                                        <div class="space-y-6">
+                                            <div class="flex items-start gap-4 p-4 rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300">
+                                                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                                    <span class="material-symbols-outlined text-2xl">mail</span>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-lg font-semibold mb-1 text-foreground-light dark:text-foreground-dark">Email Us</h3>
+                                                    <p class="text-subtle-light dark:text-subtle-dark mb-1">contact@clickdera.com</p>
+                                                    <p class="text-sm text-subtle-light dark:text-subtle-dark">We'll reply within 24 hours</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="flex items-start gap-4 p-4 rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300">
+                                                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                                    <span class="material-symbols-outlined text-2xl">call</span>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-lg font-semibold mb-1 text-foreground-light dark:text-foreground-dark">Call Us</h3>
+                                                    <p class="text-subtle-light dark:text-subtle-dark mb-1">+1 (555) 123-4567</p>
+                                                    <p class="text-sm text-subtle-light dark:text-subtle-dark">Mon-Fri from 9am to 6pm</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="flex items-start gap-4 p-4 rounded-xl border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300">
+                                                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                                    <span class="material-symbols-outlined text-2xl">location_on</span>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-lg font-semibold mb-1 text-foreground-light dark:text-foreground-dark">Visit Us</h3>
+                                                    <p class="text-subtle-light dark:text-subtle-dark mb-1">123 Marketing Lane, Suite 100</p>
+                                                    <p class="text-sm text-subtle-light dark:text-subtle-dark">Digital City, 45678</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-2xl p-8 border border-primary/20 animate-tilt">
+                                        <h3 class="text-xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">Why Choose Clickdera?</h3>
+                                        <ul class="space-y-3 text-subtle-light dark:text-subtle-dark">
+                                            <li class="flex items-start gap-2">
+                                                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                                <span>Psychology-driven marketing strategies</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                                <span>Proven track record of success</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                                <span>Customized solutions for your business</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                                <span>Transparent communication & reporting</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Admin Panel -->
+                <section id="admin-panel" class="admin-panel py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-3xl md:text-4xl font-bold text-foreground-light dark:text-foreground-dark">Contact Form Submissions</h2>
+                            <button id="refresh-submissions" class="bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center gap-2">
+                                <span class="material-symbols-outlined">refresh</span>
+                                Refresh
+                            </button>
+                        </div>
+                        
+                        <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-2xl shadow-lg overflow-hidden">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Email</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Service</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Date</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Status</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="submissions-list" class="divide-y divide-border-light dark:divide-border-dark">
+                                        <!-- Submissions will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="no-submissions" class="hidden p-8 text-center text-subtle-light dark:text-subtle-dark">
+                                <span class="material-symbols-outlined text-5xl mb-4 opacity-50">inbox</span>
+                                <p class="text-lg">No submissions yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="text-center mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground-light dark:text-foreground-dark">Frequently Asked Questions</h2>
+                            <p class="text-lg text-subtle-light dark:text-subtle-dark">Find quick answers to common questions about our services and process.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl p-6 animate-fade-in-up">
+                                <h3 class="text-lg font-semibold mb-2 text-foreground-light dark:text-foreground-dark">How quickly can you start working on my project?</h3>
+                                <p class="text-subtle-light dark:text-subtle-dark">We typically begin new projects within 1-3 business days after our initial consultation and agreement. The exact timeline depends on project complexity and our current workload.</p>
+                            </div>
+                            
+                            <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                                <h3 class="text-lg font-semibold mb-2 text-foreground-light dark:text-foreground-dark">Do you offer customized packages?</h3>
+                                <p class="text-subtle-light dark:text-subtle-dark">Yes! We believe every business is unique. We'll work with you to create a customized package that addresses your specific needs and goals.</p>
+                            </div>
+                            
+                            <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                                <h3 class="text-lg font-semibold mb-2 text-foreground-light dark:text-foreground-dark">What is your pricing structure?</h3>
+                                <p class="text-subtle-light dark:text-subtle-dark">Our pricing varies based on the scope and complexity of your project. We offer both project-based and retainer options. Contact us for a personalized quote.</p>
+                            </div>
+                            
+                            <div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.3s;">
+                                <h3 class="text-lg font-semibold mb-2 text-foreground-light dark:text-foreground-dark">How do you measure success?</h3>
+                                <p class="text-subtle-light dark:text-subtle-dark">We establish clear KPIs at the beginning of each project and provide regular performance reports. Success metrics vary by service but typically include engagement rates, conversion rates, ROI, and other relevant business metrics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-blue-600 text-white">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Digital Presence?</h2>
+                        <p class="text-lg md:text-xl mb-8 opacity-90">Let's discuss how Clickdera can help you achieve your business goals with psychology-driven marketing strategies.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#contact" class="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Start a Project
+                            </a>
+                            <a href="about.html" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                                Learn More About Us
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Section -->
+                <footer class="border-t border-border-light dark:border-border-dark bg-gradient-to-br from-background-light to-gray-50 dark:from-background-dark dark:to-gray-900">
+                    <div class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            <div class="md:col-span-2 lg:col-span-1">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M15 15l-2 5L8 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-primary">Clickdera</h3>
+                                </div>
+                                <p class="text-base text-subtle-light dark:text-subtle-dark mb-6">Your Global Partner for Digital Growth.</p>
+                                <div class="flex gap-4">
+                                    <!-- YouTube -->
+                                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.youtube.com/channel/UCCsOSk5zIq8zMgkRz2QDvjw" target="_blank">
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                                        </svg>
+                                    </a>
+                                    <!-- X (Twitter) -->
+                                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://x.com/clickdera" target="_blank">
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                        </svg>
+                                    </a>
+                                    <!-- Instagram -->
+                                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.instagram.com/clickdera/" target="_blank">
+                                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.85-1.48 3.225-1.691 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.225-1.48-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85 0-3.204.013-3.583.07-4.849.149-3.225 1.691-4.771 4.919-4.919.058-1.265.07-1.645.07-4.85zm0-2.163C8.74.001 8.363 0 4.85 0 1.801.012.001 1.802.001 4.85c-.012 3.515 0 3.892 0 7.15 0 3.258.012 3.636 0 7.15.012 3.048 1.802 4.848 4.85 4.848 3.515-.012 3.892 0 7.15 0 3.258 0 3.636-.012 7.15 0 3.048-.012 4.848-1.802 4.848-4.85.012-3.515 0-3.892 0-7.15 0-3.258-.012-3.636 0-7.15C23.988 1.802 22.198.001 19.15.001c-3.515.012-3.892 0-7.15 0z"></path>
+                                            <path d="M12 6.848c-2.841 0-5.152 2.311-5.152 5.152s2.311 5.152 5.152 5.152 5.152-2.311 5.152-5.152-2.311-5.152-5.152-5.152zm0 8.303c-1.743 0-3.151-1.408-3.151-3.151s1.408-3.151 3.151-3.151 3.151 1.408 3.151 3.151-1.408 3.151-3.151 3.151zm5.635-7.857c0-.594.482-1.076 1.076-1.076s1.076.482 1.076 1.076c0 .593-.482 1.075-1.076 1.075s-1.076-.482-1.076-1.075z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Quick Links</h3>
+                                <nav class="flex flex-col gap-3 text-base">
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="index.html">Home</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="about.html">About Us</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="#services">Services</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="testimonials.html">Testimonials</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="blog.html">Blog</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="contact.html">Contact Us</a>
+                                </nav>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Services</h3>
+                                <nav class="flex flex-col gap-3 text-base">
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="video-editing.html">Video Editing</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="lead-generation.html">Lead Generation</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="influencer-marketing.html">Influencer Marketing</a>
+                                    <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="website-development.html">Website Development</a>
+                                </nav>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Contact Info</h3>
+                                <div class="text-base text-subtle-light dark:text-subtle-dark flex flex-col gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">mail</span>
+                                        <p>contact@clickdera.com</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">call</span>
+                                        <p>+1 (555) 123-4567</p>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                                        <p>123 Marketing Lane, Suite 100, Digital City, 45678</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center text-base text-subtle-light dark:text-subtle-dark mt-16 pt-8 border-t border-border-light dark:border-border-dark">
+                            <p>© 2024 Clickdera. All Rights Reserved. A brighter digital future awaits.</p>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- Submission Detail Modal -->
+    <div id="submission-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-2xl shadow-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b border-border-light dark:border-border-dark">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-foreground-light dark:text-foreground-dark">Submission Details</h3>
+                    <button id="close-modal" class="text-subtle-light dark:text-subtle-dark hover:text-foreground-light dark:hover:text-foreground-dark">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <div id="modal-content">
+                    <!-- Submission details will be loaded here -->
+                </div>
+            </div>
+            <div class="p-6 border-t border-border-light dark:border-border-dark flex justify-end gap-3">
+                <button id="mark-read" class="bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-all duration-300">
+                    Mark as Read
+                </button>
+                <button id="delete-submission" class="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition-all duration-300">
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        const mobileServicesArrow = document.getElementById('mobile-services-arrow');
+        
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Toggle mobile services dropdown
+        mobileServicesToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesArrow.classList.toggle('rotate-180');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileServicesMenu.classList.add('hidden');
+                mobileServicesArrow.classList.remove('rotate-180');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileServicesMenu.classList.add('hidden');
+                mobileServicesArrow.classList.remove('rotate-180');
+                document.body.classList.remove('menu-open');
+            }
+        });
+
+        // Close mobile menu on scroll
+        window.addEventListener('scroll', () => {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesArrow.classList.remove('rotate-180');
+            document.body.classList.remove('menu-open');
+        });
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Firebase Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        const submitButton = document.getElementById('submit-button');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            try {
+                // Add document to Firestore
+                await window.firebase.addDoc(window.firebase.collection(window.firebase.db, "contactSubmissions"), {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    company: company,
+                    service: service,
+                    message: message,
+                    status: 'new',
+                    timestamp: new Date()
+                });
+                
+                // Show success message
+                showFormMessage('Thank you for your message! We will get back to you soon.', 'success');
+                
+                // Reset the form
+                contactForm.reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showFormMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            } finally {
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
+        
+        function showFormMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.className = `p-4 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`;
+            formMessage.classList.remove('hidden');
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        }
+        
+        // Admin Panel Functionality
+        const adminToggle = document.getElementById('admin-toggle');
+        const mobileAdminToggle = document.getElementById('mobile-admin-toggle');
+        const adminPanel = document.getElementById('admin-panel');
+        const refreshSubmissions = document.getElementById('refresh-submissions');
+        const submissionsList = document.getElementById('submissions-list');
+        const noSubmissions = document.getElementById('no-submissions');
+        
+        // Toggle admin panel
+        adminToggle.addEventListener('click', () => {
+            adminPanel.classList.toggle('active');
+            if (adminPanel.classList.contains('active')) {
+                loadSubmissions();
+            }
+        });
+        
+        mobileAdminToggle.addEventListener('click', () => {
+            adminPanel.classList.toggle('active');
+            if (adminPanel.classList.contains('active')) {
+                loadSubmissions();
+            }
+            // Close mobile menu
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesArrow.classList.remove('rotate-180');
+            document.body.classList.remove('menu-open');
+        });
+        
+        // Refresh submissions
+        refreshSubmissions.addEventListener('click', loadSubmissions);
+        
+        // Load submissions from Firestore
+        async function loadSubmissions() {
+            try {
+                const querySnapshot = await window.firebase.getDocs(
+                    window.firebase.query(
+                        window.firebase.collection(window.firebase.db, "contactSubmissions"),
+                        window.firebase.orderBy("timestamp", "desc")
+                    )
+                );
+                
+                submissionsList.innerHTML = '';
+                
+                if (querySnapshot.empty) {
+                    noSubmissions.classList.remove('hidden');
+                    return;
+                }
+                
+                noSubmissions.classList.add('hidden');
+                
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const submissionRow = document.createElement('tr');
+                    submissionRow.className = 'hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors';
+                    submissionRow.innerHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-medium text-foreground-light dark:text-foreground-dark">${data.firstName} ${data.lastName}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-subtle-light dark:text-subtle-dark">${data.email}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-subtle-light dark:text-subtle-dark">${data.service}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-subtle-light dark:text-subtle-dark">${new Date(data.timestamp.seconds * 1000).toLocaleDateString()}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="status-badge status-${data.status}">${data.status}</span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                            <button class="text-primary hover:text-primary/80 mr-3 view-submission" data-id="${doc.id}">View</button>
+                            <button class="text-red-500 hover:text-red-700 delete-submission" data-id="${doc.id}">Delete</button>
+                        </td>
+                    `;
+                    submissionsList.appendChild(submissionRow);
+                });
+                
+                // Add event listeners to view buttons
+                document.querySelectorAll('.view-submission').forEach(button => {
+                    button.addEventListener('click', () => viewSubmission(button.dataset.id));
+                });
+                
+                // Add event listeners to delete buttons
+                document.querySelectorAll('.delete-submission').forEach(button => {
+                    button.addEventListener('click', () => deleteSubmission(button.dataset.id));
+                });
+                
+            } catch (error) {
+                console.error("Error loading submissions: ", error);
+            }
+        }
+        
+        // View submission details
+        async function viewSubmission(id) {
+            try {
+                // In a real implementation, you would fetch the specific document
+                // For now, we'll just show a placeholder
+                const modal = document.getElementById('submission-modal');
+                const modalContent = document.getElementById('modal-content');
+                
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Name</h4>
+                            <p class="text-foreground-light dark:text-foreground-dark">Loading...</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Email</h4>
+                            <p class="text-foreground-light dark:text-foreground-dark">Loading...</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Service</h4>
+                            <p class="text-foreground-light dark:text-foreground-dark">Loading...</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-subtle-light dark:text-subtle-dark">Message</h4>
+                            <p class="text-foreground-light dark:text-foreground-dark">Loading...</p>
+                        </div>
+                    </div>
+                `;
+                
+                modal.classList.remove('hidden');
+                
+                // Set current submission ID for actions
+                modal.dataset.currentId = id;
+                
+                // In a real implementation, you would fetch the specific document here
+                // and update the modal content with the actual data
+                
+            } catch (error) {
+                console.error("Error viewing submission: ", error);
+            }
+        }
+        
+        // Delete submission
+        async function deleteSubmission(id) {
+            if (confirm('Are you sure you want to delete this submission?')) {
+                try {
+                    await window.firebase.deleteDoc(window.firebase.doc(window.firebase.db, "contactSubmissions", id));
+                    loadSubmissions(); // Refresh the list
+                } catch (error) {
+                    console.error("Error deleting submission: ", error);
+                }
+            }
+        }
+        
+        // Modal functionality
+        const modal = document.getElementById('submission-modal');
+        const closeModal = document.getElementById('close-modal');
+        const markRead = document.getElementById('mark-read');
+        const deleteSubmissionBtn = document.getElementById('delete-submission');
+        
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        
+        markRead.addEventListener('click', async () => {
+            const id = modal.dataset.currentId;
+            if (id) {
+                // In a real implementation, you would update the document status to 'read'
+                // await window.firebase.updateDoc(window.firebase.doc(window.firebase.db, "contactSubmissions", id), {
+                //     status: 'read'
+                // });
+                alert('Marked as read (functionality to be implemented)');
+                modal.classList.add('hidden');
+                loadSubmissions(); // Refresh the list
+            }
+        });
+        
+        deleteSubmissionBtn.addEventListener('click', () => {
+            const id = modal.dataset.currentId;
+            if (id) {
+                modal.classList.add('hidden');
+                deleteSubmission(id);
+            }
+        });
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
