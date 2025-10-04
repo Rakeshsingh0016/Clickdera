@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Clickdera - Digital Marketing</title>
+    <meta name="description" content="Clickdera - Performance marketing agency delivering measurable results. Digital marketing, video editing, lead generation, and social media management services.">
+    <meta name="keywords" content="digital marketing, performance marketing, video editing, lead generation, social media management, SEO, influencer marketing, website development">
+    <meta name="author" content="Clickdera">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Clickdera - Your Digital Growth Engine">
+    <meta property="og:description" content="Performance marketing agency delivering measurable results that elevate your brand, engage your audience, and drive unparalleled growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickdera.com">
+    <meta property="og:image" content="https://clickdera.com/images/og-image.jpg">
+    <meta property="og:site_name" content="Clickdera">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clickdera - Your Digital Growth Engine">
+    <meta name="twitter:description" content="Performance marketing agency delivering measurable results that elevate your brand, engage your audience, and drive unparalleled growth.">
+    <meta name="twitter:image" content="https://clickdera.com/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@clickdera">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://clickdera.com">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- DNS Prefetch for External Domains -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clickdera",
+      "url": "https://clickdera.com",
+      "logo": "https://clickdera.com/images/logo.png",
+      "description": "Performance marketing agency delivering measurable results that elevate your brand, engage your audience, and drive unparalleled growth.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Marketing Lane, Suite 100",
+        "addressLocality": "Digital City",
+        "postalCode": "45678",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "contact@clickdera.com",
+        "areaServed": "US",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://www.youtube.com/channel/UCCsOSk5zIq8zMgkRz2QDvjw",
+        "https://x.com/clickdera",
+        "https://www.instagram.com/clickdera/"
+      ]
+    }
+    </script>
+    
+    <title>Clickdera - Performance Marketing Agency | Digital Growth Engine</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -178,43 +251,58 @@
             height: 10px;
             background: transparent;
         }
+        /* Performance optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark font-display">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-50">Skip to main content</a>
+    
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <!-- Fixed Header Container -->
-        <div class="header-container">
-            <header class="flex items-center justify-between whitespace-nowrap px-4 sm:px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <header class="header-container" role="banner">
+            <div class="flex items-center justify-between whitespace-nowrap px-4 sm:px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
                 <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center animate-pulse">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center animate-pulse" aria-hidden="true">
                         <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path d="M15 15l-2 5L8 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </div>
-                    <h2 class="text-3xl font-bold tracking-tighter text-primary animate-fade-in-left">Clickdera</h2>
+                    <h1 class="text-3xl font-bold tracking-tighter text-primary animate-fade-in-left">Clickdera</h1>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex flex-1 justify-end items-center gap-10">
+                <nav class="hidden lg:flex flex-1 justify-end items-center gap-10" aria-label="Main navigation">
                     <div class="flex items-center gap-8 text-base font-medium text-subtle-light dark:text-subtle-dark">
                         <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="#home">Home</a>
                         <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="about.html">About Us</a>
                         <!-- FIXED: Services dropdown with bridge to prevent disappearing -->
                         <div class="relative group">
-                            <a class="hover:text-primary transition-all duration-300 flex items-center gap-1" href="#">
+                            <a class="hover:text-primary transition-all duration-300 flex items-center gap-1" href="#" aria-expanded="false" aria-haspopup="true">
                                 <span>Services</span>
                                 <span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                             </a>
-                            <div class="absolute hidden group-hover:block bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-lg mt-0 pt-4 pb-2 w-64 animate-fade-in-up z-50" style="top: 100%; left: 0;">
+                            <div class="absolute hidden group-hover:block bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-lg mt-0 pt-4 pb-2 w-64 animate-fade-in-up z-50" style="top: 100%; left: 0;" role="menu" aria-label="Services submenu">
                                 <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg">
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="video-editing.html">Video Editing</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="lead-generation.html">Lead Generation</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="influencer-marketing.html">Influencer Marketing</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="graphic-design.html">Graphic Design & Image Creation</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="social-media-management.html">Social Media Management</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="gmb-account-creation.html">GMB Account Creation</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="reviews-management.html">Reviews Management</a>
-                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="website-development.html">Website Development</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="video-editing.html" role="menuitem">Video Editing</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="lead-generation.html" role="menuitem">Lead Generation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="influencer-marketing.html" role="menuitem">Influencer Marketing</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="graphic-design.html" role="menuitem">Graphic Design & Image Creation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="social-media-management.html" role="menuitem">Social Media Management</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="gmb-account-creation.html" role="menuitem">GMB Account Creation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="reviews-management.html" role="menuitem">Reviews Management</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="website-development.html" role="menuitem">Website Development</a>
                                 </div>
                             </div>
                         </div>
@@ -225,36 +313,36 @@
                 </nav>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 hamburger">
+                <button id="mobile-menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                     <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5 mb-1.5"></span>
                     <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5 mb-1.5"></span>
                     <span class="hamburger-line bg-foreground-light dark:bg-foreground-dark w-6 h-0.5"></span>
                 </button>
-            </header>
+            </div>
             <!-- Fixed Border Line -->
             <div class="header-border"></div>
             
             <!-- Mobile Navigation Menu -->
-            <div id="mobile-menu" class="mobile-menu lg:hidden bg-background-light dark:bg-background-dark shadow-lg z-40 transition-all duration-300">
+            <div id="mobile-menu" class="mobile-menu lg:hidden bg-background-light dark:bg-background-dark shadow-lg z-40 transition-all duration-300" role="navigation" aria-label="Mobile navigation">
                 <div class="px-4 py-6 space-y-4">
                     <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="#home">Home</a>
                     <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="about.html">About Us</a>
                     
                     <!-- Mobile Services Dropdown -->
                     <div class="relative">
-                        <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2">
+                        <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" aria-expanded="false" aria-controls="mobile-services-menu">
                             <span>Services</span>
                             <span class="material-symbols-outlined transition-transform duration-300" id="mobile-services-arrow">expand_more</span>
                         </button>
-                        <div id="mobile-services-menu" class="hidden pl-4 mt-2 space-y-2 border-l border-border-light dark:border-border-dark">
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="video-editing.html">Video Editing</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="lead-generation.html">Lead Generation</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="influencer-marketing.html">Influencer Marketing</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="graphic-design.html">Graphic Design & Image Creation</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="social-media-management.html">Social Media Management</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="gmb-account-creation.html">GMB Account Creation</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="reviews-management.html">Reviews Management</a>
-                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="website-development.html">Website Development</a>
+                        <div id="mobile-services-menu" class="hidden pl-4 mt-2 space-y-2 border-l border-border-light dark:border-border-dark" role="menu" aria-label="Mobile services submenu">
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="video-editing.html" role="menuitem">Video Editing</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="lead-generation.html" role="menuitem">Lead Generation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="influencer-marketing.html" role="menuitem">Influencer Marketing</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="graphic-design.html" role="menuitem">Graphic Design & Image Creation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="social-media-management.html" role="menuitem">Social Media Management</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="gmb-account-creation.html" role="menuitem">GMB Account Creation</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="reviews-management.html" role="menuitem">Reviews Management</a>
+                            <a class="block text-base hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="website-development.html" role="menuitem">Website Development</a>
                         </div>
                     </div>
                     
@@ -263,10 +351,10 @@
                     <a class="block text-lg font-medium hover:text-primary transition-all duration-300 py-2 transform hover:translate-x-2" href="contact.html">Contact</a>
                 </div>
             </div>
-        </div>
+        </header>
         
         <div class="flex h-full grow flex-col main-content">
-            <main class="flex-1">
+            <main id="main-content" class="flex-1">
                 <!-- Hero Section -->
                 <section id="home" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
                     <div class="absolute inset-0 -z-10 h-full w-full bg-background-light dark:bg-background-dark bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px]">
@@ -275,9 +363,9 @@
                     <div class="max-w-7xl mx-auto z-20 text-center">
                         <div class="flex flex-col items-center gap-8">
                             <div class="flex flex-col gap-6 text-foreground-light dark:text-foreground-dark">
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight animate-fade-in-up">
+                                <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight animate-fade-in-up">
                                     Your Digital Growth Engine
-                                </h1>
+                                </h2>
                                 <p class="text-lg md:text-xl font-normal max-w-3xl mx-auto text-subtle-light dark:text-subtle-dark animate-fade-in-up" style="animation-delay: 0.2s;">
                                     Clickdera is your dedicated partner for performance marketing. We deliver measurable results that elevate your brand, engage your audience, and drive unparalleled growth.
                                 </p>
@@ -395,7 +483,6 @@
                     </div>
                 </section>
 
-                <!-- Rest of the sections remain the same as in the previous code -->
                 <!-- About Section -->
                 <section class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark" id="about">
                     <div class="max-w-6xl mx-auto">
@@ -464,7 +551,7 @@
                 </section>
 
               <!-- Footer Section -->
-<footer class="border-t border-border-light dark:border-border-dark bg-gradient-to-br from-background-light to-gray-50 dark:from-background-dark dark:to-gray-900">
+<footer class="border-t border-border-light dark:border-border-dark bg-gradient-to-br from-background-light to-gray-50 dark:from-background-dark dark:to-gray-900" role="contentinfo">
     <div class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div class="md:col-span-2 lg:col-span-1">
@@ -478,17 +565,17 @@
                 </div>
                 <p class="text-base text-subtle-light dark:text-subtle-dark mb-6">Your Global Partner for Digital Growth.</p>
                 <div class="flex gap-4">
-                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.youtube.com/channel/UCCsOSk5zIq8zMgkRz2QDvjw" target="_blank">
+                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.youtube.com/channel/UCCsOSk5zIq8zMgkRz2QDvjw" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel">
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
                         </svg>
                     </a>
-                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://x.com/clickdera" target="_blank">
+                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://x.com/clickdera" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                         </svg>
                     </a>
-                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.instagram.com/clickdera/" target="_blank">
+                    <a class="text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors" href="https://www.instagram.com/clickdera/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.85-1.48 3.225-1.691 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.225-1.48-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85 0-3.204.013-3.583.07-4.849.149-3.225 1.691-4.771 4.919-4.919.058-1.265.07-1.645.07-4.85zm0-2.163C8.74.001 8.363 0 4.85 0 1.801.012.001 1.802.001 4.85c-.012 3.515 0 3.892 0 7.15 0 3.258.012 3.636 0 7.15.012 3.048 1.802 4.848 4.85 4.848 3.515-.012 3.892 0 7.15 0 3.258 0 3.636-.012 7.15 0 3.048-.012 4.848-1.802 4.848-4.85.012-3.515 0-3.892 0-7.15 0-3.258-.012-3.636 0-7.15C23.988 1.802 22.198.001 19.15.001c-3.515.012-3.892 0-7.15 0z"></path>
                             <path d="M12 6.848c-2.841 0-5.152 2.311-5.152 5.152s2.311 5.152 5.152 5.152 5.152-2.311 5.152-5.152-2.311-5.152-5.152-5.152zm0 8.303c-1.743 0-3.151-1.408-3.151-3.151s1.408-3.151 3.151-3.151 3.151 1.408 3.151 3.151-1.408 3.151-3.151 3.151zm5.635-7.857c0-.594.482-1.076 1.076-1.076s1.076.482 1.076 1.076c0 .593-.482 1.075-1.076 1.075s-1.076-.482-1.076-1.075z"></path>
@@ -498,7 +585,7 @@
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Quick Links</h3>
-                <nav class="flex flex-col gap-3 text-base">
+                <nav class="flex flex-col gap-3 text-base" aria-label="Footer navigation">
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="#home">Home</a>
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="about.html">About Us</a>
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="#services">Services</a>
@@ -509,7 +596,7 @@
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Services</h3>
-                <nav class="flex flex-col gap-3 text-base">
+                <nav class="flex flex-col gap-3 text-base" aria-label="Services navigation">
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="video-editing.html">Video Editing</a>
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="lead-generation.html">Lead Generation</a>
                     <a class="hover:text-primary transition-colors text-subtle-light dark:text-subtle-dark" href="influencer-marketing.html">Influencer Marketing</a>
@@ -518,20 +605,20 @@
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-4 text-foreground-light dark:text-foreground-dark">Contact Info</h3>
-                <div class="text-base text-subtle-light dark:text-subtle-dark flex flex-col gap-3">
+                <address class="text-base text-subtle-light dark:text-subtle-dark flex flex-col gap-3 not-italic">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary">mail</span>
-                        <p>contact@clickdera.com</p>
+                        <a href="mailto:contact@clickdera.com" class="hover:text-primary transition-colors">contact@clickdera.com</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary">call</span>
-                        <p>+1 (555) 123-4567</p>
+                        <a href="tel:+15551234567" class="hover:text-primary transition-colors">+1 (555) 123-4567</a>
                     </div>
                     <div class="flex items-start gap-2">
                         <span class="material-symbols-outlined text-primary mt-1">location_on</span>
                         <p>123 Marketing Lane, Suite 100, Digital City, 45678</p>
                     </div>
-                </div>
+                </address>
             </div>
         </div>
         <div class="text-center text-base text-subtle-light dark:text-subtle-dark mt-16 pt-8 border-t border-border-light dark:border-border-dark">
@@ -554,6 +641,8 @@
         // Toggle mobile menu
         mobileMenuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
             mobileMenuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
@@ -562,6 +651,8 @@
         // Toggle mobile services dropdown
         mobileServicesToggle.addEventListener('click', (e) => {
             e.stopPropagation();
+            const isExpanded = mobileServicesToggle.getAttribute('aria-expanded') === 'true';
+            mobileServicesToggle.setAttribute('aria-expanded', !isExpanded);
             mobileServicesMenu.classList.toggle('hidden');
             mobileServicesArrow.classList.toggle('rotate-180');
         });
@@ -571,9 +662,11 @@
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenu.classList.remove('active');
                 mobileServicesMenu.classList.add('hidden');
                 mobileServicesArrow.classList.remove('rotate-180');
+                mobileServicesToggle.setAttribute('aria-expanded', 'false');
                 document.body.classList.remove('menu-open');
             });
         });
@@ -582,9 +675,11 @@
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
                 mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenu.classList.remove('active');
                 mobileServicesMenu.classList.add('hidden');
                 mobileServicesArrow.classList.remove('rotate-180');
+                mobileServicesToggle.setAttribute('aria-expanded', 'false');
                 document.body.classList.remove('menu-open');
             }
         });
@@ -592,9 +687,11 @@
         // Close mobile menu on scroll
         window.addEventListener('scroll', () => {
             mobileMenuToggle.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
             mobileMenu.classList.remove('active');
             mobileServicesMenu.classList.add('hidden');
             mobileServicesArrow.classList.remove('rotate-180');
+            mobileServicesToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('menu-open');
         });
 
@@ -625,6 +722,15 @@
             } else {
                 header.classList.remove('shadow-md');
             }
+        });
+
+        // Performance: Lazy load non-critical resources
+        window.addEventListener('load', function() {
+            // Load non-critical CSS
+            const nonCriticalCSS = document.createElement('link');
+            nonCriticalCSS.rel = 'stylesheet';
+            nonCriticalCSS.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined';
+            document.head.appendChild(nonCriticalCSS);
         });
     </script>
 </body>
