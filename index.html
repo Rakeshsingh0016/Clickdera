@@ -168,6 +168,16 @@
         .main-content {
             margin-top: 76px; /* Adjust based on header height */
         }
+        /* FIXED: Dropdown menu bridge to prevent disappearing */
+        .group:hover .group-hover\:block::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: transparent;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark font-display">
@@ -189,20 +199,23 @@
                     <div class="flex items-center gap-8 text-base font-medium text-subtle-light dark:text-subtle-dark">
                         <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="#home">Home</a>
                         <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="about.html">About Us</a>
+                        <!-- FIXED: Services dropdown with bridge to prevent disappearing -->
                         <div class="relative group">
                             <a class="hover:text-primary transition-all duration-300 flex items-center gap-1" href="#">
                                 <span>Services</span>
                                 <span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                             </a>
-                            <div class="absolute hidden group-hover:block bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-lg mt-4 py-2 w-64 animate-fade-in-up">
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="video-editing.html">Video Editing</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="lead-generation.html">Lead Generation</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="influencer-marketing.html">Influencer Marketing</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="graphic-design.html">Graphic Design & Image Creation</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="social-media-management.html">Social Media Management</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="gmb-account-creation.html">GMB Account Creation</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="reviews-management.html">Reviews Management</a>
-                                <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="website-development.html">Website Development</a>
+                            <div class="absolute hidden group-hover:block bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl shadow-lg mt-0 pt-4 pb-2 w-64 animate-fade-in-up z-50" style="top: 100%; left: 0;">
+                                <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg">
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="video-editing.html">Video Editing</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="lead-generation.html">Lead Generation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="influencer-marketing.html">Influencer Marketing</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="graphic-design.html">Graphic Design & Image Creation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="social-media-management.html">Social Media Management</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="gmb-account-creation.html">GMB Account Creation</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="reviews-management.html">Reviews Management</a>
+                                    <a class="block px-4 py-2.5 text-sm text-foreground-light dark:text-foreground-dark hover:bg-gray-100 dark:hover:bg-border-dark transition-all duration-300" href="website-development.html">Website Development</a>
+                                </div>
                             </div>
                         </div>
                         <a class="hover:text-primary transition-all duration-300 transform hover:scale-105" href="testimonials.html">Testimonials</a>
