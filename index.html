@@ -89,7 +89,7 @@ document.getElementById('test').onclick = async ()=>{
 
 document.getElementById('send').onclick = async ()=>{
   const base = (baseUrlEl.value || '').trim();
-  if(!base) return alert('Paste your API endpoint URL first.');
+  if(!base) return alert('https://api-gemini-js-y6al.vercel.app/api/gemini');
   const prompt = (promptEl.value || '').trim();
   if(!prompt) return alert('Type a message first.');
 
