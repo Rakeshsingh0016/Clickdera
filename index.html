@@ -1,125 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gemini Chat</title>
-
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini AI Chat</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #0e1117;
-        color: white;
-        margin: 0;
-        padding: 0;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
     }
-
-    .container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 10px;
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
     }
-
-    .messages {
-        background: #1b1f28;
-        height: 70vh;
-        padding: 15px;
-        border-radius: 10px;
-        overflow-y: auto;
-    }
-
-    .msg {
-        margin-bottom: 12px;
-        padding: 10px;
-        border-radius: 6px;
-        line-height: 1.4;
-        max-width: 80%;
-    }
-    .user {
-        background: #007bff;
-        margin-left: auto;
-    }
-    .bot {
-        background: #333;
-        margin-right: auto;
-    }
-
-    input {
-        width: 75%;
-        padding: 12px;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        font-size: 16px;
-    }
-
     button {
-        width: 20%;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background: #7c4dff;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
     }
-</style>
+    #reply {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
-    <h2>Gemini Chat</h2>
 
-    <div id="messages" class="messages"></div>
+  <h1>Gemini AI Chat</h1>
+  <textarea id="prompt" rows="5" placeholder="Type your prompt here..."></textarea>
+  <br>
+  <button id="sendBtn">Send</button>
 
-    <div style="margin-top: 10px;">
-        <input id="input" placeholder="Type your message..." />
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
+  <div id="reply"><strong>Reply:</strong> <span id="replyText"></span></div>
 
-<script>
-const API_URL = "https://gemini-backend-alpha-dusky.vercel.app/api/gemini";
+  <script>
+    const sendBtn = document.getElementById('sendBtn');
+    const promptInput = document.getElementById('prompt');
+    const replyText = document.getElementById('replyText');
 
-async function sendMessage() {
-    const input = document.getElementById("input");
-    const messagesDiv = document.getElementById("messages");
-    const text = input.value.trim();
+    sendBtn.addEventListener('click', async () => {
+      const prompt = promptInput.value.trim();
+      if (!prompt) return alert("Please enter a prompt!");
 
-    if (!text) return;
+      replyText.textContent = "Loading...";
 
-    // Add user message
-    messagesDiv.innerHTML += `<div class="msg user">${text}</div>`;
-    input.value = "";
-    messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
-    // Add loading message
-    let loading = document.createElement("div");
-    loading.className = "msg bot";
-    loading.innerText = "Thinking...";
-    messagesDiv.appendChild(loading);
-
-    try {
-        const res = await fetch(API_URL, {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ prompt: text })
+      try {
+        const res = await fetch('http://localhost:3000/api/gemini', {  // backend URL
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt })
         });
 
         const data = await res.json();
-        loading.remove();
-
-        // SAFE fallback
-        const reply = data.reply || "No reply received! (Check backend)";
-
-        messagesDiv.innerHTML += `<div class="msg bot">${reply}</div>`;
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
-    } catch (err) {
-        loading.innerText = "Backend error!";
-    }
-}
-</script>
+        if (data.reply) {
+          replyText.textContent = data.reply;
+        } else {
+          replyText.textContent = "Error: " + (data.error || "Unknown error");
+        }
+      } catch (err) {
+        replyText.textContent = "Server error: " + err.message;
+      }
+    });
+  </script>
 
 </body>
 </html>
