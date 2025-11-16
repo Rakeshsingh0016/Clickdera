@@ -1,73 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemini AI Chat</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f5f5f5;
-    }
-    textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-    #reply {
-      margin-top: 20px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini AI Chat</title>
+<style>
+  body { font-family: Arial; padding: 2rem; background: #f5f5f5; }
+  textarea { width: 100%; padding: 10px; font-size: 16px; }
+  button { padding: 10px 20px; font-size: 16px; margin-top: 10px; cursor: pointer; }
+  #reply { margin-top: 20px; background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0px 0px 5px rgba(0,0,0,0.1); }
+</style>
 </head>
 <body>
 
-  <h1>Gemini AI Chat</h1>
-  <textarea id="prompt" rows="5" placeholder="Type your prompt here..."></textarea>
-  <br>
-  <button id="sendBtn">Send</button>
+<h1>Gemini AI Chat</h1>
+<textarea id="prompt" rows="5" placeholder="Type your prompt here..."></textarea><br>
+<button id="sendBtn">Send</button>
 
-  <div id="reply"><strong>Reply:</strong> <span id="replyText"></span></div>
+<div id="reply"><strong>Reply:</strong> <span id="replyText"></span></div>
 
-  <script>
-    const sendBtn = document.getElementById('sendBtn');
-    const promptInput = document.getElementById('prompt');
-    const replyText = document.getElementById('replyText');
+<script>
+const sendBtn = document.getElementById('sendBtn');
+const promptInput = document.getElementById('prompt');
+const replyText = document.getElementById('replyText');
 
-    sendBtn.addEventListener('click', async () => {
-      const prompt = promptInput.value.trim();
-      if (!prompt) return alert("Please enter a prompt!");
+sendBtn.addEventListener('click', async () => {
+  const prompt = promptInput.value.trim();
+  if (!prompt) return alert("Please enter a prompt!");
 
-      replyText.textContent = "Loading...";
+  replyText.textContent = "Loading...";
 
-      try {
-        const res = await fetch('http://localhost:3000/api/gemini', {  // backend URL
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt })
-        });
-
-        const data = await res.json();
-        if (data.reply) {
-          replyText.textContent = data.reply;
-        } else {
-          replyText.textContent = "Error: " + (data.error || "Unknown error");
-        }
-      } catch (err) {
-        replyText.textContent = "Server error: " + err.message;
-      }
+  try {
+    const res = await fetch('https://gemini-backend-alpha-dusky.vercel.app/api/gemini', { 
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt })
     });
-  </script>
+
+    const data = await res.json();
+    if (data.reply) {
+      replyText.textContent = data.reply;
+    } else {
+      replyText.textContent = "Error: " + (data.error || "Unknown error");
+    }
+  } catch (err) {
+    replyText.textContent = "Server error: " + err.message;
+  }
+});
+</script>
 
 </body>
 </html>
