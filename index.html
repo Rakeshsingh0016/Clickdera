@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<h1>Gemini AI Chat</h1>
+<h1>Gemini 2.0 Flash Chat</h1>
 <textarea id="prompt" rows="5" placeholder="Type your prompt here..."></textarea><br>
 <button id="sendBtn">Send</button>
 
@@ -38,11 +38,7 @@ sendBtn.addEventListener('click', async () => {
     });
 
     const data = await res.json();
-    if (data.reply) {
-      replyText.textContent = data.reply;
-    } else {
-      replyText.textContent = "Error: " + (data.error || "Unknown error");
-    }
+    replyText.textContent = data.reply || "No reply from server";
   } catch (err) {
     replyText.textContent = "Server error: " + err.message;
   }
