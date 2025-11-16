@@ -2,105 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gemini Chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini Chat</title>
+
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  margin: 0;
-}
-#chatBox {
-  height: 80vh;
-  overflow-y: auto;
-  padding: 20px;
-  background: white;
-}
-.msg {
-  padding: 10px 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  max-width: 80%;
-}
-.user {
-  background: #d1e7ff;
-  margin-left: auto;
-}
-.bot {
-  background: #e8e8e8;
-  margin-right: auto;
-}
-#inputBox {
-  display: flex;
-  padding: 10px;
-  background: white;
-}
-#userInput {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-}
-button {
-  padding: 10px 15px;
-  font-size: 16px;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background: #0e1117;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .messages {
+        background: #1b1f28;
+        height: 70vh;
+        padding: 15px;
+        border-radius: 10px;
+        overflow-y: auto;
+    }
+
+    .msg {
+        margin-bottom: 12px;
+        padding: 10px;
+        border-radius: 6px;
+        line-height: 1.4;
+        max-width: 80%;
+    }
+    .user {
+        background: #007bff;
+        margin-left: auto;
+    }
+    .bot {
+        background: #333;
+        margin-right: auto;
+    }
+
+    input {
+        width: 75%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+
+    button {
+        width: 20%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #7c4dff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
 </style>
 </head>
+
 <body>
+<div class="container">
+    <h2>Gemini Chat</h2>
 
-<div id="chatBox"></div>
+    <div id="messages" class="messages"></div>
 
-<div id="inputBox">
-  <input id="userInput" type="text" placeholder="Type a message..." />
-  <button onclick="sendMessage()">Send</button>
+    <div style="margin-top: 10px;">
+        <input id="input" placeholder="Type your message..."/>
+        <button onclick="sendMessage()">Send</button>
+    </div>
 </div>
 
 <script>
-const API_URL = "https://gemini-backend-29s8sa4o5-rakeshs-projects-35c7130d.vercel.app/api/gemini";
-
-function addMessage(text, type) {
-  const box = document.getElementById("chatBox");
-  const msg = document.createElement("div");
-  msg.className = "msg " + type;
-  msg.innerText = text;
-  box.appendChild(msg);
-  box.scrollTop = box.scrollHeight;
-}
+const API_URL = "https://gemini-backend-alpha-dusky.vercel.app/api/gemini";
 
 async function sendMessage() {
-  const input = document.getElementById("userInput");
-  const text = input.value.trim();
-  if (!text) return;
+    const input = document.getElementById("input");
+    const messagesDiv = document.getElementById("messages");
 
-  addMessage(text, "user");
-  input.value = "";
+    const text = input.value.trim();
+    if (!text) return;
 
-  // Show "Thinking..."
-  const thinkingID = Date.now();
-  addMessage("Thinking...", "bot");
-  
-  try {
-    const res = await fetch(API_URL, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({ prompt: text })
-    });
+    // Show user message
+    messagesDiv.innerHTML += `<div class="msg user">${text}</div>`;
+    input.value = "";
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
-    const data = await res.json();
+    // Show loading
+    let loading = document.createElement("div");
+    loading.className = "msg bot";
+    loading.innerText = "Thinking...";
+    messagesDiv.appendChild(loading);
 
-    // Remove last "Thinking..." bubble
-    const chatBox = document.getElementById("chatBox");
-    chatBox.lastChild.remove();
+    try {
+        const res = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ prompt: text })
+        });
 
-    if (data.reply) {
-      addMessage(data.reply, "bot");
-    } else {
-      addMessage("❌ Backend error: No reply found", "bot");
+        const data = await res.json();
+        loading.remove();
+
+        messagesDiv.innerHTML += `<div class="msg bot">${data.reply}</div>`;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+    } catch (err) {
+        loading.innerText = "Error connecting to backend!";
     }
-  } catch (err) {
-    const chatBox = document.getElementById("chatBox");
-    chatBox.lastChild.remove();
-    addMessage("❌ Something went wrong!", "bot");
-  }
 }
 </script>
 
