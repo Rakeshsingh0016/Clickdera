@@ -79,23 +79,12 @@
     </div>
 </div>
 
-    
 <script>
 const API_URL = "https://gemini-backend-alpha-dusky.vercel.app/api/gemini";
 
 async function sendMessage() {
-  const prompt = document.getElementById("input").value.trim();
-  if (!prompt) return;
-
-  const res = await fetch(API_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt })
-  });
-
-  const data = await res.json();
-  console.log("Backend reply:", data.reply);
-}
+    let input = document.getElementById("input");
+    let messagesDiv = document.getElementById("messages");
 
     const text = input.value.trim();
     if (!text) return;
@@ -114,9 +103,7 @@ async function sendMessage() {
     try {
         const res = await fetch(API_URL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: text })
         });
 
