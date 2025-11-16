@@ -83,10 +83,10 @@
 const API_URL = "https://gemini-backend-alpha-dusky.vercel.app/api/gemini";
 
 async function sendMessage() {
-    let input = document.getElementById("input");
-    let messagesDiv = document.getElementById("messages");
-
+    const input = document.getElementById("input");
+    const messagesDiv = document.getElementById("messages");
     const text = input.value.trim();
+
     if (!text) return;
 
     // Show user message
@@ -94,7 +94,7 @@ async function sendMessage() {
     input.value = "";
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
-    // Show loading
+    // Loading message
     let loading = document.createElement("div");
     loading.className = "msg bot";
     loading.innerText = "Thinking...";
@@ -103,7 +103,7 @@ async function sendMessage() {
     try {
         const res = await fetch(API_URL, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ prompt: text })
         });
 
